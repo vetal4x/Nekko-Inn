@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nekko Inn | Home</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nekko Inn | Home</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!---------- Header ---------->
+
+    <header class="header">
+      <div class="header__logo--mobile">
+        <img
+          src="images/logo-mobile.png"
+          alt="logo-mobile"
+          class="header__logo--mobile-image"
+        />
+      </div>
+
+      <!---------- Hamburger Button ---------->
+
+      <button class="header__hamburger" aria-label="Toggle menu">
+        <span class="header__hamburger-line header__hamburger-line--top"></span>
+        <span
+          class="header__hamburger-line header__hamburger-line--middle"
+        ></span>
+        <span
+          class="header__hamburger-line header__hamburger-line--bottom"
+        ></span>
+      </button>
+
+      <!---------- Mobile Menu ---------->
+
+      <div class="header__mobile-menu">
+        <div class="mobile-menu__switcher">
+          <div class="mobile-menu__switcher--dark"></div>
+          <div class="mobile-menu__switcher--light"></div>
+        </div>
+        <ul class="mobile-menu__navigation">
+          <li>
+            <a href="index.html">About Us</a>
+          </li>
+          <li>
+            <a href="#">Our Rooms</a>
+          </li>
+          <li>
+            <a href="#">Purr Care</a>
+          </li>
+          <li>
+            <a href="#">Testimonial</a>
+          </li>
+        </ul>
+        <button class="mobile-button mobile-button--dark">Book Now</button>
+      </div>
+    </header>
+
+    <!---------- Main ---------->
+
+    <main class="main">
+      
+      <!---------- Hero Section ---------->
+
+      <section class="hero">
+        <span class="hero__title section__title"
+          >Where Feline Comfort Comes First</span
+        >
+        <h1 class="hero__subtitle section__subtitle">Your 5 Stars Purr Inn</h1>
+        <p class="hero__text section__text">
+          At NekoInn, we understand that your beloved feline companion deserves
+          the best care, even when you can't be there. That's why we've created
+          a haven designed specifically for cats, where every whisker is
+          cherished and every purr is celebrated. From cozy accommodations to
+          personalized attention, we strive to provide a nurturing environment
+          where your cat can relax, play, and thrive while you're away. Welcome
+          to NekoInn, where your cat's comfort and happiness are our top
+          priorities.
+        </p>
+        <button class="hero__button mobile-button mobile-button--light">
+          BOOK A PURR-SUITE
+        </button>
+        <div class="hero__image">
+          <div class="hero__image-wrapper">
+            <img
+              src="images/hero-main-image.png"
+              alt="hero__image-main"
+              class="hero__image-main"
+            />
+          </div>
+
+          <img
+            src="images/hero-image1.png"
+            alt="hero__image-1"
+            class="hero__image-small hero__image-small--1"
+          />
+          <img
+            src="images/hero-image2.png"
+            alt="hero__image-2"
+            class="hero__image-small hero__image-small--2"
+          />
+          <img
+            src="images/hero-image3.png"
+            alt="hero__image-3"
+            class="hero__image-small hero__image-small--3"
+          />
+          <img
+            src="images/hero-image4.png"
+            alt="hero__image-4"
+            class="hero__image-small hero__image-small--4"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
