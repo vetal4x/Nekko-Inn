@@ -7,6 +7,13 @@
     <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!---------- Header ---------->
@@ -118,7 +125,7 @@
         <div class="contacts__address">
           <div class="contacts__icon contacts__icon--location">
             <img
-              src="/images/location-icon.png"
+              src="images/location-icon.png"
               alt=""
               class="location__image"
             />
@@ -137,7 +144,7 @@
           <div class="contacts__phone">
             <div class="contacts__icon contacts__icon--phone">
               <img
-                src="/images/phone-icon.png"
+                src="images/phone-icon.png"
                 alt="Phone icon"
                 class="contacts__icon-image"
               />
@@ -150,7 +157,7 @@
           <div class="contacts__email">
             <div class="contacts__icon contacts__icon--email">
               <img
-                src="/images/email-icon.png"
+                src="images/email-icon.png"
                 alt="Email icon"
                 class="contacts__icon-image"
               />
@@ -183,7 +190,7 @@
         <div class="about__image-wrapper">
           <div class="about__image">
             <img
-              src="/images/about-image.png"
+              src="images/about-image.png"
               alt=""
               class="about__image--main"
             />
@@ -196,7 +203,7 @@
       <section class="our-rooms">
         <div class="our-rooms__image">
           <img
-            src="/images/our-rooms-image.png"
+            src="images/our-rooms-image.png"
             alt=""
             class="our-rooms__image--main"
           />
@@ -310,25 +317,255 @@
 
       <section class="care">
         <div class="care__intro">
-          <span class="care__intro-title section__title">Dedicated Care for Every Purrsonality</span>
+          <span class="care__intro-title section__title"
+            >Dedicated Care for Every Purrsonality</span
+          >
           <h1 class="care__intro-subtitle section__subtitle">Purr Care</h1>
-          <p class="care__intro-text section__text">Experience top-notch feline care with our Purr Care services. From grooming to playtime, we provide personalized attention to ensure your cat's happiness and well-being at NekoInn.</p>
-          <button class="care__intro-button mobile-button mobile-button--dark">Book Now</button>
+          <p class="care__intro-text section__text">
+            Experience top-notch feline care with our Purr Care services. From
+            grooming to playtime, we provide personalized attention to ensure
+            your cat's happiness and well-being at NekoInn.
+          </p>
+          <button class="care__intro-button mobile-button mobile-button--dark">
+            Book Now
+          </button>
         </div>
         <div class="care__block">
-          <div class="care__block-image"><img src="/images/care-image-1.png" alt="" class="block-image"></div>
+          <div class="care__block-image">
+            <img src="images/care-image-1.png" alt="" class="block-image" />
+          </div>
           <span class="care__block-title">Grooming Spa:</span>
-          <p class="care__block-text">Indulge your cat in a pampering experience at our Grooming Spa. Our skilled groomers provide gentle care and attention, from luxurious baths to expert grooming sessions, leaving your cat looking and feeling their best.</p>
+          <p class="care__block-text">
+            Indulge your cat in a pampering experience at our Grooming Spa. Our
+            skilled groomers provide gentle care and attention, from luxurious
+            baths to expert grooming sessions, leaving your cat looking and
+            feeling their best.
+          </p>
         </div>
         <div class="care__block">
-          <div class="care__block-image"><img src="/images/care-image-2.png" alt="" class="block-image"></div>
+          <div class="care__block-image">
+            <img src="images/care-image-2.png" alt="" class="block-image" />
+          </div>
           <span class="care__block-title">Playtime Paradise:</span>
-          <p class="care__block-text">Let your cat unleash their playful side in our Playtime Paradise. With a variety of engaging toys, climbing structures, and interactive games, our supervised play sessions offer the perfect opportunity for your cat to exercise, socialize, and have fun.</p>
+          <p class="care__block-text">
+            Let your cat unleash their playful side in our Playtime Paradise.
+            With a variety 7of engaging toys, climbing structures, and
+            interactive games, our supervised play sessions offer the perfect
+            opportunity for your cat to exercise, socialize, and have fun.
+          </p>
         </div>
         <div class="care__block">
-          <div class="care__block-image"><img src="/images/care-image-3.png" alt="" class="block-image"></div>
+          <div class="care__block-image">
+            <img src="images/care-image-3.png" alt="" class="block-image" />
+          </div>
           <span class="care__block-title">Gourmet Dining:</span>
-          <p class="care__block-text">Treat your cat's taste buds to a culinary delight with our Gourmet Dining service. From premium cat cuisine to customized meal plans tailored to their dietary needs, our gourmet chefs ensure that every meal is both delicious and nutritious.</p>
+          <p class="care__block-text">
+            Treat your cat's taste buds to a culinary delight with our Gourmet
+            Dining service. From premium cat cuisine to customized meal plans
+            tailored to their dietary needs, our gourmet chefs ensure that every
+            meal is both delicious and nutritious.
+          </p>
+        </div>
+      </section>
+
+      <!---------- Slider Section ---------->
+
+      <section class="slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide__content">
+                <img
+                  src="images/slider/slider-image-1.png"
+                  alt=""
+                  class="swiper-slide__image"
+                />
+                <div class="swiper-slide__icon">
+                  <svg
+                    width="77"
+                    height="75"
+                    viewBox="0 0 77 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.3889 36.518L46.6111 48.6787L30.3889 58.8126L40.5278 73M66.8889 27.5113V53.5429C66.8889 60.3533 66.8889 63.7587 65.5627 66.3599C64.3963 68.6481 62.5352 70.5087 60.2459 71.6745C57.643 73 54.2364 73 47.4222 73H29.5778C22.7638 73 19.3568 73 16.7542 71.6745C14.4649 70.5087 12.6037 68.6481 11.4372 66.3599C10.1111 63.7587 10.1111 60.3533 10.1111 53.5429V27.5087M75 36.518L52.9654 12.0505C47.9539 6.48595 45.4484 3.70363 42.4972 2.6765C39.9057 1.7743 37.0846 1.77451 34.4927 2.67707C31.5419 3.70469 29.0368 6.48733 24.0263 12.0527L2 36.518"
+                      stroke="white"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__content">
+                <img
+                  src="images/slider/slider-image-2.png"
+                  alt=""
+                  class="swiper-slide__image"
+                />
+                <div class="swiper-slide__icon">
+                  <svg
+                    width="77"
+                    height="75"
+                    viewBox="0 0 77 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.3889 36.518L46.6111 48.6787L30.3889 58.8126L40.5278 73M66.8889 27.5113V53.5429C66.8889 60.3533 66.8889 63.7587 65.5627 66.3599C64.3963 68.6481 62.5352 70.5087 60.2459 71.6745C57.643 73 54.2364 73 47.4222 73H29.5778C22.7638 73 19.3568 73 16.7542 71.6745C14.4649 70.5087 12.6037 68.6481 11.4372 66.3599C10.1111 63.7587 10.1111 60.3533 10.1111 53.5429V27.5087M75 36.518L52.9654 12.0505C47.9539 6.48595 45.4484 3.70363 42.4972 2.6765C39.9057 1.7743 37.0846 1.77451 34.4927 2.67707C31.5419 3.70469 29.0368 6.48733 24.0263 12.0527L2 36.518"
+                      stroke="white"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__content">
+                <img
+                  src="images/slider/slider-image-3.png"
+                  alt=""
+                  class="swiper-slide__image"
+                />
+                <div class="swiper-slide__icon">
+                  <svg
+                    width="77"
+                    height="75"
+                    viewBox="0 0 77 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.3889 36.518L46.6111 48.6787L30.3889 58.8126L40.5278 73M66.8889 27.5113V53.5429C66.8889 60.3533 66.8889 63.7587 65.5627 66.3599C64.3963 68.6481 62.5352 70.5087 60.2459 71.6745C57.643 73 54.2364 73 47.4222 73H29.5778C22.7638 73 19.3568 73 16.7542 71.6745C14.4649 70.5087 12.6037 68.6481 11.4372 66.3599C10.1111 63.7587 10.1111 60.3533 10.1111 53.5429V27.5087M75 36.518L52.9654 12.0505C47.9539 6.48595 45.4484 3.70363 42.4972 2.6765C39.9057 1.7743 37.0846 1.77451 34.4927 2.67707C31.5419 3.70469 29.0368 6.48733 24.0263 12.0527L2 36.518"
+                      stroke="white"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__content">
+                <img
+                  src="images/slider/slider-image-4.png"
+                  alt=""
+                  class="swiper-slide__image"
+                />
+                <div class="swiper-slide__icon">
+                  <svg
+                    width="77"
+                    height="75"
+                    viewBox="0 0 77 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.3889 36.518L46.6111 48.6787L30.3889 58.8126L40.5278 73M66.8889 27.5113V53.5429C66.8889 60.3533 66.8889 63.7587 65.5627 66.3599C64.3963 68.6481 62.5352 70.5087 60.2459 71.6745C57.643 73 54.2364 73 47.4222 73H29.5778C22.7638 73 19.3568 73 16.7542 71.6745C14.4649 70.5087 12.6037 68.6481 11.4372 66.3599C10.1111 63.7587 10.1111 60.3533 10.1111 53.5429V27.5087M75 36.518L52.9654 12.0505C47.9539 6.48595 45.4484 3.70363 42.4972 2.6765C39.9057 1.7743 37.0846 1.77451 34.4927 2.67707C31.5419 3.70469 29.0368 6.48733 24.0263 12.0527L2 36.518"
+                      stroke="white"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__content">
+                <img
+                  src="images/slider/slider-image-5.png"
+                  alt=""
+                  class="swiper-slide__image"
+                />
+                <div class="swiper-slide__icon">
+                  <svg
+                    width="77"
+                    height="75"
+                    viewBox="0 0 77 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.3889 36.518L46.6111 48.6787L30.3889 58.8126L40.5278 73M66.8889 27.5113V53.5429C66.8889 60.3533 66.8889 63.7587 65.5627 66.3599C64.3963 68.6481 62.5352 70.5087 60.2459 71.6745C57.643 73 54.2364 73 47.4222 73H29.5778C22.7638 73 19.3568 73 16.7542 71.6745C14.4649 70.5087 12.6037 68.6481 11.4372 66.3599C10.1111 63.7587 10.1111 60.3533 10.1111 53.5429V27.5087M75 36.518L52.9654 12.0505C47.9539 6.48595 45.4484 3.70363 42.4972 2.6765C39.9057 1.7743 37.0846 1.77451 34.4927 2.67707C31.5419 3.70469 29.0368 6.48733 24.0263 12.0527L2 36.518"
+                      stroke="white"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__content">
+                <img
+                  src="images/slider/slider-image-6.png"
+                  alt=""
+                  class="swiper-slide__image"
+                />
+                <div class="swiper-slide__icon">
+                  <svg
+                    width="77"
+                    height="75"
+                    viewBox="0 0 77 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M30.3889 36.518L46.6111 48.6787L30.3889 58.8126L40.5278 73M66.8889 27.5113V53.5429C66.8889 60.3533 66.8889 63.7587 65.5627 66.3599C64.3963 68.6481 62.5352 70.5087 60.2459 71.6745C57.643 73 54.2364 73 47.4222 73H29.5778C22.7638 73 19.3568 73 16.7542 71.6745C14.4649 70.5087 12.6037 68.6481 11.4372 66.3599C10.1111 63.7587 10.1111 60.3533 10.1111 53.5429V27.5087M75 36.518L52.9654 12.0505C47.9539 6.48595 45.4484 3.70363 42.4972 2.6765C39.9057 1.7743 37.0846 1.77451 34.4927 2.67707C31.5419 3.70469 29.0368 6.48733 24.0263 12.0527L2 36.518"
+                      stroke="white"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-prev slider-button">
+          <svg
+            width="23"
+            height="19"
+            viewBox="0 0 23 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.875 9.5L22.125 9.5M0.875 9.5L9.375 1M0.875 9.5L9.375 18"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+
+        <div class="button-next slider-button">
+          <svg
+            width="23"
+            height="19"
+            viewBox="0 0 23 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.125 9.5L0.875 9.5M22.125 9.5L13.625 18M22.125 9.5L13.625 1"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
       </section>
     </main>
