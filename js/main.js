@@ -22,16 +22,49 @@ wrappers.forEach((wrapper) => {
   });
 });
 
-// Slider
+// Sliders
 
-const swiper = new Swiper('.swiper', {
+// Client Slider
+
+const clientsSwiper = new Swiper('.slider--clients .swiper', {
   grabCursor: true,
   effect: 'creative',
   speed: 700,
   loop: true,
   navigation: {
-    nextEl: '.button-next',
-    prevEl: '.button-prev',
+    nextEl: '.clients-button-next',
+    prevEl: '.clients-button-prev',
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  creativeEffect: {
+    prev: {
+      translate: [0, 0, -400],
+      scale: 0.9,
+      rotate: [0, 0, -8],
+      opacity: 0.8,
+    },
+    next: {
+      translate: ['100%', 0, 0],
+      scale: 0.9,
+      rotate: [0, 0, 8],
+      opacity: 0.8,
+    },
+  },
+});
+
+// Testimonial Slider
+
+const testimonialsSwiper = new Swiper('.slider--testimonials .swiper', {
+  grabCursor: true,
+  effect: 'creative',
+  speed: 700,
+  loop: true,
+  navigation: {
+    nextEl: '.testimonials-button-next',
+    prevEl: '.testimonials-button-prev',
   },
   autoplay: {
     delay: 3000,
