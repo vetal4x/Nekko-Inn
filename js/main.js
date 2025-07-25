@@ -85,3 +85,22 @@ const testimonialsSwiper = new Swiper('.slider--testimonials .swiper', {
     },
   },
 });
+
+// Today Date
+
+const dateInput = document.getElementById('date');
+const today = new Date().toISOString().split('T')[0]; // формат YYYY-MM-DD
+dateInput.value = today;
+
+//Calendar Icon
+
+const input = document.getElementById('date');
+const icon = document.querySelector('.date-icon');
+
+icon.addEventListener('click', () => {
+  if (typeof input.showPicker === 'function') {
+    input.showPicker(); 
+  } else {
+    input.focus(); 
+  }
+});

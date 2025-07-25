@@ -722,15 +722,17 @@
 
       <section class="reviews">
         <div class="reviews-container">
-        <span class="reviews__title section__title"
-          >Pawsitive Reviews from Happy Customers</span
-        >
-        <h1 class="reviews__subtitle section__subtitle">They Celebrate NekoInn</h1>
-        <p class="reviews__text section__text">
-          Discover what our clients have to say about their experiences at
-          NekoInn. Their testimonials speak volumes about the exceptional care
-          and service we provide for their beloved feline companions.
-        </p>
+          <span class="reviews__title section__title"
+            >Pawsitive Reviews from Happy Customers</span
+          >
+          <h1 class="reviews__subtitle section__subtitle">
+            They Celebrate NekoInn
+          </h1>
+          <p class="reviews__text section__text">
+            Discover what our clients have to say about their experiences at
+            NekoInn. Their testimonials speak volumes about the exceptional care
+            and service we provide for their beloved feline companions.
+          </p>
         </div>
 
         <div class="slider slider--testimonials">
@@ -779,7 +781,11 @@
                     from home for my cat!
                   </p>
                   <div class="swiper-slide__author">
-                    <img src="images/testimonials/testimonials-image-1.png" alt="" class="swiper-slide__author-image" />
+                    <img
+                      src="images/testimonials/testimonials-image-1.png"
+                      alt=""
+                      class="swiper-slide__author-image"
+                    />
                     <span class="swiper-slide__author-name">Emily S</span>
                   </div>
                 </div>
@@ -820,10 +826,19 @@
                     </svg>
                   </div>
                   <p class="swiper-slide__text">
-                    I cannot recommend NekoInn enough! From the moment I walked in, I knew my cat would be in good hands. The facilities are clean and spacious, and the staff is incredibly friendly and attentive. My cat came back home relaxed and happy, and I will definitely be using NekoInn for all my future boarding needs.
+                    I cannot recommend NekoInn enough! From the moment I walked
+                    in, I knew my cat would be in good hands. The facilities are
+                    clean and spacious, and the staff is incredibly friendly and
+                    attentive. My cat came back home relaxed and happy, and I
+                    will definitely be using NekoInn for all my future boarding
+                    needs.
                   </p>
                   <div class="swiper-slide__author">
-                    <img src="images/testimonials/testimonials-image-2.png" alt="" class="swiper-slide__author-image" />
+                    <img
+                      src="images/testimonials/testimonials-image-2.png"
+                      alt=""
+                      class="swiper-slide__author-image"
+                    />
                     <span class="swiper-slide__author-name">Mark T</span>
                   </div>
                 </div>
@@ -864,10 +879,19 @@
                     </svg>
                   </div>
                   <p class="swiper-slide__text">
-                    NekoInn made the experience so much easier. Their personalized care and attention to detail set them apart from other boarding facilities. I loved receiving updates and photos of my cat enjoying her stay. I have complete peace of mind knowing she's in the care of such dedicated professionals. Thank you, NekoInn!
+                    NekoInn made the experience so much easier. Their
+                    personalized care and attention to detail set them apart
+                    from other boarding facilities. I loved receiving updates
+                    and photos of my cat enjoying her stay. I have complete
+                    peace of mind knowing she's in the care of such dedicated
+                    professionals. Thank you, NekoInn!
                   </p>
                   <div class="swiper-slide__author">
-                    <img src="images/testimonials/testimonials-image-3.png" alt="" class="swiper-slide__author-image" />
+                    <img
+                      src="images/testimonials/testimonials-image-3.png"
+                      alt=""
+                      class="swiper-slide__author-image"
+                    />
                     <span class="swiper-slide__author-name">Linda R</span>
                   </div>
                 </div>
@@ -910,6 +934,126 @@
               />
             </svg>
           </div>
+        </div>
+      </section>
+
+      <!---------- Booking Section ---------->
+
+      <section class="booking">
+        <div class="booking__container">
+          <div class="booking__header">
+            <span class="booking__title section__title"
+              >Secure Your Cat's Stay Today</span
+            >
+            <h1 class="booking__subtitle section__subtitle">Book Now</h1>
+            <p class="booking__text section__text">
+              Ready to reserve your cat's spot at NekoInn? Our easy-to-use
+              booking system makes it simple to schedule your cat's stay with
+              us. Just select your desired dates, choose from our range of
+              accommodations and services, and complete your reservation in a
+              few easy steps.
+            </p>
+          </div>
+
+          <form action="#" method="post" class="booking__form">
+            <div class="booking__field">
+              <label for="full-name" class="booking__label">Full Name</label>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                class="booking__input booking__input--full-name"
+                placeholder="Eg. Jane Doe"
+                required
+              />
+            </div>
+
+            <div class="booking__field">
+              <label for="email" class="booking__label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="booking__input booking__input--email"
+                placeholder="Eg. janedoe@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="booking__field">
+              <label for="phone" class="booking__label">Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="booking__input booking__input--phone"
+                placeholder="Eg. 100-616-6060"
+                pattern="^\+?[0-9\s\-]{7,20}$"
+                required
+              />
+            </div>
+
+            <div class="booking__field">
+              <label for="cat-name" class="booking__label">Cat Name</label>
+              <input
+                type="text"
+                id="cat-name"
+                name="cat-name"
+                class="booking__input booking__input--cat-name"
+                placeholder="Eg. Timothy"
+              />
+            </div>
+
+            <div class="booking__field">
+              <label for="date" class="booking__label">Pick a date</label>
+              <div class="date-wrapper">
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  class="booking__input booking__input--date"
+                  required
+                />
+                <div class="date-icon-wrapper">
+                  <img
+                    src="images/calendar-icon.png"
+                    alt="Calendar"
+                    class="date-icon"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="booking__field">
+              <label for="pets-qty" class="booking__label">How Many Pets</label>
+              <input
+                type="number"
+                id="pets-qty"
+                name="pets-qty"
+                min="1"
+                max="10"
+                step="1"
+                class="booking__input booking__input--pets-qty"
+                placeholder="1"
+              />
+            </div>
+
+            <div class="booking__field">
+              <label for="plan" class="booking__label">Select pet</label>
+              <select id="plan" class="booking__input booking__input--plan" required>
+
+                <option value="ducal">Purr Ducal</option>
+
+                <option value="royal" selected>Purr Royal</option>
+
+                <option value="imperial">Purr Imperial</option>
+              </select>
+            </div>
+
+            <button class="booking__button mobile-button mobile-button--light">
+              BOOK NOW
+            </button>
+          </form>
         </div>
       </section>
     </main>
