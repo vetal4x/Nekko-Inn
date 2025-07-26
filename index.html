@@ -9,6 +9,12 @@
     <script src="js/main.js" defer></script>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
@@ -88,35 +94,38 @@
           BOOK A PURR-SUITE
         </button>
         <div class="hero__image">
-          <div class="hero__image-wrapper">
-            <img
-              src="images/hero-main-image.png"
-              alt="hero__image-main"
-              class="hero__image-main"
-            />
-          </div>
+  <div class="hero__image-wrapper">
+    <div class="hero__main-wrapper">
+      <img
+        src="images/hero-main-image.png"
+        alt="hero__image-main"
+        class="hero__image-main"
+      />
 
-          <img
-            src="images/hero-image1.png"
-            alt="hero__image-1"
-            class="hero__image-small hero__image-small--1"
-          />
-          <img
-            src="images/hero-image2.png"
-            alt="hero__image-2"
-            class="hero__image-small hero__image-small--2"
-          />
-          <img
-            src="images/hero-image3.png"
-            alt="hero__image-3"
-            class="hero__image-small hero__image-small--3"
-          />
-          <img
-            src="images/hero-image4.png"
-            alt="hero__image-4"
-            class="hero__image-small hero__image-small--4"
-          />
-        </div>
+      <img
+        src="images/hero-image1.png"
+        alt="hero__image-1"
+        class="hero__image-small hero__image-small--1"
+      />
+      <img
+        src="images/hero-image2.png"
+        alt="hero__image-2"
+        class="hero__image-small hero__image-small--2"
+      />
+      <img
+        src="images/hero-image3.png"
+        alt="hero__image-3"
+        class="hero__image-small hero__image-small--3"
+      />
+      <img
+        src="images/hero-image4.png"
+        alt="hero__image-4"
+        class="hero__image-small hero__image-small--4"
+      />
+    </div>
+  </div>
+</div>
+
       </section>
 
       <!---------- Contacts ---------->
@@ -969,10 +978,10 @@
             </div>
 
             <div class="booking__field">
-              <label for="email" class="booking__label">Email</label>
+              <label for="booking-email" class="booking__label">Email</label>
               <input
                 type="email"
-                id="email"
+                id="booking-email"
                 name="email"
                 class="booking__input booking__input--email"
                 placeholder="Eg. janedoe@gmail.com"
@@ -1040,8 +1049,11 @@
 
             <div class="booking__field">
               <label for="plan" class="booking__label">Select pet</label>
-              <select id="plan" class="booking__input booking__input--plan" required>
-
+              <select
+                id="plan"
+                class="booking__input booking__input--plan"
+                required
+              >
                 <option value="ducal">Purr Ducal</option>
 
                 <option value="royal" selected>Purr Royal</option>
@@ -1057,5 +1069,101 @@
         </div>
       </section>
     </main>
+
+    <!---------- Footer ---------->
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__intro">
+          <div class="footer__intro-logo"></div>
+          <div class="footer__intro-text">
+            <span class="footer__intro-text--top">Stay In Touch</span>
+            <div class="footer__intro-text--bottom">Newsletter</div>
+          </div>
+
+          <form class="footer__intro-form">
+            <div class="footer__intro-email">
+              <label for="footer-email" class="footer__intro-email__label"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="footer-email"
+                name="email"
+                class="footer__intro-email__input"
+                placeholder="Eg. janedoe@gmail.com"
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="footer__contacts">
+          <div class="footer__contacts-block footer__contacts-block--address">
+            <div class="footer__contacts-block-icon"></div>
+            <div class="footer__contacts-block-text">
+              <span class="footer__contacts-block-text-top"></span>
+              <span class="footer__contacts-block-text-bottom"></span>
+            </div>
+          </div>
+
+          <div class="footer__contacts-block footer__contacts-block--phone">
+            <div class="footer__contacts-block-icon"></div>
+            <div class="footer__contacts-block-text">
+              <span class="footer__contacts-block-text-top"></span>
+              <span class="footer__contacts-block-text-bottom"></span>
+            </div>
+          </div>
+
+          <div class="footer__contacts-block footer__contacts-block--email">
+            <div class="footer__contacts-block-icon"></div>
+            <div class="footer__contacts-block-text">
+              <span class="footer__contacts-block-text-top"></span>
+              <span class="footer__contacts-block-text-bottom"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__plans">
+          <span class="footer__plans-title"></span>
+          <ul class="footer__plans-list">
+            <li class="footer__plans-item">Purr Decal</li>
+            <li class="footer__plans-item">Purr Royal</li>
+            <li class="footer__plans-item">Purr Imperial</li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <span class="footer__social-text"></span>
+          <ul class="footer__social-icons">
+            <li class="footer__social-icon">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li class="footer__social-icon">
+              <a href="#" aria-label="X (Twitter)"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li class="footer__social-icon">
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li class="footer__social-icon">
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+            <li class="footer__social-icon">
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
