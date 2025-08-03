@@ -458,6 +458,12 @@ body.lock {
   overflow: hidden;
 }
 
+.about__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about__subtitle {
   font-size: 32px;
   line-height: 48px;
@@ -1815,7 +1821,7 @@ input[type='number'] {
   }
 
   .hero__subtitle {
-    margin: 0;
+    margin: 16px 0 20px;
   }
 
   .section__title {
@@ -1827,7 +1833,7 @@ input[type='number'] {
 
   .section__subtitle {
     font-size: 30px;
-    line-height: 84px;
+    line-height: 36px;
     text-align: left;
   }
 
@@ -1901,9 +1907,11 @@ input[type='number'] {
     left: 46%;
   }
 
+  /* Contacts */
+
   .contacts {
     flex-direction: row;
-    margin: 50px 42px 26px;
+    margin: 50px 42px -46px;
     justify-content: space-between;
     gap: 0;
     position: relative;
@@ -1940,6 +1948,43 @@ input[type='number'] {
   .contacts__icon-image {
     max-width: 58%;
   }
+
+  /* About */
+
+  .about {
+    margin: 0 42px;
+    padding: 22px 34px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 42px;
+  }
+
+  .about__content-wrapper {
+    width: 100%;
+    align-items: start;
+  }
+
+  .about__subtitle {
+    margin: 16px 0 20px;
+  }
+
+  .about__button {
+    max-width: 165px;
+    margin-top: 34px;
+  }
+
+  .about__image-wrapper {
+    max-width: 100%;
+    background-position-x: 52%;
+  }
+
+  .about__image {
+    transform: translateX(-14%);
+  }
+
+  .about__image--main {
+    max-width: 150%;
+}
 }
 
 @media (min-width: 1024px) {
