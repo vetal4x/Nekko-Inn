@@ -2136,7 +2136,7 @@ input[type='number'] {
   /* Slider Clients */
 
   .slider--clients {
-    padding: 48px 42px 84px;
+    padding: 48px 42px;
   }
 
   .slider--clients .button-next {
@@ -2145,6 +2145,77 @@ input[type='number'] {
 
   .slider--clients .button-prev {
     left: 2%;
+  }
+
+  /* Pricing */
+
+  .pricing {
+    padding: 0px 42px 48px;
+  }
+
+  .pricing__text {
+    text-align: center;
+  }
+
+  .pricing__cards {
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+  }
+
+  .pricing-card {
+    padding: 46px 62px;
+    max-width: 100%;
+  }
+
+  .pricing-card__plan-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .pricing-card__plan-icon svg {
+    width: 52px;
+  }
+
+  .pricing-card__price {
+    margin: 8px 0 34px;
+  }
+
+  .pricing-card__amount {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .pricing-card__period {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .pricing-card__features {
+    gap: 24px;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pricing-card__feature {
+    gap: 12px;
+    font-size: 12px;
+    line-height: 18px;
+    text-wrap: nowrap;
+  }
+
+  .pricing-card__feature::before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pricing__button {
+    margin-top: 42px;
+    max-width: 236px;
   }
 }
 
