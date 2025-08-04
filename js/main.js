@@ -55,6 +55,11 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
       centeredSlides: true,
       spaceBetween: 20,
     },
+    768: {
+      slidesPerView: 2,
+      centeredSlides: true,
+      spaceBetween: 20,
+    },
   },
 });
 

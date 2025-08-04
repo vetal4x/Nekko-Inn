@@ -2132,6 +2132,20 @@ input[type='number'] {
   .care__block-image .block-image {
     width: 100%;
   }
+
+  /* Slider Clients */
+
+  .slider--clients {
+    padding: 48px 42px 84px;
+  }
+
+  .slider--clients .button-next {
+    right: 2%;
+  }
+
+  .slider--clients .button-prev {
+    left: 2%;
+  }
 }
 
 @media (min-width: 1024px) {
