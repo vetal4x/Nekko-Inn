@@ -47,17 +47,16 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
     nextEl: '.clients-button-next',
     prevEl: '.clients-button-prev',
   },
-  slidesPerView: 1, 
+  slidesPerView: 1,
 
   breakpoints: {
     480: {
       slidesPerView: 'auto',
-      centeredSlides: true,     
+      centeredSlides: true,
       spaceBetween: 20,
     },
   },
 });
-
 
 // Testimonial Slider
 
@@ -108,3 +107,30 @@ icon.addEventListener('click', () => {
     input.focus();
   }
 });
+
+//Image Gallery
+
+const initImageGallery = () => {
+  const galleryContainer = document.querySelector('.image-gallery__images');
+  const galleryImages = document.querySelectorAll('.image-gallery__image');
+
+  galleryContainer.style.setProperty('--total-images', galleryImages.length);
+
+  galleryContainer.addEventListener('click', (event) => {
+    const clickedImage = event.target.closest('.image-gallery__image');
+
+    if (
+      !clickedImage ||
+      clickedImage.classList.contains('image-gallery__image--active')
+    )
+      return;
+
+    galleryImages.forEach((image) => {
+      image.classList.remove('image-gallery__image--active');
+    });
+
+    clickedImage.classList.add('image-gallery__image--active');
+  });
+};
+
+initImageGallery();
