@@ -1832,6 +1832,10 @@ input[type='number'] {
     text-align: left;
   }
 
+  .hero__title {
+    text-wrap: nowrap;
+  }
+
   .section__subtitle {
     font-size: 30px;
     line-height: 36px;
@@ -1839,8 +1843,8 @@ input[type='number'] {
   }
 
   .section__text {
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 20px;
     text-align: left;
   }
 
@@ -1954,7 +1958,7 @@ input[type='number'] {
 
   .about {
     margin: 0 42px;
-    padding: 0px 34px;
+    padding: 18px 34px;
     flex-direction: row;
     justify-content: space-between;
     gap: 42px;
@@ -2021,7 +2025,7 @@ input[type='number'] {
     background-position: center;
     background-size: cover;
     border-radius: 40px;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .image-gallery__image--active {
@@ -2051,9 +2055,82 @@ input[type='number'] {
 
   .our-rooms__accordion-content {
     padding: 0;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 22px;
     text-align: center;
+    width: 70%;
+  }
+
+  /* Care */
+
+  .care-container {
+    padding: 0 42px;
+  }
+
+  .care {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    border-radius: 40px;
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .care__intro {
+    width: calc(50% - 10px);
+    padding: 64px 32px 48px 32px;
+  }
+
+  .care__intro-title {
+    padding: 0;
+  }
+
+  .care__intro-text {
+    padding: 0;
+    width: 75%;
+  }
+
+  .care__intro-button {
+    width: 230px;
+    margin-top: 48px;
+  }
+
+  .care__block {
+    width: calc(50% - 10px);
+    padding: 0;
+    align-items: center;
+  }
+
+  .care__block:last-child {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .care__block:nth-child(2),
+  .care__block:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .care__block-title {
+    font-size: 22px;
+    line-height: 36px;
+    margin: 0;
+    margin: 14px 0 10px;
+  }
+
+  .care__block-text {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0;
+  }
+
+  .care__block-image {
+    width: 100%;
+  }
+
+  .care__block-image .block-image {
+    width: 100%;
   }
 }
 
