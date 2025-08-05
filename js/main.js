@@ -63,35 +63,57 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
   },
 });
 
-// Testimonial Slider
+// Testimonial Slider Mobile
 
-const testimonialsSwiper = new Swiper('.slider--testimonials .swiper', {
+const testimonialsSwiperMobile = new Swiper(
+  '.slider-testimonials--mobile .swiper',
+  {
+    grabCursor: true,
+    effect: 'creative',
+    speed: 700,
+    loop: true,
+    navigation: {
+      nextEl: '.testimonials-button-next--mobile',
+      prevEl: '.testimonials-button-prev--mobile',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    creativeEffect: {
+      prev: {
+        translate: [0, 0, -400],
+        scale: 0.9,
+        rotate: [0, 0, -8],
+        opacity: 0.8,
+      },
+      next: {
+        translate: ['100%', 0, 0],
+        scale: 0.9,
+        rotate: [0, 0, 8],
+        opacity: 0.8,
+      },
+    },
+  }
+);
+
+// Testimonial Slider Mobile PC
+
+const testimonialsSwiperPc = new Swiper('.slider-testimonials--pc .swiper', {
   grabCursor: true,
-  effect: 'creative',
   speed: 700,
   loop: true,
-  navigation: {
-    nextEl: '.testimonials-button-next',
-    prevEl: '.testimonials-button-prev',
-  },
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
-  creativeEffect: {
-    prev: {
-      translate: [0, 0, -400],
-      scale: 0.9,
-      rotate: [0, 0, -8],
-      opacity: 0.8,
-    },
-    next: {
-      translate: ['100%', 0, 0],
-      scale: 0.9,
-      rotate: [0, 0, 8],
-      opacity: 0.8,
-    },
+  navigation: {
+    nextEl: '.testimonials-button-next--pc',
+    prevEl: '.testimonials-button-prev--pc',
   },
+  slidesPerView: 'auto', // важно
+  centeredSlides: true,
+  spaceBetween: 20,
 });
 
 // Today Date
