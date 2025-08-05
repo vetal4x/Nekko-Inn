@@ -2151,8 +2151,13 @@ body.lock {
     padding: 0px 42px 48px;
   }
 
+  .pricing__subtitle {
+    margin: 18px 0 14px;
+  }
+
   .pricing__text {
     text-align: center;
+    width: 70%;
   }
 
   .pricing__cards {
@@ -2222,8 +2227,13 @@ body.lock {
     padding: 0 42px;
   }
 
+  .reviews__subtitle {
+    margin: 18px 0 14px;
+  }
+
   .reviews__text {
     text-align: center;
+    width: 70%;
   }
 
   .slider-testimonials--pc {
@@ -2299,6 +2309,123 @@ body.lock {
   .testimonials-button-prev--pc {
     left: -4%;
     top: 48%;
+  }
+
+  /* Booking */
+
+  .booking {
+    padding: 48px 42px 68px;
+  }
+
+  .booking__container {
+    padding: 78px 84px 69px;
+  }
+
+  .booking__header {
+    gap: 0;
+  }
+
+  .booking__subtitle {
+    margin: 18px 0 14px;
+  }
+
+  .booking__text {
+    text-align: center;
+    width: 75%;
+  }
+
+  /* Footer */
+
+  .footer__container {
+    padding: 68px 42px 46px;
+  }
+
+  .footer__intro {
+    gap: 36px;
+    padding: 0 80px;
+  }
+
+  .footer__intro::after {
+    width: calc(100% - 21px);
+    bottom: -48px;
+  }
+
+  .footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 96px 0 48px;
+    padding: 0 12px;
+  }
+
+  .footer__contacts {
+    margin: 0;
+    padding: 0;
+    gap: 28px;
+  }
+
+  .footer__contacts-block {
+    gap: 22px;
+    align-items: center;
+  }
+
+  .footer__contacts-block-icon {
+    height: 55px;
+    width: 55px;
+  }
+
+  .footer__contacts-block-text {
+    gap: 8px;
+    width: 60%;
+  }
+
+  .footer__contacts-block-text-top {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .footer__contacts-block-text-bottom {
+    font-size: 14px;
+    line-height: 12px;
+  }
+
+  .footer__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .footer__plans {
+    gap: 8px;
+  }
+
+  .footer__plans-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .footer__plans-link {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .footer__social {
+    margin: 0;
+    gap: 18px;
+  }
+
+  .footer__social-text {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .footer__social-icons {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
   }
 }
 
