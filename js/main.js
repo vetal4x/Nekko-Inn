@@ -108,10 +108,10 @@ const testimonialsSwiperPc = new Swiper('.slider-testimonials--pc .swiper', {
   grabCursor: true,
   speed: 700,
   loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: '.testimonials-button-next--pc',
     prevEl: '.testimonials-button-prev--pc',
