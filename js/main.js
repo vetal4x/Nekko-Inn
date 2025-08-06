@@ -60,6 +60,11 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
       centeredSlides: true,
       spaceBetween: 20,
     },
+    1024: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 10,
+    },
   },
 });
 
@@ -103,17 +108,25 @@ const testimonialsSwiperPc = new Swiper('.slider-testimonials--pc .swiper', {
   grabCursor: true,
   speed: 700,
   loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   navigation: {
     nextEl: '.testimonials-button-next--pc',
     prevEl: '.testimonials-button-prev--pc',
   },
-  slidesPerView: 'auto', // важно
+  slidesPerView: 'auto',
   centeredSlides: true,
   spaceBetween: 20,
+
+  breakpoints: {
+    1024: {
+      slidesPerView: '3',
+      centeredSlides: true,
+      spaceBetween: 20,
+    },
+  },
 });
 
 // Today Date
