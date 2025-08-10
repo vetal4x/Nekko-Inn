@@ -25,7 +25,7 @@ wrappers.forEach((wrapper) => {
 
 // Sliders
 
-// Client Slider
+// Clients Slider
 
 const clientsSwiper = new Swiper('.slider--clients .swiper', {
   grabCursor: true,
@@ -64,6 +64,18 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
       slidesPerView: 3,
       centeredSlides: true,
       spaceBetween: 10,
+    },
+    1280: {
+      slidesPerView: '5',
+      centeredSlides: false,
+      spaceBetween: 15,
+      effect: 'slide',
+      speed: 5000, 
+      autoplay: {
+        delay: 0, 
+        disableOnInteraction: false,
+      },
+      allowTouchMove: false, 
     },
   },
 });
@@ -132,7 +144,7 @@ const testimonialsSwiperPc = new Swiper('.slider-testimonials--pc .swiper', {
 // Today Date
 
 const dateInput = document.getElementById('date');
-const today = new Date().toISOString().split('T')[0]; // формат YYYY-MM-DD
+const today = new Date().toISOString().split('T')[0];
 dateInput.value = today;
 
 //Calendar Icon
