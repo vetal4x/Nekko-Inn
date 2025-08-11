@@ -70,12 +70,24 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
       centeredSlides: false,
       spaceBetween: 15,
       effect: 'slide',
-      speed: 5000, 
+      speed: 5000,
       autoplay: {
-        delay: 0, 
+        delay: 0,
         disableOnInteraction: false,
       },
-      allowTouchMove: false, 
+      allowTouchMove: false,
+    },
+    1440: {
+      slidesPerView: '6',
+      centeredSlides: false,
+      spaceBetween: 20,
+      effect: 'slide',
+      speed: 5000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      allowTouchMove: false,
     },
   },
 });
@@ -150,13 +162,32 @@ dateInput.value = today;
 //Calendar Icon
 
 const input = document.getElementById('date');
-const icon = document.querySelector('.date-icon');
+const icon = document.querySelector('.date-icon-wrapper');
+
+let pickerOpen = false;
 
 icon.addEventListener('click', () => {
   if (typeof input.showPicker === 'function') {
-    input.showPicker();
+    if (!pickerOpen) {
+      input.showPicker();
+      pickerOpen = true;
+      input.addEventListener(
+        'blur',
+        () => {
+          pickerOpen = false;
+        },
+        { once: true }
+      );
+    } else {
+      input.blur();
+      pickerOpen = false;
+    }
   } else {
-    input.focus();
+    if (document.activeElement === input) {
+      input.blur();
+    } else {
+      input.focus();
+    }
   }
 });
 

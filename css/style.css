@@ -1546,10 +1546,14 @@ body.lock {
     max-width: 510px;
   }
 
+  .pricing-card--light .pricing-card__price {
+    margin: 0px 0 38px;
+  }
+
   .pricing-card__plan-title {
     font-size: 20px;
     line-height: 30px;
-    letter-spacing: 0.36em;
+    letter-spacing: 0.26em;
   }
 
   .pricing-card__amount {
@@ -1774,19 +1778,10 @@ body.lock {
     height: 105%;
   }
 
-  .header__switcher--dark::after {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 17px;
-    background-image: url('../images/dark-theme-icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  .header__switcher--dark svg {
     position: absolute;
-    top: 50%;
-    left: 47%;
-    transform: translate(-50%, -50%);
+    top: 23%;
+    left: 26%;
   }
 
   .header__switcher--light {
@@ -1797,19 +1792,10 @@ body.lock {
     height: 100%;
   }
 
-  .header__switcher--light::after {
-    content: '';
-    display: block;
-    width: 18px;
-    height: 18px;
-    background-image: url('../images/light-theme-icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  .header__switcher--light svg {
     position: absolute;
-    top: 50%;
-    left: 39%;
-    transform: translate(-50%, -50%);
+    top: 23%;
+    right: 32%;
   }
 
   /* Hero */
@@ -2382,7 +2368,6 @@ body.lock {
 
   .footer__contacts-block {
     gap: 22px;
-    align-items: center;
   }
 
   .footer__contacts-block-icon {
@@ -2468,14 +2453,16 @@ body.lock {
     height: 36px;
   }
 
-  .header__switcher--light::after {
-    width: 19px;
-    height: 19px;
+  .header__switcher--dark svg {
+    position: absolute;
+    top: 27%;
+    left: 29%;
   }
 
-  .header__switcher--dark::after {
-    width: 18px;
-    height: 18px;
+  .header__switcher--light svg {
+    position: absolute;
+    top: 26%;
+    right: 35%;
   }
 
   /* Hero */
@@ -2911,6 +2898,21 @@ body.lock {
     height: 45px;
   }
 
+  .header__switcher--dark svg {
+    width: 26px;
+    height: 26px;
+    top: 23%;
+    left: 26%;
+  }
+
+  .header__switcher--light svg {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 23%;
+    right: 32%;
+  }
+
   .header__button {
     display: flex;
     justify-content: center;
@@ -3163,7 +3165,7 @@ body.lock {
     width: 70px;
     height: 70px;
     bottom: 27px;
-    left: 72%;
+    left: 70%;
   }
 
   .slider--clients .swiper-slide__icon svg {
@@ -3195,7 +3197,7 @@ body.lock {
   }
 
   .pricing-card--dark {
-    padding: 32px 55px 48px 58px;
+    padding: 44px 55px 42px 58px;
   }
 
   .pricing-card__feature::before {
@@ -3226,6 +3228,10 @@ body.lock {
     font-size: 14px;
     font-weight: 700;
     line-height: 46px;
+  }
+
+  .pricing-card__features {
+    gap: 16px;
   }
 
   .pricing-card__feature {
@@ -3339,6 +3345,7 @@ body.lock {
 
   .footer__container {
     padding: 64px 93px 45px;
+    border-radius: 160px 160px 0 0;
   }
 
   .footer__intro-logo-image {
@@ -3369,7 +3376,7 @@ body.lock {
   }
 
   .footer__intro::after {
-    bottom: -73px;
+    bottom: -67px;
   }
 
   .footer__content {
@@ -3399,6 +3406,254 @@ body.lock {
     line-height: 46px;
     letter-spacing: 0.18em;
     margin-top: 93px;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* Header */
+
+  .header {
+    padding: 40px 64px;
+    gap: 122px;
+  }
+
+  .header__navbar-list {
+    gap: 64px;
+  }
+
+  /* Hero */
+
+  .hero {
+    padding: 67px 64px 158px;
+    gap: 134px;
+  }
+
+  .hero__title {
+    letter-spacing: 5px;
+  }
+
+  .hero .hero__subtitle {
+    font-size: 46px;
+    line-height: 69px;
+    margin: 28px 0;
+  }
+
+  .hero__text {
+    width: 90%;
+  }
+
+  .hero__button {
+    margin-top: 40px;
+  }
+
+  .hero__image-wrapper {
+    padding: 54px 18px 68px 41px;
+  }
+
+  /* Contacts */
+
+  .contacts {
+    margin: 42px 64px -80px;
+    top: -128px;
+  }
+
+  .contacts__address {
+    width: 37.5%;
+    padding: 45px 23px;
+  }
+
+  .contacts__communication {
+    width: 62.5%;
+    padding: 45px 34px;
+    gap: 102px;
+  }
+
+  .contacts__icon {
+    height: 78px;
+  }
+
+  /* About */
+
+  .about {
+    margin: 0px 64px;
+    padding: 10px 58px 0;
+    gap: 130px;
+  }
+
+  .section__title {
+    letter-spacing: 4.3px;
+  }
+
+  .section__subtitle {
+    font-size: 36px;
+    line-height: 54px;
+  }
+
+  .about__subtitle {
+    margin: 17px 0 31px;
+  }
+
+  .about__button {
+    margin-top: 54px;
+  }
+
+  .about__image-wrapper {
+    background-position-x: 78%;
+  }
+
+  .about__image {
+    transform: translateX(3%);
+  }
+
+  /* Our Rooms */
+
+  .our-rooms {
+    padding: 73px 64px 62px;
+    gap: 0 25px;
+  }
+
+  .our-rooms__image-gallery {
+    width: 90%;
+  }
+
+  .our-rooms__title,
+  .our-rooms__subtitle,
+  .our-rooms__accordion {
+    padding: 0;
+  }
+
+  .our-rooms__subtitle {
+    margin: 28px 0 41px;
+  }
+
+  .accordion__wrapper {
+    padding-bottom: 12px;
+  }
+
+  .accordion {
+    gap: 27px;
+  }
+
+  .our-rooms__accordion-content {
+    padding: 0px 32px 0 72px;
+  }
+
+  /* Care */
+
+  .care-container {
+    padding: 0 64px;
+  }
+
+  .care > *:not(:first-child) {
+    flex: 1 1 100%;
+    padding: 52px 34px;
+  }
+
+  .care__block-title {
+    font-size: 24px;
+    margin: 10px 0 10px;
+  }
+
+  .care__intro-subtitle {
+    margin: 19px 0 7px;
+  }
+
+  .care__intro-button {
+    width: 236px;
+  }
+
+  /* Clients Slider */
+
+  .slider--clients {
+    padding: 66px 64px 45px;
+  }
+
+  /* Pricing */
+
+  .pricing {
+    padding: 0px 64px 112px;
+  }
+
+  .pricing__subtitle {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 21px 0 18px;
+  }
+
+  .pricing__text {
+    width: 50%;
+    margin-bottom: 75px;
+  }
+
+  .pricing-card__amount {
+    line-height: 52px;
+  }
+
+  .pricing-card__period {
+    line-height: 36px;
+  }
+
+  /* Reviews */
+
+  .reviews {
+    padding: 0 64px;
+  }
+
+  .reviews__subtitle {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 23px 0 18px;
+  }
+
+  .slider-testimonials--pc {
+    margin-top: 83px;
+  }
+
+  .slider-testimonials--pc .swiper-slide__content {
+    height: 453px;
+    padding: 48px 46px 40px 42px;
+  }
+
+  /* Booking */
+
+  .booking {
+    padding: 86px 64px 122px;
+  }
+
+  .booking__container {
+    padding: 97px 111px 86px;
+    gap: 71px;
+  }
+
+  .booking__subtitle {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 23px 0 18px;
+  }
+
+  .booking__text {
+    width: 80%;
+  }
+
+  /* Footer */
+  .footer__container {
+    padding: 71px 103px 50px 62px;
+  }
+
+  .footer__content {
+    margin: 118px 0 0px;
+  }
+
+  .footer__plans {
+    width: 47%;
+  }
+
+  .footer__social {
+    width: 53%;
+  }
+
+  .footer__copyright--pc {
+    letter-spacing: 0.26em;
   }
 }
 
