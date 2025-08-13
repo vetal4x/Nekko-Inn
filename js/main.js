@@ -126,7 +126,7 @@ const testimonialsSwiperMobile = new Swiper(
   }
 );
 
-// Testimonial Slider Mobile PC
+// Testimonial Slider PC
 
 const testimonialsSwiperPc = new Swiper('.slider-testimonials--pc .swiper', {
   grabCursor: true,
@@ -149,6 +149,11 @@ const testimonialsSwiperPc = new Swiper('.slider-testimonials--pc .swiper', {
       slidesPerView: '3',
       centeredSlides: true,
       spaceBetween: 20,
+    },
+    1600: {
+      slidesPerView: '3',
+      centeredSlides: true,
+      spaceBetween: 30,
     },
   },
 });
