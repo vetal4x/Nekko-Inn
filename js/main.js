@@ -23,6 +23,18 @@ wrappers.forEach((wrapper) => {
   });
 });
 
+// Theme Switcher
+
+const themeSwitchers = document.querySelectorAll('.mobile-menu__theme-switcher, .header__theme-switcher');
+
+themeSwitchers.forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('mobile-menu__theme-switcher--active');
+    button.classList.toggle('header__theme-switcher--active');
+    document.body.dataset.theme = document.body.dataset.theme === 'light' ? '' : 'light';
+  });
+});
+
 // Sliders
 
 // Clients Slider
