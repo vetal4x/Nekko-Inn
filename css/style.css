@@ -130,7 +130,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 62px;
+  gap: 0;
 }
 
 .header::before {
@@ -320,10 +320,11 @@ body.lock {
 }
 
 .mobile-menu__navigation {
-  padding: 0 0 0 32px;
+  height: 100%;
+  padding: 100px 0 124px 32px;
   display: flex;
   flex-direction: column;
-  gap: 78px;
+  justify-content: space-between;
 }
 
 .mobile-menu__navigation li {
