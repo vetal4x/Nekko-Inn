@@ -1,3 +1,91 @@
+// GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Loader 
+
+// Header
+
+const headerTimeline = gsap.timeline()
+ .set('.header > *:not(.header__mobile-menu)', {
+    scale: 0.95,
+    opacity: 0,
+    filter: 'blur(2px)',
+  })
+  .to('.header > *:not(.header__mobile-menu)', {
+    scale: 1,
+    opacity: 1,
+    filter: 'blur(0px)',
+    duration: 1.5,
+    stagger: 0.1,
+    ease: 'power2.out',
+  });
+
+// Hero
+
+const heroTimeline = gsap.timeline()
+  .from('.hero__title', {
+    opacity: 0,
+    x: -15,
+    scale: 0.97,
+    duration: 1.2,
+    ease: 'power3.out',
+  }, 0.1)
+
+  .from('.hero__subtitle', {
+    opacity: 0,
+    x: -5,
+    duration: 1.2,
+    ease: 'power2.out',
+    onStart() {
+      this.targets().forEach(el => el.style.transformOrigin = 'left');
+    },
+    onUpdate() {
+      const progress = this.progress();
+      this.targets().forEach(
+        el => el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`
+      );
+    },
+    onComplete() {
+      this.targets().forEach(el => el.style.clipPath = 'inset(0 0 0 0)');
+    },
+  }, 0.1)
+
+  .from('.hero__text', {
+    opacity: 0,
+    y: 10,
+    duration: 1.5,
+    ease: 'power2.out',
+  }, 0.3)
+
+  .from('.hero__button', {
+    opacity: 0,
+    y: 10,
+    duration: 1,
+    ease: 'power2.out',
+  }, 0.5)
+
+  .from('.hero__image-main, .hero__image-main--pc, .hero__image-wrapper', {
+    opacity: 0,
+    scale: 0.98,
+    duration: 1.2,
+    ease: 'power2.out',
+  }, 0)
+
+  .from('.hero__image-small', {
+    opacity: 0,
+    scale: 0.6,
+    duration: 0.8,
+    ease: 'power2.out',
+    stagger: 0.15,
+  }, 0);
+
+// Master Timeline
+
+gsap.timeline()
+  .add(headerTimeline)
+  .add(heroTimeline, 0);
+
+
 // Hamburger
 
 const header = document.querySelector('.header');
@@ -25,13 +113,16 @@ wrappers.forEach((wrapper) => {
 
 // Theme Switcher
 
-const themeSwitchers = document.querySelectorAll('.mobile-menu__theme-switcher, .header__theme-switcher');
+const themeSwitchers = document.querySelectorAll(
+  '.mobile-menu__theme-switcher, .header__theme-switcher'
+);
 
-themeSwitchers.forEach(button => {
+themeSwitchers.forEach((button) => {
   button.addEventListener('click', () => {
     button.classList.toggle('mobile-menu__theme-switcher--active');
     button.classList.toggle('header__theme-switcher--active');
-    document.body.dataset.theme = document.body.dataset.theme === 'light' ? '' : 'light';
+    document.body.dataset.theme =
+      document.body.dataset.theme === 'light' ? '' : 'light';
   });
 });
 
