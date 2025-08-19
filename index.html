@@ -35,1952 +35,2021 @@
       defer
     ></script>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"
+      defer
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"
+      defer
+    ></script>
+
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <!---------- Header ---------->
+    <div class="wrapper">
+      <div class="content">
+        <div class="header-hero-wrapper">
+          <!---------- Header ---------->
 
-    <header class="header">
-      <div class="header__logo">
-        <img
-          src="images/logo--dark.png"
-          alt="Logo"
-          class="header__logo-image header__logo--dark"
-        />
-        <img
-          src="images/logo--light.png"
-          alt="Logo"
-          class="header__logo-image header__logo--light"
-        />
-      </div>
-      <nav class="header__navbar">
-        <ul class="header__navbar-list">
-          <li class="header__navbar-item">
-            <a href="#" class="header__navbar-item--link">About Us</a>
-          </li>
-          <li class="header__navbar-item">
-            <a href="#" class="header__navbar-item--link">Our Rooms</a>
-          </li>
-          <li class="header__navbar-item">
-            <a href="#" class="header__navbar-item--link">Purr Care</a>
-          </li>
-          <li class="header__navbar-item">
-            <a href="#" class="header__navbar-item--link">Testimonial</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header__buttons-wrapper">
-        <button class="header__theme-switcher" aria-label="Switch theme">
-          <svg
-            class="theme-switcher__icon theme-switcher__icon--dark"
-            width="34"
-            height="37"
-            viewBox="0 0 34 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.375 27.8289C16.2114 30.847 26.9037 12.451 16.3009 1.7085C25.631 1.95374 33.0926 9.37947 33.0926 18.5002C33.0926 27.7757 25.8513 35.2918 16.3009 35.2918C10.2766 35.2918 4.47097 32.3662 1.375 27.8289Z"
-              stroke="white"
-              stroke-width="2"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <svg
-            class="theme-switcher__icon theme-switcher__icon--light"
-            width="37"
-            height="37"
-            viewBox="0 0 37 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.22223 18.2225H5.07408M5.0742 31.704L8.92605 27.8521M18.5556 31.704V35.5558M28.1852 27.8521L32.037 31.704M5.07408 4.74101L8.92593 8.59286M32.037 18.2225H35.8889M28.1851 8.59286L32.0369 4.74101M18.5556 0.88916V4.74101M24.3333 18.2225C24.3333 21.4135 21.7465 24.0003 18.5556 24.0003C15.3646 24.0003 12.7778 21.4135 12.7778 18.2225C12.7778 15.0315 15.3646 12.4447 18.5556 12.4447C21.7465 12.4447 24.3333 15.0315 24.3333 18.2225Z"
-              stroke="#161616"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <button class="header__button button button--light">Book Now</button>
-      </div>
-
-      <!---------- Hamburger Button ---------->
-
-      <button class="header__hamburger" aria-label="Toggle menu">
-        <span class="header__hamburger-line header__hamburger-line--top"></span>
-        <span
-          class="header__hamburger-line header__hamburger-line--middle"
-        ></span>
-        <span
-          class="header__hamburger-line header__hamburger-line--bottom"
-        ></span>
-      </button>
-
-      <!---------- Mobile Menu ---------->
-
-      <div class="header__mobile-menu">
-        <button class="mobile-menu__theme-switcher" aria-label="Switch theme">
-          <svg
-            class="theme-switcher__icon theme-switcher__icon--dark"
-            width="34"
-            height="37"
-            viewBox="0 0 34 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.375 27.8289C16.2114 30.847 26.9037 12.451 16.3009 1.7085C25.631 1.95374 33.0926 9.37947 33.0926 18.5002C33.0926 27.7757 25.8513 35.2918 16.3009 35.2918C10.2766 35.2918 4.47097 32.3662 1.375 27.8289Z"
-              stroke="white"
-              stroke-width="2"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <svg
-            class="theme-switcher__icon theme-switcher__icon--light"
-            width="37"
-            height="37"
-            viewBox="0 0 37 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.22223 18.2225H5.07408M5.0742 31.704L8.92605 27.8521M18.5556 31.704V35.5558M28.1852 27.8521L32.037 31.704M5.07408 4.74101L8.92593 8.59286M32.037 18.2225H35.8889M28.1851 8.59286L32.0369 4.74101M18.5556 0.88916V4.74101M24.3333 18.2225C24.3333 21.4135 21.7465 24.0003 18.5556 24.0003C15.3646 24.0003 12.7778 21.4135 12.7778 18.2225C12.7778 15.0315 15.3646 12.4447 18.5556 12.4447C21.7465 12.4447 24.3333 15.0315 24.3333 18.2225Z"
-              stroke="#161616"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-
-        <ul class="mobile-menu__navigation">
-          <li>
-            <a href="index.html">About Us</a>
-          </li>
-          <li>
-            <a href="#">Our Rooms</a>
-          </li>
-          <li>
-            <a href="#">Purr Care</a>
-          </li>
-          <li>
-            <a href="#">Testimonial</a>
-          </li>
-        </ul>
-        <button class="mobile-button mobile-button--dark">Book Now</button>
-      </div>
-    </header>
-
-    <!---------- Main ---------->
-
-    <main class="main">
-      <!---------- Hero Section ---------->
-
-      <section class="hero">
-        <div class="hero__content-wrapper">
-          <span class="hero__title section__title"
-            >Where Feline Comfort Comes First</span
-          >
-          <h1 class="hero__subtitle section__subtitle">
-            Your 5 Stars Purr Inn
-          </h1>
-          <p class="hero__text section__text">
-            At NekoInn, we understand that your beloved feline companion
-            deserves the best care, even when you can't be there. That's why
-            we've created a haven designed specifically for cats, where every
-            whisker is cherished and every purr is celebrated. From cozy
-            accommodations to personalized attention, we strive to provide a
-            nurturing environment where your cat can relax, play, and thrive
-            while you're away. Welcome to NekoInn, where your cat's comfort and
-            happiness are our top priorities.
-          </p>
-          <button
-            class="hero__button button mobile-button mobile-button--light"
-          >
-            BOOK A PURR-SUITE
-          </button>
-        </div>
-        <div class="hero__image">
-          <div class="hero__image-wrapper">
-            <div class="hero__main-image-wrapper">
+          <header class="header">
+            <div class="header__logo">
               <img
-                src="images/hero-main-image.png"
-                alt="hero__image-main"
-                class="hero__image-main"
+                src="images/logo--dark.png"
+                alt="Logo"
+                class="header__logo-image header__logo--dark"
               />
               <img
-                src="images/hero-main-image-pc.png"
-                alt="hero__image-main"
-                class="hero__image-main--pc"
-              />
-
-              <img
-                src="images/hero-image1.png"
-                alt="hero__image-1"
-                class="hero__image-small hero__image-small--1"
-              />
-              <img
-                src="images/hero-image2.png"
-                alt="hero__image-2"
-                class="hero__image-small hero__image-small--2"
-              />
-              <img
-                src="images/hero-image3.png"
-                alt="hero__image-3"
-                class="hero__image-small hero__image-small--3"
-              />
-              <img
-                src="images/hero-image4.png"
-                alt="hero__image-4"
-                class="hero__image-small hero__image-small--4"
+                src="images/logo--light.png"
+                alt="Logo"
+                class="header__logo-image header__logo--light"
               />
             </div>
-          </div>
-        </div>
-      </section>
+            <nav class="header__navbar">
+              <ul class="header__navbar-list">
+                <li class="header__navbar-item">
+                  <a href="#" class="header__navbar-item--link">About Us</a>
+                </li>
+                <li class="header__navbar-item">
+                  <a href="#" class="header__navbar-item--link">Our Rooms</a>
+                </li>
+                <li class="header__navbar-item">
+                  <a href="#" class="header__navbar-item--link">Purr Care</a>
+                </li>
+                <li class="header__navbar-item">
+                  <a href="#" class="header__navbar-item--link">Testimonial</a>
+                </li>
+              </ul>
+            </nav>
 
-      <!---------- Contacts ---------->
-
-      <section class="contacts">
-        <div class="contacts__address">
-          <div class="contacts__icon contacts__icon--location">
-            <a href=""></a>
-            <img
-              src="images/location-icon.png"
-              alt=""
-              class="location__image"
-            />
-          </div>
-          <div class="contacts__text">
-            <a
-              href="https://maps.app.goo.gl/hSFimQPdxarbM1869"
-              target="_blank"
-              rel="noopener"
-            >
-              123 Meow Avenue. Kittyville, CA 90210 United States
-            </a>
-          </div>
-        </div>
-        <div class="contacts__communication">
-          <div class="contacts__phone">
-            <div class="contacts__icon contacts__icon--phone">
-              <img
-                src="images/phone-icon.png"
-                alt="Phone icon"
-                class="contacts__icon-image"
-              />
-            </div>
-            <div class="contacts__text">
-              <a href="tel:5555555555">(555) 555-5555</a>
-            </div>
-          </div>
-
-          <div class="contacts__email">
-            <div class="contacts__icon contacts__icon--email">
-              <img
-                src="images/email-icon.png"
-                alt="Email icon"
-                class="contacts__icon-image"
-              />
-            </div>
-            <div class="contacts__text">
-              <a href="mailto:info@neko-inn.com">info@neko-inn.com</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!---------- About Section ---------->
-
-      <section class="about">
-        <div class="about__content-wrapper">
-          <span class="about__title section__title">
-            Your Trusted Cat Retreat
-          </span>
-          <h2 class="about__subtitle section__subtitle">About NekoInn</h2>
-          <p class="about__text section__text">
-            NekoInn is more than a cat boarding facility; it's a home away from
-            home for your furry family members. Nestled in serene surroundings,
-            our inn offers a tranquil retreat for cats of all shapes, sizes, and
-            personalities. With a team of dedicated caregivers passionate about
-            feline welfare, we ensure every guest receives love, attention, and
-            comfort. Rest easy knowing your cat is in caring hands at NekoInn.
-          </p>
-          <button
-            class="about__button button mobile-button mobile-button--light"
-          >
-            BOOK NOW
-          </button>
-        </div>
-        <div class="about__image-wrapper">
-          <div class="about__image">
-            <picture>
-              <source
-                media="(min-width: 768px)"
-                srcset="images/about-image-pc.png"
-              />
-              <img
-                src="images/about-image.png"
-                alt=""
-                class="about__image--main"
-              />
-            </picture>
-          </div>
-        </div>
-      </section>
-
-      <!---------- Our Rooms Section ---------->
-
-      <section class="our-rooms">
-        <div class="our-rooms__image">
-          <img
-            src="images/our-rooms-image.png"
-            alt=""
-            class="our-rooms__image--main"
-          />
-        </div>
-        <div class="our-rooms__image-gallery">
-          <div class="image-gallery__images">
-            <div
-              class="image-gallery__image"
-              style="
-                background-image: url(images/image-gallery/accordion-image-1.png);
-              "
-            ></div>
-            <div
-              class="image-gallery__image"
-              style="
-                background-image: url(images/image-gallery/accordion-image-2.png);
-              "
-            ></div>
-            <div
-              class="image-gallery__image image-gallery__image--active"
-              style="
-                background-image: url(images/image-gallery/accordion-image-3.png);
-              "
-            ></div>
-            <div
-              class="image-gallery__image"
-              style="
-                background-image: url(images/image-gallery/accordion-image-4.png);
-              "
-            ></div>
-            <div
-              class="image-gallery__image"
-              style="
-                background-image: url(images/image-gallery/accordion-image-5.png);
-              "
-            ></div>
-            <div
-              class="image-gallery__image"
-              style="
-                background-image: url(images/image-gallery/accordion-image-6.png);
-              "
-            ></div>
-          </div>
-        </div>
-        <span class="our-rooms__title section__title">
-          perfectly Tailored for Your Feline Friend
-        </span>
-        <h2 class="our-rooms__subtitle section__subtitle">Our Rooms</h2>
-        <div class="our-rooms__accordion accordion">
-          <div class="accordion__wrapper active">
-            <div class="our-rooms__accordion-label">
-              <div class="accordion-label__icon">
+            <div class="header__buttons-wrapper">
+              <button class="header__theme-switcher" aria-label="Switch theme">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  stroke-linejoin="round"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                  />
-                </svg>
-              </div>
-              <h4 class="accordion-label__title">
-                Cozy Corners: Where Comfort Meets Contentment
-              </h4>
-            </div>
-            <p class="our-rooms__accordion-content">
-              NekoInn is more than a cat boarding facility; it's a home away
-              from home for your furry family members. Nestled in serene
-              surroundings, our inn offers a tranquil retreat for cats of all
-              shapes, sizes, and personalities. With a team of dedicated
-              caregivers passionate about feline welfare, we ensure every guest
-              receives love, attention, and comfort. Rest easy knowing your cat
-              is in caring hands at NekoInn.
-            </p>
-          </div>
-          <div class="accordion__wrapper">
-            <div class="our-rooms__accordion-label">
-              <div class="accordion-label__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  stroke-linejoin="round"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                  />
-                </svg>
-              </div>
-              <h4 class="accordion-label__title">
-                Palatial Purrfections: Opulence for Discerning Cats
-              </h4>
-            </div>
-            <p class="our-rooms__accordion-content">
-              At NekoInn, luxury isn't just for humans. Our palatial suites are
-              designed with the refined feline in mind — complete with plush
-              bedding, climbing structures, and panoramic views. From gourmet
-              meals to personalized play sessions, we cater to the tastes of
-              even the most selective cats. Every detail is curated to provide
-              an atmosphere of elegance, comfort, and indulgence.
-            </p>
-          </div>
-          <div class="accordion__wrapper">
-            <div class="our-rooms__accordion-label">
-              <div class="accordion-label__icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="1"
-                  stroke-linejoin="round"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                  />
-                </svg>
-              </div>
-              <h4 class="accordion-label__title">
-                Tailored Tranquility: Personalized Care for Every Cat
-              </h4>
-            </div>
-            <p class="our-rooms__accordion-content">
-              No two cats are alike, and at NekoInn, we celebrate their
-              individuality. Whether your feline friend is playful and energetic
-              or calm and shy, our caregivers adapt each experience to suit
-              their unique needs. With one-on-one attention, custom routines,
-              and familiar comforts, we ensure your cat feels truly at home.
-              Their peace of mind — and yours — is our top priority.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!---------- Care Section ---------->
-
-      <div class="care-container">
-        <section class="care">
-          <div class="care__intro">
-            <span class="care__intro-title section__title"
-              >Dedicated Care for Every Purrsonality</span
-            >
-            <h2 class="care__intro-subtitle section__subtitle">Purr Care</h2>
-            <p class="care__intro-text section__text">
-              Experience top-notch feline care with our Purr Care services. From
-              grooming to playtime, we provide personalized attention to ensure
-              your cat's happiness and well-being at NekoInn.
-            </p>
-            <button
-              class="care__intro-button button mobile-button mobile-button--dark"
-            >
-              Book Now
-            </button>
-          </div>
-
-          <div class="care__block">
-            <div class="care__block-image">
-              <img src="images/care-image-1.png" alt="" class="block-image" />
-            </div>
-            <span class="care__block-title">Grooming Spa:</span>
-            <p class="care__block-text">
-              Indulge your cat in a pampering experience at our Grooming Spa.
-              Our skilled groomers provide gentle care and attention, from
-              luxurious baths to expert grooming sessions, leaving your cat
-              looking and feeling their best.
-            </p>
-          </div>
-          <div class="care__block">
-            <div class="care__block-image">
-              <img src="images/care-image-2.png" alt="" class="block-image" />
-            </div>
-            <span class="care__block-title">Playtime Paradise:</span>
-            <p class="care__block-text">
-              Let your cat unleash their playful side in our Playtime Paradise.
-              With a variety 7of engaging toys, climbing structures, and
-              interactive games, our supervised play sessions offer the perfect
-              opportunity for your cat to exercise, socialize, and have fun.
-            </p>
-          </div>
-          <div class="care__block">
-            <div class="care__block-image">
-              <img src="images/care-image-3.png" alt="" class="block-image" />
-            </div>
-            <span class="care__block-title">Gourmet Dining:</span>
-            <p class="care__block-text">
-              Treat your cat's taste buds to a culinary delight with our Gourmet
-              Dining service. From premium cat cuisine to customized meal plans
-              tailored to their dietary needs, our gourmet chefs ensure that
-              every meal is both delicious and nutritious.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <!---------- Clients Slider ---------->
-
-      <section class="slider slider--clients">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-1.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-2.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-3.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-4.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-5.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-6.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-1.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-2.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-3.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-4.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-5.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__content">
-                <img
-                  src="images/slider/slider-image-6.png"
-                  alt=""
-                  class="swiper-slide__image"
-                />
-                <div class="swiper-slide__icon">
-                  <svg
-                    width="77.016357"
-                    height="75.030823"
-                    viewBox="0 0 77.0164 75.0308"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs />
-                    <path
-                      id="Vector"
-                      d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
-                      stroke="#FFFFFF"
-                      stroke-opacity="1.000000"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="button-prev slider-button clients-button-prev">
-          <svg
-            width="23"
-            height="19"
-            viewBox="0 0 23 19"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.875 9.5L22.125 9.5M0.875 9.5L9.375 1M0.875 9.5L9.375 18"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-
-        <div class="button-next slider-button clients-button-next">
-          <svg
-            width="23"
-            height="19"
-            viewBox="0 0 23 19"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22.125 9.5L0.875 9.5M22.125 9.5L13.625 18M22.125 9.5L13.625 1"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-      </section>
-
-      <!--------- Pricing Section ---------->
-
-      <section class="pricing">
-        <span class="pricing__title section__title"
-          >Transparent Rates for your purry companion</span
-        >
-        <h2 class="pricing__subtitle section__subtitle">Pricing</h2>
-        <p class="pricing__text section__text">
-          In our Pricing Section, transparency meets affordability. At NekoInn,
-          we believe in straightforward pricing, ensuring you have peace of mind
-          knowing exactly what to expect.
-        </p>
-        <div class="pricing__cards">
-          <div class="pricing-card pricing-card--dark">
-            <div class="pricing-card__plan">
-              <span
-                class="pricing-card__plan-title pricing-card__plan-title--dark"
-                >Purr Ducal</span
-              >
-              <div class="pricing-card__plan-icon">
-                <svg
-                  width="57.000000"
-                  height="47.367798"
-                  viewBox="0 0 57 47.3678"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs />
-                  <path
-                    id="Vector"
-                    d="M51.36 10.58C48.25 10.58 45.72 13.1 45.72 16.21C45.72 18.29 46.88 20.09 48.56 21.07L41.59 23.57L30.82 10.76C32.78 9.88 34.16 7.91 34.16 5.63C34.16 2.52 31.63 0 28.53 0C25.42 0 22.9 2.52 22.9 5.63C22.9 7.89 24.25 9.84 26.18 10.73L15.39 23.57L8.42 21.06C10.1 20.09 11.26 18.28 11.26 16.2C11.26 13.1 8.73 10.57 5.62 10.57C2.52 10.57 0 13.1 0 16.2C0 18.85 1.84 21.05 4.29 21.66L4.29 37.71L4.29 37.94C4.29 37.98 4.31 38.01 4.31 38.05C4.32 38.09 4.31 38.13 4.31 38.18C4.33 38.24 4.36 38.29 4.38 38.35C4.4 38.41 4.42 38.48 4.45 38.54C4.49 38.64 4.56 38.72 4.62 38.8C4.65 38.84 4.66 38.89 4.7 38.91C7.63 43.21 26.21 43.35 28.49 43.35C30.78 43.35 49.36 43.22 52.29 38.91C52.33 38.88 52.34 38.83 52.37 38.8C52.43 38.72 52.5 38.64 52.54 38.54C52.57 38.48 52.59 38.42 52.61 38.35C52.63 38.3 52.66 38.24 52.68 38.18C52.68 38.13 52.67 38.09 52.68 38.05C52.68 38.01 52.69 37.98 52.69 37.94L52.69 37.71L52.69 21.66C55.16 21.05 57 18.85 57 16.2C56.99 13.1 54.46 10.58 51.36 10.58ZM28.49 40.61C21.27 40.61 15.84 40.03 12.23 39.31C9.53 38.78 7.85 38.18 7.21 37.71C7.66 37.38 8.66 36.97 10.18 36.57C11.77 36.16 13.95 35.75 16.7 35.43C19.87 35.06 23.8 34.81 28.49 34.81C33.17 34.81 37.1 35.06 40.27 35.43C43.02 35.75 45.2 36.16 46.8 36.57C48.31 36.97 49.31 37.38 49.76 37.71C49.13 38.18 47.44 38.78 44.74 39.31C41.13 40.03 35.71 40.61 28.49 40.61ZM40.99 32.77L32.54 29.74L40.72 26.8L46.53 33.71C44.83 33.31 42.92 33 40.99 32.77ZM31.03 32.11C29.8 32.08 28.89 32.07 28.49 32.07C28.08 32.07 27.17 32.08 25.94 32.11L28.49 31.2L31.03 32.11ZM15.99 32.77C14.05 33 12.14 33.31 10.44 33.71L16.25 26.8L24.43 29.74L15.99 32.77ZM49.95 23.48L49.95 33.51L43.47 25.81L49.95 23.48ZM25.63 5.63C25.63 4.04 26.93 2.74 28.53 2.74C30.12 2.74 31.42 4.04 31.42 5.63C31.42 7.22 30.12 8.52 28.53 8.52C26.93 8.52 25.63 7.22 25.63 5.63ZM28.49 12.24L38.84 24.56L28.49 28.28L18.13 24.56L28.49 12.24ZM13.5 25.81L7.03 33.51L7.03 23.48L13.5 25.81ZM2.73 16.21C2.73 14.61 4.02 13.31 5.62 13.31C7.21 13.31 8.51 14.61 8.51 16.21C8.51 17.8 7.21 19.1 5.62 19.1C4.02 19.1 2.73 17.8 2.73 16.21ZM51.36 19.1C49.76 19.1 48.46 17.8 48.46 16.21C48.46 14.61 49.76 13.31 51.36 13.31C52.95 13.31 54.25 14.61 54.25 16.21C54.25 17.8 52.95 19.1 51.36 19.1ZM52.41 42.84C52.74 43.52 52.45 44.34 51.77 44.68C49.03 46.01 40.77 47.36 28.49 47.36C16.38 47.36 7.83 45.74 5.29 44.72C4.59 44.44 4.25 43.64 4.53 42.93C4.81 42.23 5.62 41.9 6.31 42.17C8.3 42.97 16.33 44.62 28.49 44.62C41.07 44.62 48.59 43.18 50.58 42.22C51.25 41.88 52.07 42.16 52.41 42.84Z"
-                    fill="#C75E90"
-                    fill-opacity="1.000000"
-                    fill-rule="nonzero"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="pricing-card__price">
-              <span class="pricing-card__amount">$160.99</span>
-              <span class="pricing-card__period">per day</span>
-            </div>
-            <ul class="pricing-card__features">
-              <li class="pricing-card__feature">Standard Room Accommodation</li>
-              <li class="pricing-card__feature">Basic Grooming</li>
-              <li class="pricing-card__feature">Group Playtime</li>
-              <li class="pricing-card__feature">Standard Meal Plan</li>
-              <li class="pricing-card__feature">Daily Wellness Check</li>
-            </ul>
-            <button
-              class="pricing__button button mobile-button mobile-button--light"
-            >
-              BOOK NOW
-            </button>
-          </div>
-
-          <div class="pricing-card pricing-card--light">
-            <div class="pricing-card__plan">
-              <span
-                class="pricing-card__plan-title pricing-card__plan-title--light"
-                >Purr Imperial</span
-              >
-              <div class="pricing-card__plan-icon">
-                <svg
-                  width="66.000000"
-                  height="52.100220"
-                  viewBox="0 0 66 52.1002"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <defs />
-                  <path
-                    id="Vector"
-                    d="M66 29.46C66 23.37 62.7 17.75 57.4 14.79C55.29 13.62 52.94 12.95 50.53 12.78C50.08 12.36 49.6 11.97 49.09 11.62C46.19 9.62 42.77 9.14 39.58 9.94L38.37 7.03L40.03 3.04L34.99 6.2C34.77 5.68 34.35 5.26 33.83 5.04L36.98 0L33 1.66L29.01 0L32.16 5.04C31.64 5.26 31.22 5.68 31 6.2L25.96 3.04L27.62 7.03L26.41 9.93C23.21 9.13 19.79 9.62 16.9 11.62C16.41 11.95 15.96 12.33 15.53 12.73C12.95 12.78 10.41 13.49 8.16 14.81C3.12 17.78 0 23.39 0 29.46C0 31.21 0.25 32.93 0.73 34.47C1.31 37.22 2.89 40.09 4.96 42.91L4.96 52.1L61 52.1L61 42.61C63.03 39.94 64.58 37.23 65.14 34.63C65.72 32.95 66 31.21 66 29.46ZM47.37 14.11C50.84 16.53 53 21.16 53 26.21C53 27.69 52.82 29.14 52.43 30.64C51.79 34.27 49.38 38.25 46.44 41.98L45.44 41.98C48.47 38.18 51.06 34.04 51.72 30.33C52.07 29.01 52.24 27.63 52.24 26.21C52.24 21.4 50.21 17.01 46.94 14.73C45.5 13.74 43.96 13.24 42.36 13.24C39.66 13.24 37.1 14.75 35.23 17.34C35.01 17.21 34.8 17.03 34.57 16.94C37.81 12.46 43.19 11.22 47.37 14.11ZM43.49 41.98L39.35 41.98C40.2 39.4 40.72 36.24 40.72 32.71C40.72 26.16 39.01 20.8 36.43 18.26C38.94 14.77 42.9 13.79 46.09 15.98C48.95 17.98 50.73 21.89 50.73 26.21C50.73 27.5 50.58 28.76 50.25 30.01C49.57 33.8 46.73 38.1 43.49 41.98ZM34.99 7.87L38.65 10.16C37.56 10.53 36.53 11.09 35.55 11.77L33.84 9.02C34.36 8.81 34.77 8.39 34.99 7.87ZM33 19.67C34.91 19.67 37.68 24.75 37.68 32.71C37.68 36.56 37.03 39.71 36.15 41.97L36.26 41.98L28.21 41.98L29.81 41.83C28.95 39.58 28.32 36.49 28.32 32.71C28.33 24.75 31.09 19.67 33 19.67ZM26.64 41.98L22.5 41.98C19.28 38.14 16.48 33.89 15.82 30.2C15.45 28.77 15.28 27.5 15.28 26.21C15.28 21.9 17.07 17.98 19.95 15.98C23.11 13.78 27.07 14.77 29.6 18.25C27.01 20.8 25.3 26.15 25.3 32.71C25.29 36.23 25.79 39.4 26.64 41.98ZM31.01 7.87C31.23 8.39 31.65 8.81 32.16 9.03L30.46 11.77C29.48 11.09 28.44 10.53 27.36 10.16L31.01 7.87ZM18.64 14.11C20.17 13.05 21.9 12.49 23.64 12.49C26.6 12.49 29.41 14.13 31.44 16.94C31.2 17.03 31 17.21 30.78 17.34C28.9 14.75 26.33 13.24 23.64 13.24C22.04 13.24 20.5 13.74 19.08 14.73C15.8 17.01 13.76 21.41 13.76 26.21C13.76 27.63 13.94 29.01 14.33 30.52C14.98 34.14 17.54 38.22 20.55 41.98L19.58 41.98C16.64 38.22 14.21 34.2 13.56 30.53C13.19 29.12 13 27.66 13 26.21C13 21.16 15.16 16.53 18.64 14.11ZM3.04 29.46C3.04 24.46 5.6 19.84 9.7 17.42C10.66 16.87 11.67 16.44 12.72 16.16C10.97 19.02 9.96 22.53 9.96 26.21C9.96 27.93 10.18 29.63 10.59 31.17C11.21 34.7 13.24 38.43 15.8 41.98L8.11 41.98C5.93 39.19 4.24 36.36 3.68 33.71C3.26 32.34 3.04 30.9 3.04 29.46ZM21.22 48.93L13.09 48.93L13.09 45.91L21.22 45.91L21.22 48.93ZM37.07 48.93L28.94 48.93L28.94 45.91L37.07 45.91L37.07 48.93ZM52.91 48.93L44.79 48.93L44.79 45.91L52.91 45.91L52.91 48.93ZM62.25 33.84C61.68 36.43 59.93 39.23 57.65 41.98L50.23 41.98C52.76 38.46 54.78 34.78 55.4 31.3C55.82 29.66 56.04 27.94 56.04 26.21C56.04 22.62 55.08 19.2 53.42 16.38C54.27 16.66 55.12 16.99 55.92 17.44C60.27 19.86 62.96 24.47 62.96 29.46C62.96 30.9 62.73 32.32 62.25 33.84Z"
-                    fill="#FFFFFF"
-                    fill-opacity="1.000000"
-                    fill-rule="nonzero"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="pricing-card__price">
-              <span class="pricing-card__amount">$600.99</span>
-              <span class="pricing-card__period">per day</span>
-            </div>
-            <ul class="pricing-card__features">
-              <li class="pricing-card__feature">
-                Presidential Suite Accommodation
-              </li>
-              <li class="pricing-card__feature">Deluxe Spa Grooming Package</li>
-              <li class="pricing-card__feature">
-                Exclusive One-on-One Playtime
-              </li>
-              <li class="pricing-card__feature">Gourmet Meal Plan</li>
-              <li class="pricing-card__feature">24/7 Concierge Service</li>
-            </ul>
-            <button
-              class="pricing__button button mobile-button mobile-button--dark"
-            >
-              BOOK NOW
-            </button>
-          </div>
-
-          <div class="pricing-card pricing-card--dark">
-            <div class="pricing-card__plan">
-              <span
-                class="pricing-card__plan-title pricing-card__plan-title--dark"
-                >Purr Royal</span
-              >
-              <div class="pricing-card__plan-icon">
-                <svg
-                  width="57"
-                  height="49"
-                  viewBox="0 0 57 49"
+                  class="theme-switcher__icon theme-switcher__icon--dark"
+                  width="34"
+                  height="37"
+                  viewBox="0 0 34 37"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M31.6664 25.0056C31.6664 23.2612 30.2468 21.845 28.504 21.845C26.7605 21.845 25.3434 23.2612 25.3434 25.0056C25.3434 26.7465 26.7605 28.1661 28.504 28.1661C30.2471 28.1661 31.6664 26.7465 31.6664 25.0056ZM28.5027 25.5951C28.1786 25.5951 27.9135 25.3306 27.9135 25.0059C27.9135 24.6811 28.177 24.4167 28.5027 24.4167C28.8281 24.4167 29.0925 24.6811 29.0925 25.0059C29.0925 25.3306 28.8265 25.5951 28.5027 25.5951ZM53.841 11.6266C52.0966 11.6266 50.6805 13.0421 50.6805 14.7871C50.6805 15.4646 50.8983 16.0865 51.2595 16.603L38.4799 26.5293L29.8084 6.94259C30.8998 6.44038 31.6598 5.34866 31.6598 4.07314C31.6598 2.32811 30.2436 0.912598 28.5008 0.912598C26.7573 0.912598 25.3396 2.32811 25.3396 4.07314C25.3396 5.34898 26.1031 6.44038 27.1926 6.94259L18.5528 26.4586L5.7427 16.6026C6.10427 16.0861 6.32205 15.4643 6.32205 14.7868C6.32205 13.0418 4.90431 11.6263 3.16055 11.6263C1.41774 11.6266 0 13.0421 0 14.7871C0 16.529 1.41774 17.948 3.16055 17.948C3.22912 17.948 3.29451 17.9312 3.36149 17.928L12.4558 41.4185C12.6476 41.914 13.1238 42.2387 13.6536 42.2387H43.3464C43.8804 42.2387 44.354 41.9172 44.5435 41.4185L53.6385 17.928C53.7055 17.9312 53.7706 17.948 53.8375 17.948C55.5839 17.948 57 16.5293 57 14.7871C57.0035 13.0421 55.5839 11.6266 53.841 11.6266ZM28.5027 3.48395C28.8268 3.48395 29.0925 3.74776 29.0925 4.07314C29.0925 4.39885 28.8281 4.66233 28.5027 4.66233C28.177 4.66233 27.9135 4.39885 27.9135 4.07314C27.9132 3.74744 28.1786 3.48395 28.5027 3.48395ZM28.5027 10.3368L36.3911 28.1563L28.6119 34.1961L20.6512 28.0725L28.5027 10.3368ZM2.57453 14.7871C2.57453 14.4633 2.83833 14.1979 3.16467 14.1979C3.49038 14.1979 3.75386 14.4617 3.75386 14.7871C3.75386 15.1128 3.49006 15.3763 3.16467 15.3763C2.83833 15.3763 2.57453 15.1109 2.57453 14.7871ZM17.484 28.8794L13.6828 37.464L7.33821 21.073L17.484 28.8794ZM15.5186 39.6671L19.5814 30.4934L26.5135 35.8272L21.5702 39.6674H15.5186V39.6671ZM25.7612 39.6671L28.6189 37.4475L31.5077 39.6671H25.7612ZM35.393 39.4125L30.7188 35.8167L37.4621 30.5768L41.4884 39.6671H35.646C35.5755 39.5734 35.4917 39.4896 35.393 39.4125ZM43.3213 37.464L39.5548 28.9528L49.651 21.1073L43.3213 37.464ZM53.841 15.3763C53.5195 15.3763 53.2519 15.1128 53.2519 14.7871C53.2519 14.4617 53.5131 14.1979 53.841 14.1979C54.1693 14.1979 54.4318 14.4617 54.4318 14.7871C54.4318 15.1128 54.1693 15.3763 53.841 15.3763ZM44.5016 46.8018C44.5016 47.5116 43.9258 48.0875 43.2156 48.0875H13.7876C13.0777 48.0875 12.5019 47.5119 12.5019 46.8018C12.5019 46.0917 13.0777 45.5161 13.7876 45.5161H43.2156C43.9289 45.5161 44.5016 46.092 44.5016 46.8018Z"
-                    fill="#C75E90"
+                    d="M1.375 27.8289C16.2114 30.847 26.9037 12.451 16.3009 1.7085C25.631 1.95374 33.0926 9.37947 33.0926 18.5002C33.0926 27.7757 25.8513 35.2918 16.3009 35.2918C10.2766 35.2918 4.47097 32.3662 1.375 27.8289Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linejoin="round"
                   />
                 </svg>
-              </div>
+
+                <svg
+                  class="theme-switcher__icon theme-switcher__icon--light"
+                  width="37"
+                  height="37"
+                  viewBox="0 0 37 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.22223 18.2225H5.07408M5.0742 31.704L8.92605 27.8521M18.5556 31.704V35.5558M28.1852 27.8521L32.037 31.704M5.07408 4.74101L8.92593 8.59286M32.037 18.2225H35.8889M28.1851 8.59286L32.0369 4.74101M18.5556 0.88916V4.74101M24.3333 18.2225C24.3333 21.4135 21.7465 24.0003 18.5556 24.0003C15.3646 24.0003 12.7778 21.4135 12.7778 18.2225C12.7778 15.0315 15.3646 12.4447 18.5556 12.4447C21.7465 12.4447 24.3333 15.0315 24.3333 18.2225Z"
+                    stroke="#161616"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <button class="header__button button button--light">
+                Book Now
+              </button>
             </div>
-            <div class="pricing-card__price">
-              <span class="pricing-card__amount">$299.99</span>
-              <span class="pricing-card__period">per day</span>
-            </div>
-            <ul class="pricing-card__features">
-              <li class="pricing-card__feature">Luxury Suite Accommodation</li>
-              <li class="pricing-card__feature">Deluxe Grooming Package</li>
-              <li class="pricing-card__feature">Private Playtime</li>
-              <li class="pricing-card__feature">Premium Meal Plan</li>
-              <li class="pricing-card__feature">VIP Wellness Check</li>
-            </ul>
-            <button
-              class="pricing__button button mobile-button mobile-button--light"
-            >
-              BOOK NOW
+
+            <!---------- Hamburger Button ---------->
+
+            <button class="header__hamburger" aria-label="Toggle menu">
+              <span
+                class="header__hamburger-line header__hamburger-line--top"
+              ></span>
+              <span
+                class="header__hamburger-line header__hamburger-line--middle"
+              ></span>
+              <span
+                class="header__hamburger-line header__hamburger-line--bottom"
+              ></span>
             </button>
-          </div>
-        </div>
-      </section>
 
-      <!---------- Reviews Section ---------->
+            <!---------- Mobile Menu ---------->
 
-      <section class="reviews">
-        <div class="reviews-container">
-          <span class="reviews__title section__title"
-            >Pawsitive Reviews from Happy Customers</span
-          >
-          <h2 class="reviews__subtitle section__subtitle">
-            They Celebrate NekoInn
-          </h2>
-          <p class="reviews__text section__text">
-            Discover what our clients have to say about their experiences at
-            NekoInn. Their testimonials speak volumes about the exceptional care
-            and service we provide for their beloved feline companions.
-          </p>
-        </div>
-
-        <!-- Testimonials Slider Mobile -->
-
-        <div class="slider slider-testimonials--mobile">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    Leaving my cat at NekoInn was the best decision I ever made.
-                    The staff went above and beyond to ensure that my furry
-                    friend felt loved and cared for. I received regular updates
-                    and photos, which put my mind at ease during my time away.
-                    Thank you, NekoInn, for providing such a wonderful home away
-                    from home for my cat!
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-1.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Emily S</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    I cannot recommend NekoInn enough! From the moment I walked
-                    in, I knew my cat would be in good hands. The facilities are
-                    clean and spacious, and the staff is incredibly friendly and
-                    attentive. My cat came back home relaxed and happy, and I
-                    will definitely be using NekoInn for all my future boarding
-                    needs.
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-2.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Mark T</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    NekoInn made the experience so much easier. Their
-                    personalized care and attention to detail set them apart
-                    from other boarding facilities. I loved receiving updates
-                    and photos of my cat enjoying her stay. I have complete
-                    peace of mind knowing she's in the care of such dedicated
-                    professionals. Thank you, NekoInn!
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-3.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Linda R</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="button-prev slider-button testimonials-button-prev testimonials-button-prev--mobile"
-          >
-            <svg
-              width="23"
-              height="19"
-              viewBox="0 0 23 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.875 9.5L22.125 9.5M0.875 9.5L9.375 1M0.875 9.5L9.375 18"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-
-          <div
-            class="button-next slider-button testimonials-button-next testimonials-button-next--mobile"
-          >
-            <svg
-              width="23"
-              height="19"
-              viewBox="0 0 23 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M22.125 9.5L0.875 9.5M22.125 9.5L13.625 18M22.125 9.5L13.625 1"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Testimonials Slider Big  -->
-
-        <div class="slider slider-testimonials--pc">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    Leaving my cat at NekoInn was the best decision I ever made.
-                    The staff went above and beyond to ensure that my furry
-                    friend felt loved and cared for. I received regular updates
-                    and photos, which put my mind at ease during my time away.
-                    Thank you, NekoInn, for providing such a wonderful home away
-                    from home for my cat!
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-1.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Emily S</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    I cannot recommend NekoInn enough! From the moment I walked
-                    in, I knew my cat would be in good hands. The facilities are
-                    clean and spacious, and the staff is incredibly friendly and
-                    attentive. My cat came back home relaxed and happy, and I
-                    will definitely be using NekoInn for all my future boarding
-                    needs.
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-2.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Mark T</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    NekoInn made the experience so much easier. Their
-                    personalized care and attention to detail set them apart
-                    from other boarding facilities. I loved receiving updates
-                    and photos of my cat enjoying her stay. I have complete
-                    peace of mind knowing she's in the care of such dedicated
-                    professionals. Thank you, NekoInn!
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-3.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Linda R</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    Leaving my cat at NekoInn was the best decision I ever made.
-                    The staff went above and beyond to ensure that my furry
-                    friend felt loved and cared for. I received regular updates
-                    and photos, which put my mind at ease during my time away.
-                    Thank you, NekoInn, for providing such a wonderful home away
-                    from home for my cat!
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-1.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Emily S</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    I cannot recommend NekoInn enough! From the moment I walked
-                    in, I knew my cat would be in good hands. The facilities are
-                    clean and spacious, and the staff is incredibly friendly and
-                    attentive. My cat came back home relaxed and happy, and I
-                    will definitely be using NekoInn for all my future boarding
-                    needs.
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-2.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Mark T</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="swiper-slide__content">
-                  <div class="swiper-slide__icon">
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                    <svg
-                      width="32"
-                      height="68"
-                      viewBox="0 0 32 68"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
-                        stroke="#C75E90"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <p class="swiper-slide__text">
-                    NekoInn made the experience so much easier. Their
-                    personalized care and attention to detail set them apart
-                    from other boarding facilities. I loved receiving updates
-                    and photos of my cat enjoying her stay. I have complete
-                    peace of mind knowing she's in the care of such dedicated
-                    professionals. Thank you, NekoInn!
-                  </p>
-                  <div class="swiper-slide__author">
-                    <img
-                      src="images/testimonials/testimonials-image-3.png"
-                      alt=""
-                      class="swiper-slide__author-image"
-                    />
-                    <span class="swiper-slide__author-name">Linda R</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            class="button-prev slider-button testimonials-button-prev testimonials-button-prev--pc"
-          >
-            <svg
-              width="23"
-              height="19"
-              viewBox="0 0 23 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.875 9.5L22.125 9.5M0.875 9.5L9.375 1M0.875 9.5L9.375 18"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-
-          <div
-            class="button-next slider-button testimonials-button-next testimonials-button-next--pc"
-          >
-            <svg
-              width="23"
-              height="19"
-              viewBox="0 0 23 19"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M22.125 9.5L0.875 9.5M22.125 9.5L13.625 18M22.125 9.5L13.625 1"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
-      </section>
-
-      <!---------- Booking Section ---------->
-
-      <section class="booking">
-        <div class="booking__container">
-          <div class="booking__header">
-            <span class="booking__title section__title"
-              >Secure Your Cat's Stay Today</span
-            >
-            <h2 class="booking__subtitle section__subtitle">Book Now</h2>
-            <p class="booking__text section__text">
-              Ready to reserve your cat's spot at NekoInn? Our easy-to-use
-              booking system makes it simple to schedule your cat's stay with
-              us. Just select your desired dates, choose from our range of
-              accommodations and services, and complete your reservation in a
-              few easy steps.
-            </p>
-          </div>
-
-          <form action="#" method="post" class="booking__form">
-            <div class="booking__field">
-              <label for="full-name" class="booking__label">Full Name</label>
-              <input
-                type="text"
-                id="full-name"
-                name="full-name"
-                class="booking__input booking__input--full-name"
-                placeholder="Eg. Jane Doe"
-                required
-              />
-            </div>
-
-            <div class="booking__field">
-              <label for="booking-email" class="booking__label">Email</label>
-              <input
-                type="email"
-                id="booking-email"
-                name="email"
-                class="booking__input booking__input--email"
-                placeholder="Eg. janedoe@gmail.com"
-                required
-              />
-            </div>
-
-            <div class="booking__field">
-              <label for="phone" class="booking__label">Phone number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                class="booking__input booking__input--phone"
-                placeholder="Eg. 100-616-6060"
-                pattern="^\+?[0-9\s\-]{7,20}$"
-                required
-              />
-            </div>
-
-            <div class="booking__field">
-              <label for="cat-name" class="booking__label">Cat Name</label>
-              <input
-                type="text"
-                id="cat-name"
-                name="cat-name"
-                class="booking__input booking__input--cat-name"
-                placeholder="Eg. Timothy"
-              />
-            </div>
-
-            <div class="booking__field">
-              <label for="date" class="booking__label">Pick a date</label>
-              <div class="date-wrapper">
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  class="booking__input booking__input--date"
-                  required
-                />
-                <div class="date-icon-wrapper">
-                  <svg
-                    width="25"
-                    height="29"
-                    viewBox="0 0 25 29"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M22.1077 20.7623L19.3626 18.0172M8.12492 13.0417H0.833252M24.1666 10.125V7.20833C24.1666 5.5975 22.8607 4.29167 21.2499 4.29167H3.74992C2.13909 4.29167 0.833252 5.5975 0.833252 7.20833V24.7083C0.833252 26.3192 2.13909 27.625 3.74992 27.625H8.12492M16.8749 1.375V7.20833M8.12492 1.375V7.20833M12.4999 27.625V24.8799L21.4215 15.9583L24.1666 18.7034L15.245 27.625H12.4999Z"
-                      stroke="white"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="booking__field">
-              <label for="pets-qty" class="booking__label">How Many Pets</label>
-              <input
-                type="number"
-                id="pets-qty"
-                name="pets-qty"
-                min="1"
-                max="10"
-                step="1"
-                class="booking__input booking__input--pets-qty"
-                placeholder="1"
-              />
-            </div>
-
-            <div class="booking__field">
-              <label for="plan" class="booking__label">Select pet</label>
-              <select
-                id="plan"
-                class="booking__input booking__input--plan"
-                required
+            <div class="header__mobile-menu">
+              <button
+                class="mobile-menu__theme-switcher"
+                aria-label="Switch theme"
               >
-                <option value="ducal">Purr Ducal</option>
+                <svg
+                  class="theme-switcher__icon theme-switcher__icon--dark"
+                  width="34"
+                  height="37"
+                  viewBox="0 0 34 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.375 27.8289C16.2114 30.847 26.9037 12.451 16.3009 1.7085C25.631 1.95374 33.0926 9.37947 33.0926 18.5002C33.0926 27.7757 25.8513 35.2918 16.3009 35.2918C10.2766 35.2918 4.47097 32.3662 1.375 27.8289Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
 
-                <option value="royal" selected>Purr Royal</option>
+                <svg
+                  class="theme-switcher__icon theme-switcher__icon--light"
+                  width="37"
+                  height="37"
+                  viewBox="0 0 37 37"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.22223 18.2225H5.07408M5.0742 31.704L8.92605 27.8521M18.5556 31.704V35.5558M28.1852 27.8521L32.037 31.704M5.07408 4.74101L8.92593 8.59286M32.037 18.2225H35.8889M28.1851 8.59286L32.0369 4.74101M18.5556 0.88916V4.74101M24.3333 18.2225C24.3333 21.4135 21.7465 24.0003 18.5556 24.0003C15.3646 24.0003 12.7778 21.4135 12.7778 18.2225C12.7778 15.0315 15.3646 12.4447 18.5556 12.4447C21.7465 12.4447 24.3333 15.0315 24.3333 18.2225Z"
+                    stroke="#161616"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
 
-                <option value="imperial">Purr Imperial</option>
-              </select>
+              <ul class="mobile-menu__navigation">
+                <li>
+                  <a href="index.html">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Our Rooms</a>
+                </li>
+                <li>
+                  <a href="#">Purr Care</a>
+                </li>
+                <li>
+                  <a href="#">Testimonial</a>
+                </li>
+              </ul>
+              <button class="mobile-button mobile-button--dark">
+                Book Now
+              </button>
             </div>
+          </header>
 
-            <button
-              class="booking__button button mobile-button mobile-button--light"
-            >
-              BOOK NOW
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
+          <!---------- Hero Section ---------->
 
-    <!---------- Footer ---------->
-
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__intro">
-          <div class="footer__intro-logo">
-            <img
-              src="images/logo-icon.png"
-              alt=""
-              class="footer__intro-logo-image"
-            />
-            <div class="footer__intro-logo-text">
-              <span class="footer__intro-logo-text--top">Stay In Touch</span>
-              <div class="footer__intro-logo-text--bottom">Newsletter</div>
-            </div>
-          </div>
-
-          <form class="footer__intro-form">
-            <div class="footer__intro-email">
-              <label for="footer-email" class="footer__intro-email__label"
-                >Email</label
+          <section class="hero">
+            <div class="hero__content-wrapper">
+              <span class="hero__title section__title"
+                >Where Feline Comfort Comes First</span
               >
-              <input
-                type="email"
-                id="footer-email"
-                name="email"
-                class="footer__intro-email__input"
-                placeholder="Eg. janedoe@gmail.com"
-                required
-              />
+              <h1 class="hero__subtitle section__subtitle">
+                Your 5 Stars Purr Inn
+              </h1>
+              <p class="hero__text section__text">
+                At NekoInn, we understand that your beloved feline companion
+                deserves the best care, even when you can't be there. That's why
+                we've created a haven designed specifically for cats, where
+                every whisker is cherished and every purr is celebrated. From
+                cozy accommodations to personalized attention, we strive to
+                provide a nurturing environment where your cat can relax, play,
+                and thrive while you're away. Welcome to NekoInn, where your
+                cat's comfort and happiness are our top priorities.
+              </p>
+              <button
+                class="hero__button button mobile-button mobile-button--light"
+              >
+                BOOK A PURR-SUITE
+              </button>
             </div>
-          </form>
+            <div class="hero__image">
+              <div class="hero__image-wrapper">
+                <div class="hero__main-image-wrapper">
+                  <img
+                    src="images/hero-main-image.png"
+                    alt="hero__image-main"
+                    class="hero__image-main"
+                  />
+                  <img
+                    src="images/hero-main-image-pc.png"
+                    alt="hero__image-main"
+                    class="hero__image-main--pc"
+                  />
+
+                  <img
+                    src="images/hero-image1.png"
+                    alt="hero__image-1"
+                    class="hero__image-small hero__image-small--1"
+                  />
+                  <img
+                    src="images/hero-image2.png"
+                    alt="hero__image-2"
+                    class="hero__image-small hero__image-small--2"
+                  />
+                  <img
+                    src="images/hero-image3.png"
+                    alt="hero__image-3"
+                    class="hero__image-small hero__image-small--3"
+                  />
+                  <img
+                    src="images/hero-image4.png"
+                    alt="hero__image-4"
+                    class="hero__image-small hero__image-small--4"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <div class="footer__content">
-          <div class="footer__contacts">
-            <div class="footer__contacts-block footer__contacts-block--address">
-              <div class="footer__contacts-block-icon">
+        <!---------- Main ---------->
+
+        <main class="main">
+          <!---------- Contacts ---------->
+
+          <section class="contacts">
+            <div class="contacts__address">
+              <div class="contacts__icon contacts__icon--location">
+                <a href=""></a>
                 <img
                   src="images/location-icon.png"
                   alt=""
-                  class="footer__contacts-block-icon-image"
+                  class="location__image"
                 />
               </div>
-              <div class="footer__contacts-block-text">
-                <span class="footer__contacts-block-text-top"
-                  >Pay Us A Visit</span
-                >
+              <div class="contacts__text">
                 <a
-                  class="footer__contacts-block-link-bottom"
+                  class="contacts__link"
                   href="https://maps.app.goo.gl/hSFimQPdxarbM1869"
                   target="_blank"
                   rel="noopener"
                 >
-                  <span class="footer__contacts-block-text-bottom"
-                    >123 Meow Avenue Kittyville, CA 90210 United States</span
-                  ></a
-                >
+                  123 Meow Avenue. Kittyville, CA 90210 United States
+                </a>
               </div>
             </div>
+            <div class="contacts__communication">
+              <div class="contacts__phone">
+                <div class="contacts__icon contacts__icon--phone">
+                  <img
+                    src="images/phone-icon.png"
+                    alt="Phone icon"
+                    class="contacts__icon-image"
+                  />
+                </div>
+                <div class="contacts__text">
+                  <a class="contacts__link" href="tel:5555555555"
+                    >(555) 555-5555</a
+                  >
+                </div>
+              </div>
 
-            <div class="footer__contacts-block footer__contacts-block--phone">
-              <div class="footer__contacts-block-icon">
-                <img
-                  src="images/phone-icon.png"
-                  alt=""
-                  class="footer__contacts-block-icon-image"
-                />
-              </div>
-              <div class="footer__contacts-block-text">
-                <span class="footer__contacts-block-text-top"
-                  >Give Us A Call</span
-                >
-                <a
-                  class="footer__contacts-block-link-bottom"
-                  href="tel:5555555555"
-                  ><span class="footer__contacts-block-text-bottom"
-                    >(555) 555-5555</span
-                  ></a
-                >
+              <div class="contacts__email">
+                <div class="contacts__icon contacts__icon--email">
+                  <img
+                    src="images/email-icon.png"
+                    alt="Email icon"
+                    class="contacts__icon-image"
+                  />
+                </div>
+                <div class="contacts__text">
+                  <a class="contacts__link" href="mailto:info@neko-inn.com"
+                    >info@neko-inn.com</a
+                  >
+                </div>
               </div>
             </div>
+          </section>
 
-            <div class="footer__contacts-block footer__contacts-block--email">
-              <div class="footer__contacts-block-icon">
-                <img
-                  src="images/email-icon.png"
-                  alt=""
-                  class="footer__contacts-block-icon-image"
-                />
-              </div>
-              <div class="footer__contacts-block-text">
-                <span class="footer__contacts-block-text-top"
-                  >Send Us A Message</span
-                >
-                <a
-                  class="footer__contacts-block-link-bottom"
-                  href="mailto:info@neko-inn.com"
-                  ><span class="footer__contacts-block-text-bottom"
-                    >info@neko-inn.com</span
-                  ></a
-                >
+          <!---------- About Section ---------->
+
+          <section class="about">
+            <div class="about__content-wrapper">
+              <span class="about__title section__title">
+                Your Trusted Cat Retreat
+              </span>
+              <h2 class="about__subtitle section__subtitle">About NekoInn</h2>
+              <p class="about__text section__text">
+                NekoInn is more than a cat boarding facility; it's a home away
+                from home for your furry family members. Nestled in serene
+                surroundings, our inn offers a tranquil retreat for cats of all
+                shapes, sizes, and personalities. With a team of dedicated
+                caregivers passionate about feline welfare, we ensure every
+                guest receives love, attention, and comfort. Rest easy knowing
+                your cat is in caring hands at NekoInn.
+              </p>
+              <button
+                class="about__button button mobile-button mobile-button--light"
+              >
+                BOOK NOW
+              </button>
+            </div>
+            <div class="about__image-wrapper">
+              <div class="about__image">
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="images/about-image-pc.png"
+                  />
+                  <img
+                    src="images/about-image.png"
+                    alt=""
+                    class="about__image--main"
+                  />
+                </picture>
               </div>
             </div>
+          </section>
+
+          <!---------- Our Rooms Section ---------->
+
+          <section class="our-rooms">
+            <div class="our-rooms__image">
+              <img
+                src="images/our-rooms-image.png"
+                alt=""
+                class="our-rooms__image--main"
+              />
+            </div>
+            <div class="our-rooms__image-gallery">
+              <div class="image-gallery__images">
+                <div
+                  class="image-gallery__image"
+                  style="
+                    background-image: url(images/image-gallery/accordion-image-1.png);
+                  "
+                ></div>
+                <div
+                  class="image-gallery__image"
+                  style="
+                    background-image: url(images/image-gallery/accordion-image-2.png);
+                  "
+                ></div>
+                <div
+                  class="image-gallery__image image-gallery__image--active"
+                  style="
+                    background-image: url(images/image-gallery/accordion-image-3.png);
+                  "
+                ></div>
+                <div
+                  class="image-gallery__image"
+                  style="
+                    background-image: url(images/image-gallery/accordion-image-4.png);
+                  "
+                ></div>
+                <div
+                  class="image-gallery__image"
+                  style="
+                    background-image: url(images/image-gallery/accordion-image-5.png);
+                  "
+                ></div>
+                <div
+                  class="image-gallery__image"
+                  style="
+                    background-image: url(images/image-gallery/accordion-image-6.png);
+                  "
+                ></div>
+              </div>
+            </div>
+            <span class="our-rooms__title section__title">
+              perfectly Tailored for Your Feline Friend
+            </span>
+            <h2 class="our-rooms__subtitle section__subtitle">Our Rooms</h2>
+            <div class="our-rooms__accordion accordion">
+              <div class="accordion__wrapper active">
+                <div class="our-rooms__accordion-label">
+                  <div class="accordion-label__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linejoin="round"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="accordion-label__title">
+                    Cozy Corners: Where Comfort Meets Contentment
+                  </h4>
+                </div>
+                <p class="our-rooms__accordion-content">
+                  NekoInn is more than a cat boarding facility; it's a home away
+                  from home for your furry family members. Nestled in serene
+                  surroundings, our inn offers a tranquil retreat for cats of
+                  all shapes, sizes, and personalities. With a team of dedicated
+                  caregivers passionate about feline welfare, we ensure every
+                  guest receives love, attention, and comfort. Rest easy knowing
+                  your cat is in caring hands at NekoInn.
+                </p>
+              </div>
+              <div class="accordion__wrapper">
+                <div class="our-rooms__accordion-label">
+                  <div class="accordion-label__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linejoin="round"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="accordion-label__title">
+                    Palatial Purrfections: Opulence for Discerning Cats
+                  </h4>
+                </div>
+                <p class="our-rooms__accordion-content">
+                  At NekoInn, luxury isn't just for humans. Our palatial suites
+                  are designed with the refined feline in mind — complete with
+                  plush bedding, climbing structures, and panoramic views. From
+                  gourmet meals to personalized play sessions, we cater to the
+                  tastes of even the most selective cats. Every detail is
+                  curated to provide an atmosphere of elegance, comfort, and
+                  indulgence.
+                </p>
+              </div>
+              <div class="accordion__wrapper">
+                <div class="our-rooms__accordion-label">
+                  <div class="accordion-label__icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linejoin="round"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="accordion-label__title">
+                    Tailored Tranquility: Personalized Care for Every Cat
+                  </h4>
+                </div>
+                <p class="our-rooms__accordion-content">
+                  No two cats are alike, and at NekoInn, we celebrate their
+                  individuality. Whether your feline friend is playful and
+                  energetic or calm and shy, our caregivers adapt each
+                  experience to suit their unique needs. With one-on-one
+                  attention, custom routines, and familiar comforts, we ensure
+                  your cat feels truly at home. Their peace of mind — and yours
+                  — is our top priority.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!---------- Care Section ---------->
+
+          <div class="care-container">
+            <section class="care">
+              <div class="care__intro">
+                <span class="care__intro-title section__title"
+                  >Dedicated Care for Every Purrsonality</span
+                >
+                <h2 class="care__intro-subtitle section__subtitle">
+                  Purr Care
+                </h2>
+                <p class="care__intro-text section__text">
+                  Experience top-notch feline care with our Purr Care services.
+                  From grooming to playtime, we provide personalized attention
+                  to ensure your cat's happiness and well-being at NekoInn.
+                </p>
+                <button
+                  class="care__intro-button button mobile-button mobile-button--dark"
+                >
+                  Book Now
+                </button>
+              </div>
+
+              <div class="care__block">
+                <div class="care__block-image">
+                  <img
+                    src="images/care-image-1.png"
+                    alt=""
+                    class="block-image"
+                  />
+                </div>
+                <span class="care__block-title">Grooming Spa:</span>
+                <p class="care__block-text">
+                  Indulge your cat in a pampering experience at our Grooming
+                  Spa. Our skilled groomers provide gentle care and attention,
+                  from luxurious baths to expert grooming sessions, leaving your
+                  cat looking and feeling their best.
+                </p>
+              </div>
+              <div class="care__block">
+                <div class="care__block-image">
+                  <img
+                    src="images/care-image-2.png"
+                    alt=""
+                    class="block-image"
+                  />
+                </div>
+                <span class="care__block-title">Playtime Paradise:</span>
+                <p class="care__block-text">
+                  Let your cat unleash their playful side in our Playtime
+                  Paradise. With a variety 7of engaging toys, climbing
+                  structures, and interactive games, our supervised play
+                  sessions offer the perfect opportunity for your cat to
+                  exercise, socialize, and have fun.
+                </p>
+              </div>
+              <div class="care__block">
+                <div class="care__block-image">
+                  <img
+                    src="images/care-image-3.png"
+                    alt=""
+                    class="block-image"
+                  />
+                </div>
+                <span class="care__block-title">Gourmet Dining:</span>
+                <p class="care__block-text">
+                  Treat your cat's taste buds to a culinary delight with our
+                  Gourmet Dining service. From premium cat cuisine to customized
+                  meal plans tailored to their dietary needs, our gourmet chefs
+                  ensure that every meal is both delicious and nutritious.
+                </p>
+              </div>
+            </section>
           </div>
 
-          <div class="footer__right">
-            <div class="footer__plans">
-              <span class="footer__plans-title">NekoInn Plans</span>
-              <ul class="footer__plans-list">
-                <ul class="footer__plans-list">
-                  <li class="footer__plans-item">
-                    <a href="#" class="footer__plans-link">Purr Ducal</a>
+          <!---------- Clients Slider ---------->
+
+          <section class="slider slider--clients">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-1.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-2.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-3.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-4.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-5.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-6.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-1.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-2.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-3.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-4.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-5.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__content">
+                    <img
+                      src="images/slider/slider-image-6.png"
+                      alt=""
+                      class="swiper-slide__image"
+                    />
+                    <div class="swiper-slide__icon">
+                      <svg
+                        width="77.016357"
+                        height="75.030823"
+                        viewBox="0 0 77.0164 75.0308"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                      >
+                        <defs />
+                        <path
+                          id="Vector"
+                          d="M30.39 36.54L46.61 48.7L30.39 58.83L40.53 73.02M66.89 27.53L66.89 53.56C66.89 60.37 66.89 63.78 65.57 66.38C64.4 68.67 62.54 70.53 60.25 71.69C57.65 73.02 54.24 73.02 47.43 73.02L29.58 73.02C22.77 73.02 19.36 73.02 16.76 71.69C14.47 70.53 12.61 68.67 11.44 66.38C10.11 63.78 10.11 60.37 10.11 53.56L10.11 27.53M75 36.54L52.97 12.07C47.96 6.5 45.45 3.72 42.5 2.69C39.91 1.79 37.09 1.79 34.5 2.7C31.55 3.72 29.04 6.51 24.03 12.07L2 36.54"
+                          stroke="#FFFFFF"
+                          stroke-opacity="1.000000"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="button-prev slider-button clients-button-prev">
+              <svg
+                width="23"
+                height="19"
+                viewBox="0 0 23 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.875 9.5L22.125 9.5M0.875 9.5L9.375 1M0.875 9.5L9.375 18"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div class="button-next slider-button clients-button-next">
+              <svg
+                width="23"
+                height="19"
+                viewBox="0 0 23 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.125 9.5L0.875 9.5M22.125 9.5L13.625 18M22.125 9.5L13.625 1"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </section>
+
+          <!--------- Pricing Section ---------->
+
+          <section class="pricing">
+            <span class="pricing__title section__title"
+              >Transparent Rates for your purry companion</span
+            >
+            <h2 class="pricing__subtitle section__subtitle">Pricing</h2>
+            <p class="pricing__text section__text">
+              In our Pricing Section, transparency meets affordability. At
+              NekoInn, we believe in straightforward pricing, ensuring you have
+              peace of mind knowing exactly what to expect.
+            </p>
+            <div class="pricing__cards">
+              <div class="pricing-card pricing-card--dark">
+                <div class="pricing-card__plan">
+                  <span
+                    class="pricing-card__plan-title pricing-card__plan-title--dark"
+                    >Purr Ducal</span
+                  >
+                  <div class="pricing-card__plan-icon">
+                    <svg
+                      width="57.000000"
+                      height="47.367798"
+                      viewBox="0 0 57 47.3678"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs />
+                      <path
+                        id="Vector"
+                        d="M51.36 10.58C48.25 10.58 45.72 13.1 45.72 16.21C45.72 18.29 46.88 20.09 48.56 21.07L41.59 23.57L30.82 10.76C32.78 9.88 34.16 7.91 34.16 5.63C34.16 2.52 31.63 0 28.53 0C25.42 0 22.9 2.52 22.9 5.63C22.9 7.89 24.25 9.84 26.18 10.73L15.39 23.57L8.42 21.06C10.1 20.09 11.26 18.28 11.26 16.2C11.26 13.1 8.73 10.57 5.62 10.57C2.52 10.57 0 13.1 0 16.2C0 18.85 1.84 21.05 4.29 21.66L4.29 37.71L4.29 37.94C4.29 37.98 4.31 38.01 4.31 38.05C4.32 38.09 4.31 38.13 4.31 38.18C4.33 38.24 4.36 38.29 4.38 38.35C4.4 38.41 4.42 38.48 4.45 38.54C4.49 38.64 4.56 38.72 4.62 38.8C4.65 38.84 4.66 38.89 4.7 38.91C7.63 43.21 26.21 43.35 28.49 43.35C30.78 43.35 49.36 43.22 52.29 38.91C52.33 38.88 52.34 38.83 52.37 38.8C52.43 38.72 52.5 38.64 52.54 38.54C52.57 38.48 52.59 38.42 52.61 38.35C52.63 38.3 52.66 38.24 52.68 38.18C52.68 38.13 52.67 38.09 52.68 38.05C52.68 38.01 52.69 37.98 52.69 37.94L52.69 37.71L52.69 21.66C55.16 21.05 57 18.85 57 16.2C56.99 13.1 54.46 10.58 51.36 10.58ZM28.49 40.61C21.27 40.61 15.84 40.03 12.23 39.31C9.53 38.78 7.85 38.18 7.21 37.71C7.66 37.38 8.66 36.97 10.18 36.57C11.77 36.16 13.95 35.75 16.7 35.43C19.87 35.06 23.8 34.81 28.49 34.81C33.17 34.81 37.1 35.06 40.27 35.43C43.02 35.75 45.2 36.16 46.8 36.57C48.31 36.97 49.31 37.38 49.76 37.71C49.13 38.18 47.44 38.78 44.74 39.31C41.13 40.03 35.71 40.61 28.49 40.61ZM40.99 32.77L32.54 29.74L40.72 26.8L46.53 33.71C44.83 33.31 42.92 33 40.99 32.77ZM31.03 32.11C29.8 32.08 28.89 32.07 28.49 32.07C28.08 32.07 27.17 32.08 25.94 32.11L28.49 31.2L31.03 32.11ZM15.99 32.77C14.05 33 12.14 33.31 10.44 33.71L16.25 26.8L24.43 29.74L15.99 32.77ZM49.95 23.48L49.95 33.51L43.47 25.81L49.95 23.48ZM25.63 5.63C25.63 4.04 26.93 2.74 28.53 2.74C30.12 2.74 31.42 4.04 31.42 5.63C31.42 7.22 30.12 8.52 28.53 8.52C26.93 8.52 25.63 7.22 25.63 5.63ZM28.49 12.24L38.84 24.56L28.49 28.28L18.13 24.56L28.49 12.24ZM13.5 25.81L7.03 33.51L7.03 23.48L13.5 25.81ZM2.73 16.21C2.73 14.61 4.02 13.31 5.62 13.31C7.21 13.31 8.51 14.61 8.51 16.21C8.51 17.8 7.21 19.1 5.62 19.1C4.02 19.1 2.73 17.8 2.73 16.21ZM51.36 19.1C49.76 19.1 48.46 17.8 48.46 16.21C48.46 14.61 49.76 13.31 51.36 13.31C52.95 13.31 54.25 14.61 54.25 16.21C54.25 17.8 52.95 19.1 51.36 19.1ZM52.41 42.84C52.74 43.52 52.45 44.34 51.77 44.68C49.03 46.01 40.77 47.36 28.49 47.36C16.38 47.36 7.83 45.74 5.29 44.72C4.59 44.44 4.25 43.64 4.53 42.93C4.81 42.23 5.62 41.9 6.31 42.17C8.3 42.97 16.33 44.62 28.49 44.62C41.07 44.62 48.59 43.18 50.58 42.22C51.25 41.88 52.07 42.16 52.41 42.84Z"
+                        fill="#C75E90"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount">$160.99</span>
+                  <span class="pricing-card__period">per day</span>
+                </div>
+                <ul class="pricing-card__features">
+                  <li class="pricing-card__feature">
+                    Standard Room Accommodation
                   </li>
-                  <li class="footer__plans-item">
-                    <a href="#" class="footer__plans-link">Purr Royal</a>
-                  </li>
-                  <li class="footer__plans-item">
-                    <a href="#" class="footer__plans-link">Purr Imperial</a>
-                  </li>
+                  <li class="pricing-card__feature">Basic Grooming</li>
+                  <li class="pricing-card__feature">Group Playtime</li>
+                  <li class="pricing-card__feature">Standard Meal Plan</li>
+                  <li class="pricing-card__feature">Daily Wellness Check</li>
                 </ul>
-              </ul>
+                <button
+                  class="pricing__button button mobile-button mobile-button--light"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+
+              <div class="pricing-card pricing-card--light">
+                <div class="pricing-card__plan">
+                  <span
+                    class="pricing-card__plan-title pricing-card__plan-title--light"
+                    >Purr Imperial</span
+                  >
+                  <div class="pricing-card__plan-icon">
+                    <svg
+                      width="66.000000"
+                      height="52.100220"
+                      viewBox="0 0 66 52.1002"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs />
+                      <path
+                        id="Vector"
+                        d="M66 29.46C66 23.37 62.7 17.75 57.4 14.79C55.29 13.62 52.94 12.95 50.53 12.78C50.08 12.36 49.6 11.97 49.09 11.62C46.19 9.62 42.77 9.14 39.58 9.94L38.37 7.03L40.03 3.04L34.99 6.2C34.77 5.68 34.35 5.26 33.83 5.04L36.98 0L33 1.66L29.01 0L32.16 5.04C31.64 5.26 31.22 5.68 31 6.2L25.96 3.04L27.62 7.03L26.41 9.93C23.21 9.13 19.79 9.62 16.9 11.62C16.41 11.95 15.96 12.33 15.53 12.73C12.95 12.78 10.41 13.49 8.16 14.81C3.12 17.78 0 23.39 0 29.46C0 31.21 0.25 32.93 0.73 34.47C1.31 37.22 2.89 40.09 4.96 42.91L4.96 52.1L61 52.1L61 42.61C63.03 39.94 64.58 37.23 65.14 34.63C65.72 32.95 66 31.21 66 29.46ZM47.37 14.11C50.84 16.53 53 21.16 53 26.21C53 27.69 52.82 29.14 52.43 30.64C51.79 34.27 49.38 38.25 46.44 41.98L45.44 41.98C48.47 38.18 51.06 34.04 51.72 30.33C52.07 29.01 52.24 27.63 52.24 26.21C52.24 21.4 50.21 17.01 46.94 14.73C45.5 13.74 43.96 13.24 42.36 13.24C39.66 13.24 37.1 14.75 35.23 17.34C35.01 17.21 34.8 17.03 34.57 16.94C37.81 12.46 43.19 11.22 47.37 14.11ZM43.49 41.98L39.35 41.98C40.2 39.4 40.72 36.24 40.72 32.71C40.72 26.16 39.01 20.8 36.43 18.26C38.94 14.77 42.9 13.79 46.09 15.98C48.95 17.98 50.73 21.89 50.73 26.21C50.73 27.5 50.58 28.76 50.25 30.01C49.57 33.8 46.73 38.1 43.49 41.98ZM34.99 7.87L38.65 10.16C37.56 10.53 36.53 11.09 35.55 11.77L33.84 9.02C34.36 8.81 34.77 8.39 34.99 7.87ZM33 19.67C34.91 19.67 37.68 24.75 37.68 32.71C37.68 36.56 37.03 39.71 36.15 41.97L36.26 41.98L28.21 41.98L29.81 41.83C28.95 39.58 28.32 36.49 28.32 32.71C28.33 24.75 31.09 19.67 33 19.67ZM26.64 41.98L22.5 41.98C19.28 38.14 16.48 33.89 15.82 30.2C15.45 28.77 15.28 27.5 15.28 26.21C15.28 21.9 17.07 17.98 19.95 15.98C23.11 13.78 27.07 14.77 29.6 18.25C27.01 20.8 25.3 26.15 25.3 32.71C25.29 36.23 25.79 39.4 26.64 41.98ZM31.01 7.87C31.23 8.39 31.65 8.81 32.16 9.03L30.46 11.77C29.48 11.09 28.44 10.53 27.36 10.16L31.01 7.87ZM18.64 14.11C20.17 13.05 21.9 12.49 23.64 12.49C26.6 12.49 29.41 14.13 31.44 16.94C31.2 17.03 31 17.21 30.78 17.34C28.9 14.75 26.33 13.24 23.64 13.24C22.04 13.24 20.5 13.74 19.08 14.73C15.8 17.01 13.76 21.41 13.76 26.21C13.76 27.63 13.94 29.01 14.33 30.52C14.98 34.14 17.54 38.22 20.55 41.98L19.58 41.98C16.64 38.22 14.21 34.2 13.56 30.53C13.19 29.12 13 27.66 13 26.21C13 21.16 15.16 16.53 18.64 14.11ZM3.04 29.46C3.04 24.46 5.6 19.84 9.7 17.42C10.66 16.87 11.67 16.44 12.72 16.16C10.97 19.02 9.96 22.53 9.96 26.21C9.96 27.93 10.18 29.63 10.59 31.17C11.21 34.7 13.24 38.43 15.8 41.98L8.11 41.98C5.93 39.19 4.24 36.36 3.68 33.71C3.26 32.34 3.04 30.9 3.04 29.46ZM21.22 48.93L13.09 48.93L13.09 45.91L21.22 45.91L21.22 48.93ZM37.07 48.93L28.94 48.93L28.94 45.91L37.07 45.91L37.07 48.93ZM52.91 48.93L44.79 48.93L44.79 45.91L52.91 45.91L52.91 48.93ZM62.25 33.84C61.68 36.43 59.93 39.23 57.65 41.98L50.23 41.98C52.76 38.46 54.78 34.78 55.4 31.3C55.82 29.66 56.04 27.94 56.04 26.21C56.04 22.62 55.08 19.2 53.42 16.38C54.27 16.66 55.12 16.99 55.92 17.44C60.27 19.86 62.96 24.47 62.96 29.46C62.96 30.9 62.73 32.32 62.25 33.84Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="nonzero"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount">$600.99</span>
+                  <span class="pricing-card__period">per day</span>
+                </div>
+                <ul class="pricing-card__features">
+                  <li class="pricing-card__feature">
+                    Presidential Suite Accommodation
+                  </li>
+                  <li class="pricing-card__feature">
+                    Deluxe Spa Grooming Package
+                  </li>
+                  <li class="pricing-card__feature">
+                    Exclusive One-on-One Playtime
+                  </li>
+                  <li class="pricing-card__feature">Gourmet Meal Plan</li>
+                  <li class="pricing-card__feature">24/7 Concierge Service</li>
+                </ul>
+                <button
+                  class="pricing__button button mobile-button mobile-button--dark"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+
+              <div class="pricing-card pricing-card--dark">
+                <div class="pricing-card__plan">
+                  <span
+                    class="pricing-card__plan-title pricing-card__plan-title--dark"
+                    >Purr Royal</span
+                  >
+                  <div class="pricing-card__plan-icon">
+                    <svg
+                      width="57"
+                      height="49"
+                      viewBox="0 0 57 49"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M31.6664 25.0056C31.6664 23.2612 30.2468 21.845 28.504 21.845C26.7605 21.845 25.3434 23.2612 25.3434 25.0056C25.3434 26.7465 26.7605 28.1661 28.504 28.1661C30.2471 28.1661 31.6664 26.7465 31.6664 25.0056ZM28.5027 25.5951C28.1786 25.5951 27.9135 25.3306 27.9135 25.0059C27.9135 24.6811 28.177 24.4167 28.5027 24.4167C28.8281 24.4167 29.0925 24.6811 29.0925 25.0059C29.0925 25.3306 28.8265 25.5951 28.5027 25.5951ZM53.841 11.6266C52.0966 11.6266 50.6805 13.0421 50.6805 14.7871C50.6805 15.4646 50.8983 16.0865 51.2595 16.603L38.4799 26.5293L29.8084 6.94259C30.8998 6.44038 31.6598 5.34866 31.6598 4.07314C31.6598 2.32811 30.2436 0.912598 28.5008 0.912598C26.7573 0.912598 25.3396 2.32811 25.3396 4.07314C25.3396 5.34898 26.1031 6.44038 27.1926 6.94259L18.5528 26.4586L5.7427 16.6026C6.10427 16.0861 6.32205 15.4643 6.32205 14.7868C6.32205 13.0418 4.90431 11.6263 3.16055 11.6263C1.41774 11.6266 0 13.0421 0 14.7871C0 16.529 1.41774 17.948 3.16055 17.948C3.22912 17.948 3.29451 17.9312 3.36149 17.928L12.4558 41.4185C12.6476 41.914 13.1238 42.2387 13.6536 42.2387H43.3464C43.8804 42.2387 44.354 41.9172 44.5435 41.4185L53.6385 17.928C53.7055 17.9312 53.7706 17.948 53.8375 17.948C55.5839 17.948 57 16.5293 57 14.7871C57.0035 13.0421 55.5839 11.6266 53.841 11.6266ZM28.5027 3.48395C28.8268 3.48395 29.0925 3.74776 29.0925 4.07314C29.0925 4.39885 28.8281 4.66233 28.5027 4.66233C28.177 4.66233 27.9135 4.39885 27.9135 4.07314C27.9132 3.74744 28.1786 3.48395 28.5027 3.48395ZM28.5027 10.3368L36.3911 28.1563L28.6119 34.1961L20.6512 28.0725L28.5027 10.3368ZM2.57453 14.7871C2.57453 14.4633 2.83833 14.1979 3.16467 14.1979C3.49038 14.1979 3.75386 14.4617 3.75386 14.7871C3.75386 15.1128 3.49006 15.3763 3.16467 15.3763C2.83833 15.3763 2.57453 15.1109 2.57453 14.7871ZM17.484 28.8794L13.6828 37.464L7.33821 21.073L17.484 28.8794ZM15.5186 39.6671L19.5814 30.4934L26.5135 35.8272L21.5702 39.6674H15.5186V39.6671ZM25.7612 39.6671L28.6189 37.4475L31.5077 39.6671H25.7612ZM35.393 39.4125L30.7188 35.8167L37.4621 30.5768L41.4884 39.6671H35.646C35.5755 39.5734 35.4917 39.4896 35.393 39.4125ZM43.3213 37.464L39.5548 28.9528L49.651 21.1073L43.3213 37.464ZM53.841 15.3763C53.5195 15.3763 53.2519 15.1128 53.2519 14.7871C53.2519 14.4617 53.5131 14.1979 53.841 14.1979C54.1693 14.1979 54.4318 14.4617 54.4318 14.7871C54.4318 15.1128 54.1693 15.3763 53.841 15.3763ZM44.5016 46.8018C44.5016 47.5116 43.9258 48.0875 43.2156 48.0875H13.7876C13.0777 48.0875 12.5019 47.5119 12.5019 46.8018C12.5019 46.0917 13.0777 45.5161 13.7876 45.5161H43.2156C43.9289 45.5161 44.5016 46.092 44.5016 46.8018Z"
+                        fill="#C75E90"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount">$299.99</span>
+                  <span class="pricing-card__period">per day</span>
+                </div>
+                <ul class="pricing-card__features">
+                  <li class="pricing-card__feature">
+                    Luxury Suite Accommodation
+                  </li>
+                  <li class="pricing-card__feature">Deluxe Grooming Package</li>
+                  <li class="pricing-card__feature">Private Playtime</li>
+                  <li class="pricing-card__feature">Premium Meal Plan</li>
+                  <li class="pricing-card__feature">VIP Wellness Check</li>
+                </ul>
+                <button
+                  class="pricing__button button mobile-button mobile-button--light"
+                >
+                  BOOK NOW
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!---------- Reviews Section ---------->
+
+          <section class="reviews">
+            <div class="reviews-container">
+              <span class="reviews__title section__title"
+                >Pawsitive Reviews from Happy Customers</span
+              >
+              <h2 class="reviews__subtitle section__subtitle">
+                They Celebrate NekoInn
+              </h2>
+              <p class="reviews__text section__text">
+                Discover what our clients have to say about their experiences at
+                NekoInn. Their testimonials speak volumes about the exceptional
+                care and service we provide for their beloved feline companions.
+              </p>
             </div>
 
-            <a href="" class=""></a>
+            <!-- Testimonials Slider Mobile -->
 
-            <div class="footer__social">
-              <span class="footer__social-text">Socialize With NekoInn</span>
-              <ul class="footer__social-icons">
-                <li class="footer__social-icon">
-                  <a href="#" aria-label="Facebook"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                </li>
-                <li class="footer__social-icon">
-                  <a href="#" aria-label="X (Twitter)"
-                    ><i class="fab fa-twitter"></i
-                  ></a>
-                </li>
-                <li class="footer__social-icon">
-                  <a href="#" aria-label="LinkedIn"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </li>
-                <li class="footer__social-icon">
-                  <a href="#" aria-label="YouTube"
-                    ><i class="fab fa-youtube"></i
-                  ></a>
-                </li>
-                <li class="footer__social-icon">
-                  <a href="#" aria-label="Instagram"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </li>
-              </ul>
+            <div class="slider slider-testimonials--mobile">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        Leaving my cat at NekoInn was the best decision I ever
+                        made. The staff went above and beyond to ensure that my
+                        furry friend felt loved and cared for. I received
+                        regular updates and photos, which put my mind at ease
+                        during my time away. Thank you, NekoInn, for providing
+                        such a wonderful home away from home for my cat!
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-1.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Emily S</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        I cannot recommend NekoInn enough! From the moment I
+                        walked in, I knew my cat would be in good hands. The
+                        facilities are clean and spacious, and the staff is
+                        incredibly friendly and attentive. My cat came back home
+                        relaxed and happy, and I will definitely be using
+                        NekoInn for all my future boarding needs.
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-2.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Mark T</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        NekoInn made the experience so much easier. Their
+                        personalized care and attention to detail set them apart
+                        from other boarding facilities. I loved receiving
+                        updates and photos of my cat enjoying her stay. I have
+                        complete peace of mind knowing she's in the care of such
+                        dedicated professionals. Thank you, NekoInn!
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-3.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Linda R</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="button-prev slider-button testimonials-button-prev testimonials-button-prev--mobile"
+              >
+                <svg
+                  width="23"
+                  height="19"
+                  viewBox="0 0 23 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.875 9.5L22.125 9.5M0.875 9.5L9.375 1M0.875 9.5L9.375 18"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="button-next slider-button testimonials-button-next testimonials-button-next--mobile"
+              >
+                <svg
+                  width="23"
+                  height="19"
+                  viewBox="0 0 23 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.125 9.5L0.875 9.5M22.125 9.5L13.625 18M22.125 9.5L13.625 1"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
-            <span class="footer__copyright--pc"
+
+            <!-- Testimonials Slider Big  -->
+
+            <div class="slider slider-testimonials--pc">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        Leaving my cat at NekoInn was the best decision I ever
+                        made. The staff went above and beyond to ensure that my
+                        furry friend felt loved and cared for. I received
+                        regular updates and photos, which put my mind at ease
+                        during my time away. Thank you, NekoInn, for providing
+                        such a wonderful home away from home for my cat!
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-1.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Emily S</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        I cannot recommend NekoInn enough! From the moment I
+                        walked in, I knew my cat would be in good hands. The
+                        facilities are clean and spacious, and the staff is
+                        incredibly friendly and attentive. My cat came back home
+                        relaxed and happy, and I will definitely be using
+                        NekoInn for all my future boarding needs.
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-2.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Mark T</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        NekoInn made the experience so much easier. Their
+                        personalized care and attention to detail set them apart
+                        from other boarding facilities. I loved receiving
+                        updates and photos of my cat enjoying her stay. I have
+                        complete peace of mind knowing she's in the care of such
+                        dedicated professionals. Thank you, NekoInn!
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-3.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Linda R</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        Leaving my cat at NekoInn was the best decision I ever
+                        made. The staff went above and beyond to ensure that my
+                        furry friend felt loved and cared for. I received
+                        regular updates and photos, which put my mind at ease
+                        during my time away. Thank you, NekoInn, for providing
+                        such a wonderful home away from home for my cat!
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-1.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Emily S</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        I cannot recommend NekoInn enough! From the moment I
+                        walked in, I knew my cat would be in good hands. The
+                        facilities are clean and spacious, and the staff is
+                        incredibly friendly and attentive. My cat came back home
+                        relaxed and happy, and I will definitely be using
+                        NekoInn for all my future boarding needs.
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-2.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Mark T</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper-slide__content">
+                      <div class="swiper-slide__icon">
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <svg
+                          width="32"
+                          height="68"
+                          viewBox="0 0 32 68"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M4.66667 67.001C15.6667 67.001 30.3333 63.3343 30.3333 37.6677V8.33435C30.3333 3.75102 27.5577 0.938682 23 1.00102H8.33333C3.75 1.00102 1 3.75102 1 8.23168V30.3343C1 34.9177 3.75 37.6677 8.33333 37.6677H11.0833C11.0833 45.9177 12 52.3343 1 52.3343V63.3343C1 67.001 1 67.001 4.66667 67.001Z"
+                            stroke="#C75E90"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <p class="swiper-slide__text">
+                        NekoInn made the experience so much easier. Their
+                        personalized care and attention to detail set them apart
+                        from other boarding facilities. I loved receiving
+                        updates and photos of my cat enjoying her stay. I have
+                        complete peace of mind knowing she's in the care of such
+                        dedicated professionals. Thank you, NekoInn!
+                      </p>
+                      <div class="swiper-slide__author">
+                        <img
+                          src="images/testimonials/testimonials-image-3.png"
+                          alt=""
+                          class="swiper-slide__author-image"
+                        />
+                        <span class="swiper-slide__author-name">Linda R</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="button-prev slider-button testimonials-button-prev testimonials-button-prev--pc"
+              >
+                <svg
+                  width="23"
+                  height="19"
+                  viewBox="0 0 23 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.875 9.5L22.125 9.5M0.875 9.5L9.375 1M0.875 9.5L9.375 18"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="button-next slider-button testimonials-button-next testimonials-button-next--pc"
+              >
+                <svg
+                  width="23"
+                  height="19"
+                  viewBox="0 0 23 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.125 9.5L0.875 9.5M22.125 9.5L13.625 18M22.125 9.5L13.625 1"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          <!---------- Booking Section ---------->
+
+          <section class="booking">
+            <div class="booking__container">
+              <div class="booking__header">
+                <span class="booking__title section__title"
+                  >Secure Your Cat's Stay Today</span
+                >
+                <h2 class="booking__subtitle section__subtitle">Book Now</h2>
+                <p class="booking__text section__text">
+                  Ready to reserve your cat's spot at NekoInn? Our easy-to-use
+                  booking system makes it simple to schedule your cat's stay
+                  with us. Just select your desired dates, choose from our range
+                  of accommodations and services, and complete your reservation
+                  in a few easy steps.
+                </p>
+              </div>
+
+              <form action="#" method="post" class="booking__form">
+                <div class="booking__field">
+                  <label for="full-name" class="booking__label"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    class="booking__input booking__input--full-name"
+                    placeholder="Eg. Jane Doe"
+                    required
+                  />
+                </div>
+
+                <div class="booking__field">
+                  <label for="booking-email" class="booking__label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="booking-email"
+                    name="email"
+                    class="booking__input booking__input--email"
+                    placeholder="Eg. janedoe@gmail.com"
+                    required
+                  />
+                </div>
+
+                <div class="booking__field">
+                  <label for="phone" class="booking__label">Phone number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="booking__input booking__input--phone"
+                    placeholder="Eg. 100-616-6060"
+                    pattern="^\+?[0-9\s\-]{7,20}$"
+                    required
+                  />
+                </div>
+
+                <div class="booking__field">
+                  <label for="cat-name" class="booking__label">Cat Name</label>
+                  <input
+                    type="text"
+                    id="cat-name"
+                    name="cat-name"
+                    class="booking__input booking__input--cat-name"
+                    placeholder="Eg. Timothy"
+                  />
+                </div>
+
+                <div class="booking__field">
+                  <label for="date" class="booking__label">Pick a date</label>
+                  <div class="date-wrapper">
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      class="booking__input booking__input--date"
+                      required
+                    />
+                    <div class="date-icon-wrapper">
+                      <svg
+                        width="25"
+                        height="29"
+                        viewBox="0 0 25 29"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22.1077 20.7623L19.3626 18.0172M8.12492 13.0417H0.833252M24.1666 10.125V7.20833C24.1666 5.5975 22.8607 4.29167 21.2499 4.29167H3.74992C2.13909 4.29167 0.833252 5.5975 0.833252 7.20833V24.7083C0.833252 26.3192 2.13909 27.625 3.74992 27.625H8.12492M16.8749 1.375V7.20833M8.12492 1.375V7.20833M12.4999 27.625V24.8799L21.4215 15.9583L24.1666 18.7034L15.245 27.625H12.4999Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="booking__field">
+                  <label for="pets-qty" class="booking__label"
+                    >How Many Pets</label
+                  >
+                  <input
+                    type="number"
+                    id="pets-qty"
+                    name="pets-qty"
+                    min="1"
+                    max="10"
+                    step="1"
+                    class="booking__input booking__input--pets-qty"
+                    placeholder="1"
+                  />
+                </div>
+
+                <div class="booking__field">
+                  <label for="plan" class="booking__label">Select pet</label>
+                  <select
+                    id="plan"
+                    class="booking__input booking__input--plan"
+                    required
+                  >
+                    <option value="ducal">Purr Ducal</option>
+
+                    <option value="royal" selected>Purr Royal</option>
+
+                    <option value="imperial">Purr Imperial</option>
+                  </select>
+                </div>
+
+                <button
+                  class="booking__button button mobile-button mobile-button--light"
+                >
+                  BOOK NOW
+                </button>
+              </form>
+            </div>
+          </section>
+        </main>
+
+        <!---------- Footer ---------->
+
+        <footer class="footer">
+          <div class="footer__container">
+            <div class="footer__intro">
+              <div class="footer__intro-logo">
+                <img
+                  src="images/logo-icon.png"
+                  alt=""
+                  class="footer__intro-logo-image"
+                />
+                <div class="footer__intro-logo-text">
+                  <span class="footer__intro-logo-text--top"
+                    >Stay In Touch</span
+                  >
+                  <div class="footer__intro-logo-text--bottom">Newsletter</div>
+                </div>
+              </div>
+
+              <form class="footer__intro-form">
+                <div class="footer__intro-email">
+                  <label for="footer-email" class="footer__intro-email__label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="footer-email"
+                    name="email"
+                    class="footer__intro-email__input"
+                    placeholder="Eg. janedoe@gmail.com"
+                    required
+                  />
+                </div>
+              </form>
+            </div>
+
+            <div class="footer__content">
+              <div class="footer__contacts">
+                <div
+                  class="footer__contacts-block footer__contacts-block--address"
+                >
+                  <div class="footer__contacts-block-icon">
+                    <img
+                      src="images/location-icon.png"
+                      alt=""
+                      class="footer__contacts-block-icon-image"
+                    />
+                  </div>
+                  <div class="footer__contacts-block-text">
+                    <span class="footer__contacts-block-text-top"
+                      >Pay Us A Visit</span
+                    >
+                    <a
+                      class="footer__contacts-block-link-bottom"
+                      href="https://maps.app.goo.gl/hSFimQPdxarbM1869"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <span class="footer__contacts-block-text-bottom"
+                        >123 Meow Avenue Kittyville, CA 90210 United
+                        States</span
+                      ></a
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="footer__contacts-block footer__contacts-block--phone"
+                >
+                  <div class="footer__contacts-block-icon">
+                    <img
+                      src="images/phone-icon.png"
+                      alt=""
+                      class="footer__contacts-block-icon-image"
+                    />
+                  </div>
+                  <div class="footer__contacts-block-text">
+                    <span class="footer__contacts-block-text-top"
+                      >Give Us A Call</span
+                    >
+                    <a
+                      class="footer__contacts-block-link-bottom"
+                      href="tel:5555555555"
+                      ><span class="footer__contacts-block-text-bottom"
+                        >(555) 555-5555</span
+                      ></a
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="footer__contacts-block footer__contacts-block--email"
+                >
+                  <div class="footer__contacts-block-icon">
+                    <img
+                      src="images/email-icon.png"
+                      alt=""
+                      class="footer__contacts-block-icon-image"
+                    />
+                  </div>
+                  <div class="footer__contacts-block-text">
+                    <span class="footer__contacts-block-text-top"
+                      >Send Us A Message</span
+                    >
+                    <a
+                      class="footer__contacts-block-link-bottom"
+                      href="mailto:info@neko-inn.com"
+                      ><span class="footer__contacts-block-text-bottom"
+                        >info@neko-inn.com</span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="footer__right">
+                <div class="footer__plans">
+                  <span class="footer__plans-title">NekoInn Plans</span>
+                  <ul class="footer__plans-list">
+                    <li class="footer__plans-item">
+                      <a href="#" class="footer__plans-link">Purr Ducal</a>
+                    </li>
+                    <li class="footer__plans-item">
+                      <a href="#" class="footer__plans-link">Purr Royal</a>
+                    </li>
+                    <li class="footer__plans-item">
+                      <a href="#" class="footer__plans-link">Purr Imperial</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <a href="" class=""></a>
+
+                <div class="footer__social">
+                  <span class="footer__social-text"
+                    >Socialize With NekoInn</span
+                  >
+                  <ul class="footer__social-icons">
+                    <li class="footer__social-icon">
+                      <a href="#" aria-label="Facebook"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li class="footer__social-icon">
+                      <a href="#" aria-label="X (Twitter)"
+                        ><i class="fab fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li class="footer__social-icon">
+                      <a href="#" aria-label="LinkedIn"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                    <li class="footer__social-icon">
+                      <a href="#" aria-label="YouTube"
+                        ><i class="fab fa-youtube"></i
+                      ></a>
+                    </li>
+                    <li class="footer__social-icon">
+                      <a href="#" aria-label="Instagram"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <span class="footer__copyright--pc"
+                  >2025 © COPYRIGHT - NEKOINN A 5 STAR PURR HOTEL</span
+                >
+              </div>
+            </div>
+
+            <span class="footer__copyright--mobile"
               >2025 © COPYRIGHT - NEKOINN A 5 STAR PURR HOTEL</span
             >
           </div>
-        </div>
-
-        <span class="footer__copyright--mobile"
-          >2025 © COPYRIGHT - NEKOINN A 5 STAR PURR HOTEL</span
-        >
+        </footer>
       </div>
-    </footer>
+    </div>
   </body>
 </html>

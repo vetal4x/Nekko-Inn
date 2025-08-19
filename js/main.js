@@ -1,12 +1,20 @@
 // GSAP
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TextPlugin);
 
-// Loader 
+ScrollSmoother.create({
+  wrapper: '.wrapper',
+  content: '.content',
+  smooth: 1.1,
+  effects: true,
+});
+
+// Loader
 
 // Header
 
-const headerTimeline = gsap.timeline()
- .set('.header > *:not(.header__mobile-menu)', {
+const headerTimeline = gsap
+  .timeline()
+  .set('.header > *:not(.header__mobile-menu)', {
     scale: 0.95,
     opacity: 0,
     filter: 'blur(2px)',
@@ -22,69 +30,147 @@ const headerTimeline = gsap.timeline()
 
 // Hero
 
-const heroTimeline = gsap.timeline()
-  .from('.hero__title', {
-    opacity: 0,
-    x: -15,
-    scale: 0.97,
-    duration: 1.2,
-    ease: 'power3.out',
-  }, 0.1)
-
-  .from('.hero__subtitle', {
-    opacity: 0,
-    x: -5,
-    duration: 1.2,
-    ease: 'power2.out',
-    onStart() {
-      this.targets().forEach(el => el.style.transformOrigin = 'left');
+const heroTimeline = gsap
+  .timeline()
+  .from(
+    '.hero__title',
+    {
+      opacity: 0,
+      x: -15,
+      scale: 0.97,
+      duration: 1.2,
+      ease: 'power3.out',
     },
-    onUpdate() {
-      const progress = this.progress();
-      this.targets().forEach(
-        el => el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`
-      );
+    0.1
+  )
+
+  .from(
+    '.hero__subtitle',
+    {
+      opacity: 0,
+      x: -5,
+      duration: 1.2,
+      ease: 'power2.out',
+      onStart() {
+        this.targets().forEach((el) => (el.style.transformOrigin = 'left'));
+      },
+      onUpdate() {
+        const progress = this.progress();
+        this.targets().forEach(
+          (el) => (el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`)
+        );
+      },
+      onComplete() {
+        this.targets().forEach((el) => (el.style.clipPath = 'inset(0 0 0 0)'));
+      },
     },
-    onComplete() {
-      this.targets().forEach(el => el.style.clipPath = 'inset(0 0 0 0)');
+    0.1
+  )
+
+  .from(
+    '.hero__text',
+    {
+      opacity: 0,
+      y: 10,
+      duration: 1.5,
+      ease: 'power2.out',
     },
-  }, 0.1)
+    0.3
+  )
 
-  .from('.hero__text', {
-    opacity: 0,
-    y: 10,
-    duration: 1.5,
-    ease: 'power2.out',
-  }, 0.3)
+  .from(
+    '.hero__button',
+    {
+      opacity: 0,
+      y: 10,
+      duration: 1,
+      ease: 'power2.out',
+    },
+    0.5
+  )
 
-  .from('.hero__button', {
-    opacity: 0,
-    y: 10,
-    duration: 1,
-    ease: 'power2.out',
-  }, 0.5)
+  .from(
+    '.hero__image-main, .hero__image-main--pc, .hero__image-wrapper',
+    {
+      opacity: 0,
+      scale: 0.98,
+      duration: 1.2,
+      ease: 'power2.out',
+    },
+    0
+  )
 
-  .from('.hero__image-main, .hero__image-main--pc, .hero__image-wrapper', {
-    opacity: 0,
-    scale: 0.98,
-    duration: 1.2,
-    ease: 'power2.out',
-  }, 0)
-
-  .from('.hero__image-small', {
-    opacity: 0,
-    scale: 0.6,
-    duration: 0.8,
-    ease: 'power2.out',
-    stagger: 0.15,
-  }, 0);
+  .from(
+    '.hero__image-small',
+    {
+      opacity: 0,
+      scale: 0.6,
+      duration: 0.8,
+      ease: 'power2.out',
+      stagger: 0.15,
+    },
+    0
+  );
 
 // Master Timeline
 
-gsap.timeline()
-  .add(headerTimeline)
-  .add(heroTimeline, 0);
+gsap.timeline().add(headerTimeline).add(heroTimeline, 0);
 
+// Scroll Animations
+
+const tabletWidth = window.matchMedia('(min-width: 768px)');
+
+if (tabletWidth.matches) {
+  // Hero Scroll Animations
+
+  const heroTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true,
+    },
+  });
+
+  heroTimeline.to('.hero__content-wrapper', { x: -200, opacity: 0 }, 0);
+  heroTimeline.to('.hero__image', { x: 200, opacity: 0 }, 0);
+
+  // Contacts Scroll Animations
+
+  const contactsTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.contacts',
+      start: 'top bottom',
+      end: 'center+=80% center',
+      scrub: true,
+    },
+  });
+
+  // Contacts Blocks Scroll Animation
+
+  contactsTimeline.fromTo(
+    '.contacts__communication',
+    { width: '200%' },
+    { width: '100%' },
+    0
+  );
+
+  // Contacts Text and Icons Scroll Animation
+
+  contactsTimeline.fromTo(
+    '.contacts__text',
+    { x: -20, opacity: 0 },
+    { x: 0, opacity: 1, stagger: 0.1 },
+    0
+  );
+
+  contactsTimeline.fromTo(
+    '.contacts__icon',
+    { scale: 0.7, opacity: 0, filter: 'blur(2px)' },
+    { scale: 1, opacity: 1, filter: 'blur(0px)', stagger: 0.1 },
+    0
+  );
+}
 
 // Hamburger
 
