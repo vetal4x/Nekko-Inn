@@ -10,7 +10,11 @@
   --main-color: rgb(199, 94, 144);
   --secondary-color: rgb(142, 52, 95);
   --main-background-color: rgb(29, 29, 29);
-  --header-hero-background-color-light: linear-gradient(46.79deg, rgba(255, 253.9375, 254.44345092773438, 1),rgba(246.5, 220.8229217529297, 233.05010986328125, 1) 100%);
+  --header-hero-background-color-light: linear-gradient(
+    46.79deg,
+    rgba(255, 253.9375, 254.44345092773438, 1),
+    rgba(246.5, 220.8229217529297, 233.05010986328125, 1) 100%
+  );
   --header-hero-background-color-dark: rgb(22, 22, 22);
   --footer-background-color: rgb(22, 22, 22);
   --secondary-background-color: rgb(22, 22, 22);
@@ -134,22 +138,20 @@ button {
 .header-hero-wrapper::before {
   content: '';
   position: absolute;
-    top: 0;
+  top: 0;
   left: -1px;
   right: -1px;
   bottom: -1px;
   z-index: -1;
-  background: var(--header-hero-background-color-dark); 
+  background: var(--header-hero-background-color-dark);
   border-radius: inherit;
   opacity: 1;
-  transition: opacity 1s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme='light'] .header-hero-wrapper::before {
   opacity: 0;
 }
-
-
 
 .header__logo {
   width: 100%;
@@ -2069,8 +2071,33 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     align-items: start;
   }
 
+  .about__title {
+    position: relative;
+  }
+
+  .about__title-underline {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform-origin: left center;
+    bottom: -6px;
+  }
+
   .about__subtitle {
+    position: relative;
     margin: 16px 0 20px;
+  }
+
+  .about__subtitle-underline {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transform-origin: left center;
+    bottom: -6px;
   }
 
   .about__button {
@@ -2116,6 +2143,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     flex-direction: row;
     height: 410px;
     width: 100%;
+    cursor: pointer;
   }
 
   .image-gallery__image {

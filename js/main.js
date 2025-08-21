@@ -170,8 +170,112 @@ if (tabletWidth.matches) {
     { scale: 1, opacity: 1, filter: 'blur(0px)', stagger: 0.1 },
     0
   );
-}
 
+// About Scroll Animations
+
+const aboutTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.about',
+    start: 'top 130%',
+    end: 'top 20%',
+    scrub: true,
+  },
+});
+
+// About Blocks Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about',
+  {
+    rotateX: 45,
+    opacity: 0,
+    y: -100,
+    transformPerspective: 1000,
+    transformOrigin: 'center bottom',
+  },
+  {
+    rotateX: 0,
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    ease: 'power3.out'
+  },
+  0.15 
+);
+
+// About Title Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__title',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.2
+);
+
+aboutTimeline.fromTo(
+  '.about__title-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+  0.25
+);
+
+aboutTimeline.to(
+  '.about__title-underline',
+  { transformOrigin: 'right center', scaleX: 0, duration: 0.2, ease: 'power2.in' },
+  0.45
+);
+
+// About Subtitle Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__subtitle',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.5
+);
+
+aboutTimeline.fromTo(
+  '.about__subtitle-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+  0.55
+);
+
+aboutTimeline.to(
+  '.about__subtitle-underline',
+  { transformOrigin: 'right center', scaleX: 0, duration: 0.2, ease: 'power2.in' },
+  0.75
+);
+
+// About Text Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__text',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+  0.8 
+);
+
+// About Button Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__button',
+  { scale: 0.8, opacity: 0 },
+  { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
+  0.95
+);
+
+// About Image Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__image-wrapper',
+  { x: 140, opacity: 0, scale: 0.95 },
+  { x: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'power3.out' },
+  0.5
+);
+
+
+}
 // Hamburger
 
 const header = document.querySelector('.header');
