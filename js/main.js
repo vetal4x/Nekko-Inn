@@ -504,6 +504,19 @@ if (tabletWidth.matches) {
     { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
     2
   );
+
+  // Clients Slider Scroll Animation
+  
+  gsap.from('.slider--clients', {
+    y: 50,
+    opacity: 0,
+    duration: 0.6,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.slider--clients',
+      start: 'top 90%',
+    },
+  });
 }
 
 // Hamburger
