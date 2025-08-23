@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TextPlugin);
 ScrollSmoother.create({
   wrapper: '.wrapper',
   content: '.content',
-  smooth: 1.1,
+  smooth: 1.2,
   effects: true,
 });
 
@@ -171,111 +171,256 @@ if (tabletWidth.matches) {
     0
   );
 
-// About Scroll Animations
+  // About Scroll Animations
 
-const aboutTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.about',
-    start: 'top 130%',
-    end: 'top 20%',
-    scrub: true,
-  },
-});
+  const aboutTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.about',
+      start: 'top 130%',
+      end: 'top 20%',
+      scrub: true,
+    },
+  });
 
-// About Blocks Scroll Animation
+  // About Blocks Scroll Animation
 
-aboutTimeline.fromTo(
-  '.about',
-  {
-    rotateX: 45,
-    opacity: 0,
-    y: -100,
-    transformPerspective: 1000,
-    transformOrigin: 'center bottom',
-  },
-  {
-    rotateX: 0,
-    opacity: 1,
-    y: 0,
-    duration: 0.6,
-    ease: 'power3.out'
-  },
-  0.15 
-);
+  aboutTimeline.fromTo(
+    '.about',
+    {
+      rotateX: 45,
+      opacity: 0,
+      y: -100,
+      transformPerspective: 1000,
+      transformOrigin: 'center bottom',
+    },
+    {
+      rotateX: 0,
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      ease: 'power3.out',
+    },
+    0.15
+  );
 
-// About Title Scroll Animation
+  // About Title Scroll Animation
 
-aboutTimeline.fromTo(
-  '.about__title',
-  { y: 30, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-  0.2
-);
+  aboutTimeline.fromTo(
+    '.about__title',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.2
+  );
 
-aboutTimeline.fromTo(
-  '.about__title-underline',
-  { scaleX: 0, transformOrigin: 'left center' },
-  { scaleX: 1, duration: 0.2, ease: 'power2.out' },
-  0.25
-);
+  aboutTimeline.fromTo(
+    '.about__title-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    0.25
+  );
 
-aboutTimeline.to(
-  '.about__title-underline',
-  { transformOrigin: 'right center', scaleX: 0, duration: 0.2, ease: 'power2.in' },
-  0.45
-);
+  aboutTimeline.to(
+    '.about__title-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    },
+    0.45
+  );
 
-// About Subtitle Scroll Animation
+  // About Subtitle Scroll Animation
 
-aboutTimeline.fromTo(
-  '.about__subtitle',
-  { y: 30, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-  0.5
-);
+  aboutTimeline.fromTo(
+    '.about__subtitle',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.5
+  );
 
-aboutTimeline.fromTo(
-  '.about__subtitle-underline',
-  { scaleX: 0, transformOrigin: 'left center' },
-  { scaleX: 1, duration: 0.2, ease: 'power2.out' },
-  0.55
-);
+  aboutTimeline.fromTo(
+    '.about__subtitle-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    0.55
+  );
 
-aboutTimeline.to(
-  '.about__subtitle-underline',
-  { transformOrigin: 'right center', scaleX: 0, duration: 0.2, ease: 'power2.in' },
-  0.75
-);
+  aboutTimeline.to(
+    '.about__subtitle-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    },
+    0.75
+  );
 
-// About Text Scroll Animation
+  // About Text Scroll Animation
 
-aboutTimeline.fromTo(
-  '.about__text',
-  { y: 30, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
-  0.8 
-);
+  aboutTimeline.fromTo(
+    '.about__text',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    0.8
+  );
 
-// About Button Scroll Animation
+  // About Button Scroll Animation
 
-aboutTimeline.fromTo(
-  '.about__button',
-  { scale: 0.8, opacity: 0 },
-  { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
-  0.95
-);
+  aboutTimeline.fromTo(
+    '.about__button',
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
+    0.95
+  );
 
-// About Image Scroll Animation
+  // About Image Scroll Animation
 
-aboutTimeline.fromTo(
-  '.about__image-wrapper',
-  { x: 140, opacity: 0, scale: 0.95 },
-  { x: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'power3.out' },
-  0.5
-);
+  aboutTimeline.fromTo(
+    '.about__image-wrapper',
+    {
+      x: 140,
+      opacity: 0,
+      scale: 0.95,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 0.9,
+      ease: 'power3.out',
+    },
+    0.5
+  );
 
+  // Our Rooms Scroll Animations
 
+  // Our Rooms Image Gallery Scroll Animation
+
+  const ourRoomsGalleryTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.our-rooms',
+      start: 'top 90%',
+      end: 'bottom 90%',
+      scrub: true,
+    },
+  });
+
+  ourRoomsGalleryTimeline.fromTo(
+    '.image-gallery__image',
+    {
+      x: -450,
+      flexGrow: 1,
+      opacity: 0.3,
+    },
+    {
+      x: 0,
+      flexGrow: 1,
+      opacity: 0.3,
+      stagger: 0.2,
+      duration: 1,
+      ease: 'power2.out',
+    }
+  );
+
+  ourRoomsGalleryTimeline.to(
+    '.image-gallery__image--active',
+    {
+      flexGrow: 'var(--total-images)',
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power2.out',
+    },
+    '>-0.2'
+  );
+
+  ourRoomsGalleryTimeline.eventCallback('onUpdate', () => {
+    const progress = ourRoomsGalleryTimeline.progress();
+    if (progress > 0.8) {
+      document.querySelectorAll('.image-gallery__image').forEach((el) => {
+        el.style.removeProperty('flex-grow');
+        el.style.removeProperty('opacity');
+        el.style.removeProperty('transform');
+      });
+    }
+  });
+
+  // Our Rooms Title, Subtitle and Accordion Scroll Animation
+
+  const ourRoomsRightContentTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.our-rooms',
+      start: 'top 85%',
+      end: 'bottom 110%',
+      scrub: true,
+    },
+  });
+
+  // Our Rooms Title Scroll Animation
+
+  ourRoomsRightContentTimeline.fromTo(
+    '.our-rooms__title',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.2
+  );
+
+  ourRoomsRightContentTimeline.fromTo(
+    '.our-rooms__title-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.4, ease: 'power2.out' },
+    0.35
+  );
+
+  ourRoomsRightContentTimeline.to(
+    '.our-rooms__title-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    },
+    0.7
+  );
+
+  // Our Rooms Subtitle Scroll Animation
+
+  ourRoomsRightContentTimeline.fromTo(
+    '.our-rooms__subtitle',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.6
+  );
+
+  ourRoomsRightContentTimeline.fromTo(
+    '.our-rooms__subtitle-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    0.75
+  );
+
+  ourRoomsRightContentTimeline.to(
+    '.our-rooms__subtitle-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    },
+    1.1
+  );
+
+  // Our Rooms Accordion Scroll Animation
+
+  ourRoomsRightContentTimeline.fromTo(
+    '.accordion__wrapper',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.4 },
+    0.9
+  );
 }
+
 // Hamburger
 
 const header = document.querySelector('.header');
