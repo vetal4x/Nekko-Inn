@@ -118,7 +118,7 @@ gsap.timeline().add(headerTimeline).add(heroTimeline, 0);
 
 // Scroll Animations
 
-const tabletWidth = window.matchMedia('(min-width: 768px)');
+const tabletWidth = window.matchMedia('(min-width: 1280px)');
 
 if (tabletWidth.matches) {
   // Hero Scroll Animations
@@ -418,6 +418,91 @@ if (tabletWidth.matches) {
     { y: 30, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.4 },
     0.9
+  );
+
+  // Care Section Scroll Animation
+
+  // Care Cards Scroll Animation
+
+  const careCards = document.querySelectorAll('.care__block');
+
+  const reversedCards = Array.from(careCards).reverse();
+
+  const careTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.care',
+      start: 'top 90%',
+      end: 'bottom 100%',
+      scrub: true,
+    },
+  });
+
+  careTimeline.fromTo(
+    reversedCards,
+    {
+      x: () => -careCards[0].offsetWidth * 2,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 1,
+      duration: 2,
+      stagger: 0.15,
+    }
+  );
+
+  // Care Title Scroll Animation
+
+  careTimeline.fromTo(
+    '.care__intro-title',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.3
+  );
+
+  // Care Subtitle Scroll Animation
+
+  careTimeline.fromTo(
+    '.care__intro-subtitle',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.7
+  );
+
+  careTimeline.fromTo(
+    '.care__intro-subtitle-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    0.85
+  );
+
+  careTimeline.to(
+    '.care__intro-subtitle-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    },
+    1.2
+  );
+
+  // Care Text Scroll Animation
+
+  careTimeline.fromTo(
+    '.care__intro-text',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    1.4
+  );
+
+  // Care Button Scroll Animation
+
+  careTimeline.fromTo(
+    '.care__intro-button',
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
+    2
   );
 }
 
