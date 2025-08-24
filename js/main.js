@@ -215,7 +215,7 @@ if (tabletWidth.matches) {
   aboutTimeline.fromTo(
     '.about__title-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
     0.25
   );
 
@@ -225,7 +225,7 @@ if (tabletWidth.matches) {
       transformOrigin: 'right center',
       scaleX: 0,
       duration: 0.2,
-      ease: 'power2.in',
+      ease: 'power1.in',
     },
     0.45
   );
@@ -242,7 +242,7 @@ if (tabletWidth.matches) {
   aboutTimeline.fromTo(
     '.about__subtitle-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
     0.55
   );
 
@@ -252,7 +252,7 @@ if (tabletWidth.matches) {
       transformOrigin: 'right center',
       scaleX: 0,
       duration: 0.2,
-      ease: 'power2.in',
+      ease: 'power1.in',
     },
     0.75
   );
@@ -369,7 +369,7 @@ if (tabletWidth.matches) {
   ourRoomsRightContentTimeline.fromTo(
     '.our-rooms__title-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.4, ease: 'power2.out' },
+    { scaleX: 1, duration: 0.4, ease: 'power1.out' },
     0.35
   );
 
@@ -379,7 +379,7 @@ if (tabletWidth.matches) {
       transformOrigin: 'right center',
       scaleX: 0,
       duration: 0.2,
-      ease: 'power2.in',
+      ease: 'power1.in',
     },
     0.7
   );
@@ -396,7 +396,7 @@ if (tabletWidth.matches) {
   ourRoomsRightContentTimeline.fromTo(
     '.our-rooms__subtitle-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
     0.75
   );
 
@@ -406,7 +406,7 @@ if (tabletWidth.matches) {
       transformOrigin: 'right center',
       scaleX: 0,
       duration: 0.2,
-      ease: 'power2.in',
+      ease: 'power1.in',
     },
     1.1
   );
@@ -472,7 +472,7 @@ if (tabletWidth.matches) {
   careTimeline.fromTo(
     '.care__intro-subtitle-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
     0.85
   );
 
@@ -482,7 +482,7 @@ if (tabletWidth.matches) {
       transformOrigin: 'right center',
       scaleX: 0,
       duration: 0.2,
-      ease: 'power2.in',
+      ease: 'power1.in',
     },
     1.2
   );
@@ -541,7 +541,7 @@ if (tabletWidth.matches) {
   pricingIntroTimeline.fromTo(
     '.pricing__title-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
     0.45
   );
 
@@ -551,7 +551,7 @@ if (tabletWidth.matches) {
       transformOrigin: 'right center',
       scaleX: 0,
       duration: 0.2,
-      ease: 'power2.in',
+      ease: 'power1.in',
     },
     0.65
   );
@@ -568,7 +568,7 @@ if (tabletWidth.matches) {
   pricingIntroTimeline.fromTo(
     '.pricing__subtitle-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
     0.75
   );
 
@@ -578,7 +578,7 @@ if (tabletWidth.matches) {
       transformOrigin: 'right center',
       scaleX: 0,
       duration: 0.2,
-      ease: 'power2.in',
+      ease: 'power1.in',
     },
     0.95
   );
@@ -639,6 +639,89 @@ if (tabletWidth.matches) {
       duration: 1,
     },
     0.1
+  );
+
+    // Reviws Scroll Animations
+
+  const reviewsTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.reviews',
+      start: 'top 100%',
+      end: 'top 20%',
+      scrub: true,
+    },
+  });
+
+  // Reviws Title Scroll Animation
+
+  reviewsTimeline.fromTo(
+    '.reviews__title',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.35
+  );
+
+  reviewsTimeline.fromTo(
+    '.reviews__title-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+    0.45
+  );
+
+  reviewsTimeline.to(
+    '.reviews__title-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power1.in',
+    },
+    0.65
+  );
+
+  // Reviews Subtitle Scroll Animation
+
+  reviewsTimeline.fromTo(
+    '.reviews__subtitle',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.65
+  );
+
+  reviewsTimeline.fromTo(
+    '.reviews__subtitle-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+    0.75
+  );
+
+  reviewsTimeline.to(
+    '.reviews__subtitle-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power1.in',
+    },
+    0.95
+  );
+
+  // Reviews Text Scroll Animation
+
+  reviewsTimeline.fromTo(
+    '.reviews__text',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    1
+  );
+
+  // Reviews Slider Testimonials Scroll Animation
+
+  reviewsTimeline.fromTo(
+    '.slider-testimonials--pc',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    1.2
   );
 }
 
