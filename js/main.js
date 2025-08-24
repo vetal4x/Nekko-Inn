@@ -506,7 +506,7 @@ if (tabletWidth.matches) {
   );
 
   // Clients Slider Scroll Animation
-  
+
   gsap.from('.slider--clients', {
     y: 50,
     opacity: 0,
@@ -517,6 +517,129 @@ if (tabletWidth.matches) {
       start: 'top 90%',
     },
   });
+
+  // Pricing Scroll Animations
+
+  const pricingIntroTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.pricing',
+      start: 'top 100%',
+      end: 'top 20%',
+      scrub: true,
+    },
+  });
+
+  // Pricing Title Scroll Animation
+
+  pricingIntroTimeline.fromTo(
+    '.pricing__title',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.35
+  );
+
+  pricingIntroTimeline.fromTo(
+    '.pricing__title-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    0.45
+  );
+
+  pricingIntroTimeline.to(
+    '.pricing__title-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    },
+    0.65
+  );
+
+  // Pricing Subtitle Scroll Animation
+
+  pricingIntroTimeline.fromTo(
+    '.pricing__subtitle',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.65
+  );
+
+  pricingIntroTimeline.fromTo(
+    '.pricing__subtitle-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power2.out' },
+    0.75
+  );
+
+  pricingIntroTimeline.to(
+    '.pricing__subtitle-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power2.in',
+    },
+    0.95
+  );
+
+  // Pricing Text Scroll Animation
+
+  pricingIntroTimeline.fromTo(
+    '.pricing__text',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    1
+  );
+
+  // Pricing Cards Scroll Animation
+
+  const pricingCardsTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.pricing__cards',
+      start: 'top 80%',
+      end: 'bottom 70%',
+      scrub: true,
+    },
+  });
+
+  const pricingCards = document.querySelectorAll('.pricing-card');
+
+  // Pricing Cards Container Scroll Animation
+
+  pricingCardsTimeline.fromTo(
+    '.pricing__cards',
+    { y: 30, scale: 0.96, opacity: 0 },
+    { y: 0, scale: 1, duration: 1.6, opacity: 1, ease: 'power3.out' }
+  );
+
+  // Pricing Cards Left Card Scroll Animation
+
+  pricingCardsTimeline.fromTo(
+    pricingCards[0],
+    {
+      x: () => pricingCards[0].offsetWidth * 0.8,
+    },
+    {
+      x: 0,
+      duration: 1,
+    },
+    0.1
+  );
+
+  // Pricing Cards Right Card Scroll Animation
+
+  pricingCardsTimeline.fromTo(
+    pricingCards[2],
+    {
+      x: () => -pricingCards[2].offsetWidth * 0.8,
+    },
+    {
+      x: 0,
+      duration: 1,
+    },
+    0.1
+  );
 }
 
 // Hamburger

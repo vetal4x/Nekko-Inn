@@ -906,11 +906,36 @@ body.lock {
   align-items: center;
 }
 
+.pricing__title {
+  position: relative;
+}
+
+.pricing__title-underline {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform-origin: left center;
+    bottom: -6px;
+  }
+
 .pricing__subtitle {
+  position: relative;
   font-size: 40px;
   line-height: 60px;
   margin: 20px 0;
 }
+
+  .pricing__subtitle-underline {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    transform-origin: left center;
+    bottom: -6px;
+  }
 
 .pricing__text {
   font-family: Poppins;
@@ -940,6 +965,7 @@ body.lock {
 }
 
 .pricing-card--light {
+  z-index: 1;
   background-color: var(--main-color);
   padding: 50px 37px;
 }
