@@ -16,12 +16,12 @@ links.forEach((link) => {
 
     const target = document.querySelector(link.getAttribute('href'));
 
-    const topPosition = target.getBoundingClientRect().top + window.pageYOffset - 50;
+    const topPosition =
+      target.getBoundingClientRect().top + window.pageYOffset - 50;
 
     smoother.scrollTo(topPosition, true, 'top');
   });
 });
-
 
 // Loader
 
@@ -656,7 +656,16 @@ if (tabletWidth.matches) {
     0.1
   );
 
-  // Reviws Scroll Animations
+  // Pricing Button Scroll Animation
+
+  pricingCardsTimeline.fromTo(
+    '.pricing__button',
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)', stagger: 0.08, },
+    0.8
+  );
+
+  // Reviews Scroll Animations
 
   const reviewsTimeline = gsap.timeline({
     scrollTrigger: {
@@ -667,7 +676,7 @@ if (tabletWidth.matches) {
     },
   });
 
-  // Reviws Title Scroll Animation
+  // Reviews Title Scroll Animation
 
   reviewsTimeline.fromTo(
     '.reviews__title',
@@ -737,6 +746,116 @@ if (tabletWidth.matches) {
     { y: 30, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
     1.2
+  );
+
+  // Booking Scroll Animations
+
+  const bookingTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.booking__container',
+      start: 'top 100%',
+      end: 'top 20%',
+      scrub: true,
+    },
+  });
+
+  // Booking Container Scroll Animation
+
+  bookingTimeline.fromTo(
+    '.booking__container',
+    { y: 100, opacity: 0 },
+    { y: 0, opacity: 1, duration: 2, ease: 'power3.out' }
+  );
+
+  // Booking Title Scroll Animation
+
+  bookingTimeline.fromTo(
+    '.booking__title',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.35
+  );
+
+  bookingTimeline.fromTo(
+    '.booking__title-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+    0.45
+  );
+
+  bookingTimeline.to(
+    '.booking__title-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power1.in',
+    },
+    0.65
+  );
+
+  // Booking Subtitle Scroll Animation
+
+  bookingTimeline.fromTo(
+    '.booking__subtitle',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.65
+  );
+
+  bookingTimeline.fromTo(
+    '.booking__subtitle-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+    0.75
+  );
+
+  bookingTimeline.to(
+    '.booking__subtitle-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power1.in',
+    },
+    0.95
+  );
+
+  // Booking Text Scroll Animation
+
+  bookingTimeline.fromTo(
+    '.booking__text',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    1
+  );
+
+  // Booking Form Scroll Animation
+
+  const bookingFormTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.booking__form',
+      start: 'top 90%',
+      end: 'top',
+      scrub: true,
+    },
+  });
+
+  // Booking Form Fields Scroll Animation
+
+  bookingFormTimeline.fromTo(
+    '.booking__field',
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 1.2, ease: 'back.out(1.7)', stagger: 0.2 }
+  );
+
+  // Booking Form Button Scroll Animation
+
+  bookingFormTimeline.fromTo(
+    '.booking__button',
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
+    '>'
   );
 }
 
