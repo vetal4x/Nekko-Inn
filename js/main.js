@@ -1,12 +1,27 @@
 // GSAP
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TextPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, TextPlugin, ScrollToPlugin);
 
-ScrollSmoother.create({
+const smoother = ScrollSmoother.create({
   wrapper: '.wrapper',
   content: '.content',
   smooth: 1.2,
   effects: true,
 });
+
+const links = document.querySelectorAll('.header__navbar-item--link');
+
+links.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const target = document.querySelector(link.getAttribute('href'));
+
+    const topPosition = target.getBoundingClientRect().top + window.pageYOffset - 50;
+
+    smoother.scrollTo(topPosition, true, 'top');
+  });
+});
+
 
 // Loader
 
@@ -641,7 +656,7 @@ if (tabletWidth.matches) {
     0.1
   );
 
-    // Reviws Scroll Animations
+  // Reviws Scroll Animations
 
   const reviewsTimeline = gsap.timeline({
     scrollTrigger: {
