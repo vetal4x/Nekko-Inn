@@ -1419,6 +1419,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
 }
 
 .footer__intro-logo-text--top {
+  position: relative;
   color: var(--grey-text-color);
   font-size: 12px;
   font-weight: 700;
@@ -1426,14 +1427,27 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   letter-spacing: 4.4px;
   text-align: left;
   text-transform: uppercase;
+  width: fit-content;
 }
 
 .footer__intro-logo-text--bottom {
+  position: relative;
   color: var(--main-text-color);
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
   text-align: left;
+}
+
+.footer__intro-logo-text--top-underline,
+.footer__intro-logo-text--bottom-underline {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transform-origin: left center;
+  bottom: -6px;
 }
 
 .footer__intro-form {
@@ -3097,6 +3111,10 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     justify-content: end;
     width: 100%;
     gap: 58px;
+  }
+
+  .header__navbar-item--link {
+    white-space: nowrap;
   }
 
   .header__buttons-wrapper {

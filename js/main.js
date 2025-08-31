@@ -661,7 +661,13 @@ if (tabletWidth.matches) {
   pricingCardsTimeline.fromTo(
     '.pricing__button',
     { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)', stagger: 0.08, },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.08,
+    },
     0.8
   );
 
@@ -857,6 +863,197 @@ if (tabletWidth.matches) {
     { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
     '>'
   );
+
+  // Footer Scroll Animations
+
+  const footerTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.footer',
+      start: 'top 100%',
+      end: 'bottom 90%',
+      scrub: true,
+    },
+  });
+
+  // Footer Container Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__container',
+    { y: 50, opacity: 0, filter: 'blur(10px)' },
+    { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.5, ease: 'power3.out' }
+  );
+
+  // Footer Logo Image Scroll Animations
+
+  footerTimeline.fromTo(
+    '.footer__intro-logo-image',
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
+    0.45
+  );
+
+  // Footer Logo Text Top Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__intro-logo-text--top',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.45
+  );
+
+  footerTimeline.fromTo(
+    '.footer__intro-logo-text--top-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+    0.55
+  );
+
+  footerTimeline.to(
+    '.footer__intro-logo-text--top-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power1.in',
+    },
+    0.8
+  );
+
+  // Footer Logo Text Bottom Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__intro-logo-text--bottom',
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+    0.8
+  );
+
+  footerTimeline.fromTo(
+    '.footer__intro-logo-text--bottom-underline',
+    { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+    0.9
+  );
+
+  footerTimeline.to(
+    '.footer__intro-logo-text--bottom-underline',
+    {
+      transformOrigin: 'right center',
+      scaleX: 0,
+      duration: 0.2,
+      ease: 'power1.in',
+    },
+    1.15
+  );
+
+  // Footer Input Field Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__intro-form',
+    { width: '26%' },
+    { width: '62%', duration: 1.2, ease: 'power3.out' },
+    0.55
+  );
+
+  // Footer Contact Icons Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__contacts-block-icon',
+    { scale: 0.8, opacity: 0 },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.3,
+    },
+    1.55
+  );
+
+  // Footer Contact Text Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__contacts-block-text',
+    { rotationX: 90, opacity: 0 },
+    {
+      rotationX: 0,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.3,
+    },
+    1.6
+  );
+
+  // Footer Plans Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__plans-title, .footer__plans-item',
+    { rotationX: 90, opacity: 0 },
+    {
+      rotationX: 0,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.2,
+    },
+    1.4
+  );
+
+  // Footer Social Text Scroll Animation
+
+  footerTimeline.from(
+    '.footer__social-text',
+    {
+      opacity: 0,
+      x: -5,
+      duration: 1.2,
+      ease: 'power2.out',
+      onStart() {
+        this.targets().forEach((el) => (el.style.transformOrigin = 'left'));
+      },
+      onUpdate() {
+        const progress = this.progress();
+        this.targets().forEach(
+          (el) => (el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`)
+        );
+      },
+      onComplete() {
+        this.targets().forEach((el) => (el.style.clipPath = 'inset(0 0 0 0)'));
+      },
+    },
+    1.4
+  );
+
+  // Footer Social Icons Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__social-icon',
+    { scale: 0.8, opacity: 0 },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.2,
+    },
+    1.6
+  );
+
+  // Footer Copyright Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__copyright--pc, .footer__copyright--mobile',
+    { x: '100%', opacity: 0 },
+    {
+      x: '0%',
+      opacity: 1,
+      duration: 0.4,
+      ease: 'power3.out',
+      stagger: 0.2,
+    },
+    2.2
+  );
 }
 
 // Hamburger
@@ -890,14 +1087,59 @@ const themeSwitchers = document.querySelectorAll(
   '.mobile-menu__theme-switcher, .header__theme-switcher'
 );
 
+let userSelectedTheme = localStorage.getItem('theme');
+
+// Function to apply theme
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+
+  themeSwitchers.forEach((button) => {
+    button.classList.toggle(
+      'mobile-menu__theme-switcher--active',
+      theme === 'light'
+    );
+    button.classList.toggle(
+      'header__theme-switcher--active',
+      theme === 'light'
+    );
+  });
+}
+
+// Detecting the theme when loading a page
+
+function getInitialTheme() {
+  if (userSelectedTheme !== null) {
+    return userSelectedTheme;
+  }
+
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return prefersDark ? '' : 'light';
+}
+
+// Applying a theme when loading a page
+
+applyTheme(getInitialTheme());
+
+// Events on switching
+
 themeSwitchers.forEach((button) => {
   button.addEventListener('click', () => {
-    button.classList.toggle('mobile-menu__theme-switcher--active');
-    button.classList.toggle('header__theme-switcher--active');
-    document.body.dataset.theme =
-      document.body.dataset.theme === 'light' ? '' : 'light';
+    const newTheme = document.body.dataset.theme === 'light' ? '' : 'light';
+    userSelectedTheme = newTheme;
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
   });
 });
+
+window
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', (event) => {
+    if (userSelectedTheme === null) {
+      const newTheme = event.matches ? '' : 'light';
+      applyTheme(newTheme);
+    }
+  });
 
 // Sliders
 
@@ -1040,7 +1282,7 @@ const dateInput = document.getElementById('date');
 const today = new Date().toISOString().split('T')[0];
 dateInput.value = today;
 
-//Calendar Icon
+// Calendar Icon
 
 const input = document.getElementById('date');
 const icon = document.querySelector('.date-icon-wrapper');
