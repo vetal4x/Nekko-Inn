@@ -155,9 +155,8 @@ if (tabletWidth.matches) {
   const contactsTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.contacts',
-      start: 'top bottom',
-      end: 'center+=80% center',
-      scrub: true,
+      start: 'top 80%',
+      toggleActions: 'play none none none',
     },
   });
 
@@ -191,9 +190,8 @@ if (tabletWidth.matches) {
   const aboutTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.about',
-      start: 'top 130%',
-      end: 'top 20%',
-      scrub: true,
+      start: 'top 100%',
+      toggleActions: 'play none none none',
     },
   });
 
@@ -366,9 +364,8 @@ if (tabletWidth.matches) {
   const ourRoomsRightContentTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.our-rooms',
-      start: 'top 85%',
-      end: 'bottom 110%',
-      scrub: true,
+      start: 'top 80%',
+      toggleActions: 'play none none none',
     },
   });
 
@@ -437,20 +434,18 @@ if (tabletWidth.matches) {
 
   // Care Section Scroll Animation
 
-  // Care Cards Scroll Animation
-
   const careCards = document.querySelectorAll('.care__block');
-
   const reversedCards = Array.from(careCards).reverse();
 
   const careTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.care',
-      start: 'top 90%',
-      end: 'bottom 100%',
-      scrub: true,
+      start: 'top 80%',
+      toggleActions: 'play none none none',
     },
   });
+
+  // Care Cards Scroll Animation
 
   careTimeline.fromTo(
     reversedCards,
@@ -461,9 +456,10 @@ if (tabletWidth.matches) {
     {
       x: 0,
       opacity: 1,
-      duration: 2,
-      stagger: 0.15,
-    }
+      duration: 0.6,
+      stagger: 0.2,
+    },
+    0
   );
 
   // Care Title Scroll Animation
@@ -471,8 +467,8 @@ if (tabletWidth.matches) {
   careTimeline.fromTo(
     '.care__intro-title',
     { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.3
+    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+    0.4
   );
 
   // Care Subtitle Scroll Animation
@@ -481,14 +477,14 @@ if (tabletWidth.matches) {
     '.care__intro-subtitle',
     { y: 30, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.7
+    0.6
   );
 
   careTimeline.fromTo(
     '.care__intro-subtitle-underline',
     { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.85
+    { scaleX: 1, duration: 0.25, ease: 'power1.out' },
+    0.75
   );
 
   careTimeline.to(
@@ -496,10 +492,10 @@ if (tabletWidth.matches) {
     {
       transformOrigin: 'right center',
       scaleX: 0,
-      duration: 0.2,
+      duration: 0.25,
       ease: 'power1.in',
     },
-    1.2
+    1.05
   );
 
   // Care Text Scroll Animation
@@ -508,7 +504,7 @@ if (tabletWidth.matches) {
     '.care__intro-text',
     { y: 30, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
-    1.4
+    1.1
   );
 
   // Care Button Scroll Animation
@@ -517,7 +513,7 @@ if (tabletWidth.matches) {
     '.care__intro-button',
     { scale: 0.8, opacity: 0 },
     { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
-    2
+    1.3
   );
 
   // Clients Slider Scroll Animation
@@ -539,8 +535,7 @@ if (tabletWidth.matches) {
     scrollTrigger: {
       trigger: '.pricing',
       start: 'top 100%',
-      end: 'top 20%',
-      scrub: true,
+      toggleActions: 'play none none none',
     },
   });
 
@@ -613,8 +608,7 @@ if (tabletWidth.matches) {
     scrollTrigger: {
       trigger: '.pricing__cards',
       start: 'top 80%',
-      end: 'bottom 70%',
-      scrub: true,
+      toggleActions: 'play none none none',
     },
   });
 
@@ -677,8 +671,7 @@ if (tabletWidth.matches) {
     scrollTrigger: {
       trigger: '.reviews',
       start: 'top 100%',
-      end: 'top 20%',
-      scrub: true,
+      toggleActions: 'play none none none',
     },
   });
 
@@ -760,8 +753,7 @@ if (tabletWidth.matches) {
     scrollTrigger: {
       trigger: '.booking__container',
       start: 'top 100%',
-      end: 'top 20%',
-      scrub: true,
+      toggleActions: 'play none none none',
     },
   });
 
@@ -841,27 +833,17 @@ if (tabletWidth.matches) {
   const bookingFormTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.booking__form',
-      start: 'top 90%',
-      end: 'top',
-      scrub: true,
+      start: 'top 80%',
+      toggleActions: 'play none none none',
     },
   });
 
-  // Booking Form Fields Scroll Animation
+  // Booking Form Fields + Button Scroll Animation
 
   bookingFormTimeline.fromTo(
-    '.booking__field',
+    '.booking__field, .booking__button',
     { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 1.2, ease: 'back.out(1.7)', stagger: 0.2 }
-  );
-
-  // Booking Form Button Scroll Animation
-
-  bookingFormTimeline.fromTo(
-    '.booking__button',
-    { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
-    '>'
+    { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.7)', stagger: 0.18 }
   );
 
   // Footer Scroll Animations
@@ -869,9 +851,8 @@ if (tabletWidth.matches) {
   const footerTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: '.footer',
-      start: 'top 100%',
-      end: 'bottom 90%',
-      scrub: true,
+      start: 'top 90%',
+      toggleActions: 'play none none none',
     },
   });
 
@@ -879,7 +860,7 @@ if (tabletWidth.matches) {
 
   footerTimeline.fromTo(
     '.footer__container',
-    { y: 50, opacity: 0, filter: 'blur(10px)' },
+    { y: 60, opacity: 0, filter: 'blur(10px)' },
     { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.5, ease: 'power3.out' }
   );
 
@@ -951,7 +932,7 @@ if (tabletWidth.matches) {
   footerTimeline.fromTo(
     '.footer__intro-form',
     { width: '26%' },
-    { width: '62%', duration: 1.2, ease: 'power3.out' },
+    { width: '62%', duration: 3, ease: 'power3.out' },
     0.55
   );
 
@@ -1033,7 +1014,7 @@ if (tabletWidth.matches) {
     {
       scale: 1,
       opacity: 1,
-      duration: 0.4,
+      duration: 0.6,
       ease: 'back.out(1.7)',
       stagger: 0.2,
     },
@@ -1048,11 +1029,10 @@ if (tabletWidth.matches) {
     {
       x: '0%',
       opacity: 1,
-      duration: 0.4,
+      duration: 0.8,
       ease: 'power3.out',
-      stagger: 0.2,
     },
-    2.2
+    2
   );
 }
 
