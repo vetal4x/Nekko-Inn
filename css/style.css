@@ -2661,6 +2661,17 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
 }
 
 @media (min-width: 1024px) {
+  .button {
+    text-shadow: none;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .button:hover {
+    box-shadow: inset 0 0 30px var(--secondary-color),
+      0 0 30px var(--secondary-color);
+    text-shadow: 2px 2px 4px #427388;
+  }
+
   /* Header */
 
   .header {
@@ -3108,7 +3119,28 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   }
 
   .header__navbar-item--link {
+    position: relative;
     white-space: nowrap;
+    transition: all 0.3s ease;
+  }
+
+  .header__navbar-item--link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.25em;
+    height: 2px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .header__navbar-item--link:hover::after {
+    width: 100%;
+    animation: pulse 0.7s;
+    box-shadow: 0 0 0 1em transparent;
   }
 
   .header__buttons-wrapper {
@@ -4999,5 +5031,17 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(166, 166, 166, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 12px 4px rgba(166, 166, 166, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
   }
 }
