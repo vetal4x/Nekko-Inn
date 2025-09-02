@@ -127,11 +127,691 @@ const heroTimeline = gsap
     0
   );
 
-// Master Timeline
-
-gsap.timeline().add(headerTimeline).add(heroTimeline, 0);
-
 // Scroll Animations
+
+// About Scroll Animations
+
+const aboutTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.about',
+    start: 'top 100%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// About Title Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__title',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.2
+);
+
+aboutTimeline.fromTo(
+  '.about__title-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.25
+);
+
+aboutTimeline.to(
+  '.about__title-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.45
+);
+
+// About Subtitle Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__subtitle',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.5
+);
+
+aboutTimeline.fromTo(
+  '.about__subtitle-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.55
+);
+
+aboutTimeline.to(
+  '.about__subtitle-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.75
+);
+
+// About Text Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__text',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+  0.8
+);
+
+// About Button Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__button',
+  { scale: 0.8, opacity: 0 },
+  { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
+  0.95
+);
+
+// About Image Scroll Animation
+
+aboutTimeline.fromTo(
+  '.about__image-wrapper',
+  {
+    x: 140,
+    opacity: 0,
+    scale: 0.95,
+  },
+  {
+    x: 0,
+    opacity: 1,
+    scale: 1,
+    duration: 0.9,
+    ease: 'power3.out',
+  },
+  0.5
+);
+
+// Our Rooms Scroll Animations
+
+// Our Rooms Image Gallery Scroll Animation
+
+const ourRoomsGalleryTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.our-rooms',
+    start: 'top 90%',
+    end: 'bottom 90%',
+    scrub: true,
+  },
+});
+
+ourRoomsGalleryTimeline.fromTo(
+  '.image-gallery__image',
+  {
+    x: -450,
+    flexGrow: 1,
+    opacity: 0.3,
+  },
+  {
+    x: 0,
+    flexGrow: 1,
+    opacity: 0.3,
+    stagger: 0.2,
+    duration: 1,
+    ease: 'power2.out',
+  }
+);
+
+ourRoomsGalleryTimeline.to(
+  '.image-gallery__image--active',
+  {
+    flexGrow: 'var(--total-images)',
+    opacity: 1,
+    duration: 0.4,
+    ease: 'power2.out',
+  },
+  '>-0.2'
+);
+
+ourRoomsGalleryTimeline.eventCallback('onUpdate', () => {
+  const progress = ourRoomsGalleryTimeline.progress();
+  if (progress > 0.8) {
+    document.querySelectorAll('.image-gallery__image').forEach((el) => {
+      el.style.removeProperty('flex-grow');
+      el.style.removeProperty('opacity');
+      el.style.removeProperty('transform');
+    });
+  }
+});
+
+// Our Rooms Title, Subtitle and Accordion Scroll Animation
+
+const ourRoomsRightContentTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.our-rooms',
+    start: 'top 80%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// Our Rooms Title Scroll Animation
+
+ourRoomsRightContentTimeline.fromTo(
+  '.our-rooms__title',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.2
+);
+
+ourRoomsRightContentTimeline.fromTo(
+  '.our-rooms__title-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.4, ease: 'power1.out' },
+  0.35
+);
+
+ourRoomsRightContentTimeline.to(
+  '.our-rooms__title-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.7
+);
+
+// Our Rooms Subtitle Scroll Animation
+
+ourRoomsRightContentTimeline.fromTo(
+  '.our-rooms__subtitle',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.6
+);
+
+ourRoomsRightContentTimeline.fromTo(
+  '.our-rooms__subtitle-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.75
+);
+
+ourRoomsRightContentTimeline.to(
+  '.our-rooms__subtitle-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  1.1
+);
+
+// Our Rooms Accordion Scroll Animation
+
+ourRoomsRightContentTimeline.fromTo(
+  '.accordion__wrapper',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', stagger: 0.2 },
+  0.8
+);
+
+// Clients Slider Scroll Animation
+
+gsap.from('.slider--clients', {
+  y: 50,
+  opacity: 0,
+  duration: 0.6,
+  ease: 'power3.out',
+  scrollTrigger: {
+    trigger: '.slider--clients',
+    start: 'top 90%',
+  },
+});
+
+// Pricing Scroll Animations
+
+const pricingIntroTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.pricing',
+    start: 'top 100%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// Pricing Title Scroll Animation
+
+pricingIntroTimeline.fromTo(
+  '.pricing__title',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.35
+);
+
+pricingIntroTimeline.fromTo(
+  '.pricing__title-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.45
+);
+
+pricingIntroTimeline.to(
+  '.pricing__title-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.65
+);
+
+// Pricing Subtitle Scroll Animation
+
+pricingIntroTimeline.fromTo(
+  '.pricing__subtitle',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.65
+);
+
+pricingIntroTimeline.fromTo(
+  '.pricing__subtitle-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.75
+);
+
+pricingIntroTimeline.to(
+  '.pricing__subtitle-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.95
+);
+
+// Pricing Text Scroll Animation
+
+pricingIntroTimeline.fromTo(
+  '.pricing__text',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+  1
+);
+
+// Reviews Scroll Animations
+
+const reviewsTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.reviews',
+    start: 'top 100%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// Reviews Title Scroll Animation
+
+reviewsTimeline.fromTo(
+  '.reviews__title',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.35
+);
+
+reviewsTimeline.fromTo(
+  '.reviews__title-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.45
+);
+
+reviewsTimeline.to(
+  '.reviews__title-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.65
+);
+
+// Reviews Subtitle Scroll Animation
+
+reviewsTimeline.fromTo(
+  '.reviews__subtitle',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.65
+);
+
+reviewsTimeline.fromTo(
+  '.reviews__subtitle-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.75
+);
+
+reviewsTimeline.to(
+  '.reviews__subtitle-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.95
+);
+
+// Reviews Text Scroll Animation
+
+reviewsTimeline.fromTo(
+  '.reviews__text',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+  1
+);
+
+// Reviews Slider Testimonials Scroll Animation
+
+reviewsTimeline.fromTo(
+  '.slider-testimonials--pc',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+  1.2
+);
+
+// Booking Scroll Animations
+
+const bookingTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.booking__container',
+    start: 'top 100%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// Booking Container Scroll Animation
+
+bookingTimeline.fromTo(
+  '.booking__container',
+  { y: 100, opacity: 0 },
+  { y: 0, opacity: 1, duration: 2, ease: 'power3.out' }
+);
+
+// Booking Title Scroll Animation
+
+bookingTimeline.fromTo(
+  '.booking__title',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.35
+);
+
+bookingTimeline.fromTo(
+  '.booking__title-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.45
+);
+
+bookingTimeline.to(
+  '.booking__title-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.65
+);
+
+// Booking Subtitle Scroll Animation
+
+bookingTimeline.fromTo(
+  '.booking__subtitle',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.65
+);
+
+bookingTimeline.fromTo(
+  '.booking__subtitle-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.75
+);
+
+bookingTimeline.to(
+  '.booking__subtitle-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.95
+);
+
+// Booking Text Scroll Animation
+
+bookingTimeline.fromTo(
+  '.booking__text',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
+  1
+);
+
+// Booking Form Scroll Animation
+
+const bookingFormTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.booking__form',
+    start: 'top 80%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// Booking Form Fields + Button Scroll Animation
+
+bookingFormTimeline.fromTo(
+  '.booking__field, .booking__button',
+  { scale: 0.8, opacity: 0 },
+  { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.7)', stagger: 0.18 }
+);
+
+// Footer Scroll Animations
+
+const footerTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.footer',
+    start: 'top 90%',
+    toggleActions: 'play none none none',
+  },
+});
+
+// Footer Container Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__container',
+  { y: 60, opacity: 0, filter: 'blur(10px)' },
+  { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.5, ease: 'power3.out' }
+);
+
+// Footer Logo Image Scroll Animations
+
+footerTimeline.fromTo(
+  '.footer__intro-logo-image',
+  { scale: 0.8, opacity: 0 },
+  { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
+  0.45
+);
+
+// Footer Logo Text Top Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__intro-logo-text--top',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.45
+);
+
+footerTimeline.fromTo(
+  '.footer__intro-logo-text--top-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.55
+);
+
+footerTimeline.to(
+  '.footer__intro-logo-text--top-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  0.8
+);
+
+// Footer Logo Text Bottom Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__intro-logo-text--bottom',
+  { y: 30, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
+  0.8
+);
+
+footerTimeline.fromTo(
+  '.footer__intro-logo-text--bottom-underline',
+  { scaleX: 0, transformOrigin: 'left center' },
+  { scaleX: 1, duration: 0.2, ease: 'power1.out' },
+  0.9
+);
+
+footerTimeline.to(
+  '.footer__intro-logo-text--bottom-underline',
+  {
+    transformOrigin: 'right center',
+    scaleX: 0,
+    duration: 0.2,
+    ease: 'power1.in',
+  },
+  1.15
+);
+
+// Footer Input Field Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__intro-form',
+  { width: '26%' },
+  { width: '100%', duration: 2.5, ease: 'power3.out' },
+  0.55
+);
+
+// Footer Contact Icons Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__contacts-block-icon',
+  { scale: 0.8, opacity: 0 },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 0.4,
+    ease: 'back.out(1.7)',
+    stagger: 0.3,
+  },
+  1.55
+);
+
+// Footer Contact Text Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__contacts-block-text',
+  { rotationX: 90, opacity: 0 },
+  {
+    rotationX: 0,
+    opacity: 1,
+    duration: 0.4,
+    ease: 'back.out(1.7)',
+    stagger: 0.3,
+  },
+  1.6
+);
+
+// Footer Plans Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__plans-title, .footer__plans-item',
+  { rotationX: 90, opacity: 0 },
+  {
+    rotationX: 0,
+    opacity: 1,
+    duration: 0.4,
+    ease: 'back.out(1.7)',
+    stagger: 0.2,
+  },
+  1.4
+);
+
+// Footer Social Text Scroll Animation
+
+footerTimeline.from(
+  '.footer__social-text',
+  {
+    opacity: 0,
+    x: -5,
+    duration: 1.2,
+    ease: 'power2.out',
+    onStart() {
+      this.targets().forEach((el) => (el.style.transformOrigin = 'left'));
+    },
+    onUpdate() {
+      const progress = this.progress();
+      this.targets().forEach(
+        (el) => (el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`)
+      );
+    },
+    onComplete() {
+      this.targets().forEach((el) => (el.style.clipPath = 'inset(0 0 0 0)'));
+    },
+  },
+  1.4
+);
+
+// Footer Social Icons Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__social-icon',
+  { scale: 0.8, opacity: 0 },
+  {
+    scale: 1,
+    opacity: 1,
+    duration: 0.6,
+    ease: 'back.out(1.7)',
+    stagger: 0.2,
+  },
+  1.6
+);
+
+// Footer Copyright Scroll Animation
+
+footerTimeline.fromTo(
+  '.footer__copyright--pc, .footer__copyright--mobile',
+  { x: '100%', opacity: 0 },
+  {
+    x: '0%',
+    opacity: 1,
+    duration: 0.8,
+    ease: 'power3.out',
+  },
+  2
+);
+
+// 1280px+ Scroll Animations
 
 const tabletWidth = window.matchMedia('(min-width: 1280px)');
 
@@ -187,14 +867,6 @@ if (tabletWidth.matches) {
 
   // About Scroll Animations
 
-  const aboutTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.about',
-      start: 'top 100%',
-      toggleActions: 'play none none none',
-    },
-  });
-
   // About Blocks Scroll Animation
 
   aboutTimeline.fromTo(
@@ -214,222 +886,6 @@ if (tabletWidth.matches) {
       ease: 'power3.out',
     },
     0.15
-  );
-
-  // About Title Scroll Animation
-
-  aboutTimeline.fromTo(
-    '.about__title',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.2
-  );
-
-  aboutTimeline.fromTo(
-    '.about__title-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.25
-  );
-
-  aboutTimeline.to(
-    '.about__title-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.45
-  );
-
-  // About Subtitle Scroll Animation
-
-  aboutTimeline.fromTo(
-    '.about__subtitle',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.5
-  );
-
-  aboutTimeline.fromTo(
-    '.about__subtitle-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.55
-  );
-
-  aboutTimeline.to(
-    '.about__subtitle-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.75
-  );
-
-  // About Text Scroll Animation
-
-  aboutTimeline.fromTo(
-    '.about__text',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
-    0.8
-  );
-
-  // About Button Scroll Animation
-
-  aboutTimeline.fromTo(
-    '.about__button',
-    { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
-    0.95
-  );
-
-  // About Image Scroll Animation
-
-  aboutTimeline.fromTo(
-    '.about__image-wrapper',
-    {
-      x: 140,
-      opacity: 0,
-      scale: 0.95,
-    },
-    {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      duration: 0.9,
-      ease: 'power3.out',
-    },
-    0.5
-  );
-
-  // Our Rooms Scroll Animations
-
-  // Our Rooms Image Gallery Scroll Animation
-
-  const ourRoomsGalleryTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.our-rooms',
-      start: 'top 90%',
-      end: 'bottom 90%',
-      scrub: true,
-    },
-  });
-
-  ourRoomsGalleryTimeline.fromTo(
-    '.image-gallery__image',
-    {
-      x: -450,
-      flexGrow: 1,
-      opacity: 0.3,
-    },
-    {
-      x: 0,
-      flexGrow: 1,
-      opacity: 0.3,
-      stagger: 0.2,
-      duration: 1,
-      ease: 'power2.out',
-    }
-  );
-
-  ourRoomsGalleryTimeline.to(
-    '.image-gallery__image--active',
-    {
-      flexGrow: 'var(--total-images)',
-      opacity: 1,
-      duration: 0.4,
-      ease: 'power2.out',
-    },
-    '>-0.2'
-  );
-
-  ourRoomsGalleryTimeline.eventCallback('onUpdate', () => {
-    const progress = ourRoomsGalleryTimeline.progress();
-    if (progress > 0.8) {
-      document.querySelectorAll('.image-gallery__image').forEach((el) => {
-        el.style.removeProperty('flex-grow');
-        el.style.removeProperty('opacity');
-        el.style.removeProperty('transform');
-      });
-    }
-  });
-
-  // Our Rooms Title, Subtitle and Accordion Scroll Animation
-
-  const ourRoomsRightContentTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.our-rooms',
-      start: 'top 80%',
-      toggleActions: 'play none none none',
-    },
-  });
-
-  // Our Rooms Title Scroll Animation
-
-  ourRoomsRightContentTimeline.fromTo(
-    '.our-rooms__title',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.2
-  );
-
-  ourRoomsRightContentTimeline.fromTo(
-    '.our-rooms__title-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.4, ease: 'power1.out' },
-    0.35
-  );
-
-  ourRoomsRightContentTimeline.to(
-    '.our-rooms__title-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.7
-  );
-
-  // Our Rooms Subtitle Scroll Animation
-
-  ourRoomsRightContentTimeline.fromTo(
-    '.our-rooms__subtitle',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.6
-  );
-
-  ourRoomsRightContentTimeline.fromTo(
-    '.our-rooms__subtitle-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.75
-  );
-
-  ourRoomsRightContentTimeline.to(
-    '.our-rooms__subtitle-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    1.1
-  );
-
-  // Our Rooms Accordion Scroll Animation
-
-  ourRoomsRightContentTimeline.fromTo(
-    '.accordion__wrapper',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.4 },
-    0.9
   );
 
   // Care Section Scroll Animation
@@ -516,91 +972,7 @@ if (tabletWidth.matches) {
     1.3
   );
 
-  // Clients Slider Scroll Animation
-
-  gsap.from('.slider--clients', {
-    y: 50,
-    opacity: 0,
-    duration: 0.6,
-    ease: 'power3.out',
-    scrollTrigger: {
-      trigger: '.slider--clients',
-      start: 'top 90%',
-    },
-  });
-
   // Pricing Scroll Animations
-
-  const pricingIntroTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.pricing',
-      start: 'top 100%',
-      toggleActions: 'play none none none',
-    },
-  });
-
-  // Pricing Title Scroll Animation
-
-  pricingIntroTimeline.fromTo(
-    '.pricing__title',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.35
-  );
-
-  pricingIntroTimeline.fromTo(
-    '.pricing__title-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.45
-  );
-
-  pricingIntroTimeline.to(
-    '.pricing__title-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.65
-  );
-
-  // Pricing Subtitle Scroll Animation
-
-  pricingIntroTimeline.fromTo(
-    '.pricing__subtitle',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.65
-  );
-
-  pricingIntroTimeline.fromTo(
-    '.pricing__subtitle-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.75
-  );
-
-  pricingIntroTimeline.to(
-    '.pricing__subtitle-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.95
-  );
-
-  // Pricing Text Scroll Animation
-
-  pricingIntroTimeline.fromTo(
-    '.pricing__text',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
-    1
-  );
 
   // Pricing Cards Scroll Animation
 
@@ -665,375 +1037,14 @@ if (tabletWidth.matches) {
     0.8
   );
 
-  // Reviews Scroll Animations
-
-  const reviewsTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.reviews',
-      start: 'top 100%',
-      toggleActions: 'play none none none',
-    },
-  });
-
-  // Reviews Title Scroll Animation
-
-  reviewsTimeline.fromTo(
-    '.reviews__title',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.35
-  );
-
-  reviewsTimeline.fromTo(
-    '.reviews__title-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.45
-  );
-
-  reviewsTimeline.to(
-    '.reviews__title-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.65
-  );
-
-  // Reviews Subtitle Scroll Animation
-
-  reviewsTimeline.fromTo(
-    '.reviews__subtitle',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.65
-  );
-
-  reviewsTimeline.fromTo(
-    '.reviews__subtitle-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.75
-  );
-
-  reviewsTimeline.to(
-    '.reviews__subtitle-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.95
-  );
-
-  // Reviews Text Scroll Animation
-
-  reviewsTimeline.fromTo(
-    '.reviews__text',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
-    1
-  );
-
-  // Reviews Slider Testimonials Scroll Animation
-
-  reviewsTimeline.fromTo(
-    '.slider-testimonials--pc',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
-    1.2
-  );
-
-  // Booking Scroll Animations
-
-  const bookingTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.booking__container',
-      start: 'top 100%',
-      toggleActions: 'play none none none',
-    },
-  });
-
-  // Booking Container Scroll Animation
-
-  bookingTimeline.fromTo(
-    '.booking__container',
-    { y: 100, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2, ease: 'power3.out' }
-  );
-
-  // Booking Title Scroll Animation
-
-  bookingTimeline.fromTo(
-    '.booking__title',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.35
-  );
-
-  bookingTimeline.fromTo(
-    '.booking__title-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.45
-  );
-
-  bookingTimeline.to(
-    '.booking__title-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.65
-  );
-
-  // Booking Subtitle Scroll Animation
-
-  bookingTimeline.fromTo(
-    '.booking__subtitle',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.65
-  );
-
-  bookingTimeline.fromTo(
-    '.booking__subtitle-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.75
-  );
-
-  bookingTimeline.to(
-    '.booking__subtitle-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.95
-  );
-
-  // Booking Text Scroll Animation
-
-  bookingTimeline.fromTo(
-    '.booking__text',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' },
-    1
-  );
-
-  // Booking Form Scroll Animation
-
-  const bookingFormTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.booking__form',
-      start: 'top 80%',
-      toggleActions: 'play none none none',
-    },
-  });
-
-  // Booking Form Fields + Button Scroll Animation
-
-  bookingFormTimeline.fromTo(
-    '.booking__field, .booking__button',
-    { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.7)', stagger: 0.18 }
-  );
-
-  // Footer Scroll Animations
-
-  const footerTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.footer',
-      start: 'top 90%',
-      toggleActions: 'play none none none',
-    },
-  });
-
-  // Footer Container Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__container',
-    { y: 60, opacity: 0, filter: 'blur(10px)' },
-    { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.5, ease: 'power3.out' }
-  );
-
-  // Footer Logo Image Scroll Animations
-
-  footerTimeline.fromTo(
-    '.footer__intro-logo-image',
-    { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' },
-    0.45
-  );
-
-  // Footer Logo Text Top Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__intro-logo-text--top',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.45
-  );
-
-  footerTimeline.fromTo(
-    '.footer__intro-logo-text--top-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.55
-  );
-
-  footerTimeline.to(
-    '.footer__intro-logo-text--top-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    0.8
-  );
-
-  // Footer Logo Text Bottom Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__intro-logo-text--bottom',
-    { y: 30, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out' },
-    0.8
-  );
-
-  footerTimeline.fromTo(
-    '.footer__intro-logo-text--bottom-underline',
-    { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.2, ease: 'power1.out' },
-    0.9
-  );
-
-  footerTimeline.to(
-    '.footer__intro-logo-text--bottom-underline',
-    {
-      transformOrigin: 'right center',
-      scaleX: 0,
-      duration: 0.2,
-      ease: 'power1.in',
-    },
-    1.15
-  );
-
   // Footer Input Field Scroll Animation
 
-  footerTimeline.fromTo(
-    '.footer__intro-form',
-    { width: '26%' },
-    { width: '62%', duration: 3, ease: 'power3.out' },
-    0.55
-  );
-
-  // Footer Contact Icons Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__contacts-block-icon',
-    { scale: 0.8, opacity: 0 },
-    {
-      scale: 1,
-      opacity: 1,
-      duration: 0.4,
-      ease: 'back.out(1.7)',
-      stagger: 0.3,
-    },
-    1.55
-  );
-
-  // Footer Contact Text Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__contacts-block-text',
-    { rotationX: 90, opacity: 0 },
-    {
-      rotationX: 0,
-      opacity: 1,
-      duration: 0.4,
-      ease: 'back.out(1.7)',
-      stagger: 0.3,
-    },
-    1.6
-  );
-
-  // Footer Plans Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__plans-title, .footer__plans-item',
-    { rotationX: 90, opacity: 0 },
-    {
-      rotationX: 0,
-      opacity: 1,
-      duration: 0.4,
-      ease: 'back.out(1.7)',
-      stagger: 0.2,
-    },
-    1.4
-  );
-
-  // Footer Social Text Scroll Animation
-
-  footerTimeline.from(
-    '.footer__social-text',
-    {
-      opacity: 0,
-      x: -5,
-      duration: 1.2,
-      ease: 'power2.out',
-      onStart() {
-        this.targets().forEach((el) => (el.style.transformOrigin = 'left'));
-      },
-      onUpdate() {
-        const progress = this.progress();
-        this.targets().forEach(
-          (el) => (el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`)
-        );
-      },
-      onComplete() {
-        this.targets().forEach((el) => (el.style.clipPath = 'inset(0 0 0 0)'));
-      },
-    },
-    1.4
-  );
-
-  // Footer Social Icons Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__social-icon',
-    { scale: 0.8, opacity: 0 },
-    {
-      scale: 1,
-      opacity: 1,
-      duration: 0.6,
-      ease: 'back.out(1.7)',
-      stagger: 0.2,
-    },
-    1.6
-  );
-
-  // Footer Copyright Scroll Animation
-
-  footerTimeline.fromTo(
-    '.footer__copyright--pc, .footer__copyright--mobile',
-    { x: '100%', opacity: 0 },
-    {
-      x: '0%',
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power3.out',
-    },
-    2
-  );
+footerTimeline.fromTo(
+  '.footer__intro-form',
+  { width: '26%' },
+  { width: '62%', duration: 3, ease: 'power3.out' },
+  0.55
+);
 }
 
 // Hamburger
@@ -1294,7 +1305,7 @@ icon.addEventListener('click', () => {
   }
 });
 
-//Image Gallery
+// Image Gallery
 
 const initImageGallery = () => {
   const galleryContainer = document.querySelector('.image-gallery__images');
