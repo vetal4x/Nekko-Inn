@@ -93,15 +93,11 @@ const heroTimeline = gsap
     0.3
   )
 
-  .from(
+  .fromTo(
     '.hero__button',
-    {
-      opacity: 0,
-      y: 10,
-      duration: 1,
-      ease: 'power2.out',
-    },
-    0.5
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, duration: 1, ease: 'back.out(1.7)' },
+    0.6
   )
 
   .from(
@@ -712,105 +708,6 @@ footerTimeline.fromTo(
   0.55
 );
 
-// Footer Contact Icons Scroll Animation
-
-footerTimeline.fromTo(
-  '.footer__contacts-block-icon',
-  { scale: 0.8, opacity: 0 },
-  {
-    scale: 1,
-    opacity: 1,
-    duration: 0.4,
-    ease: 'back.out(1.7)',
-    stagger: 0.3,
-  },
-  1.55
-);
-
-// Footer Contact Text Scroll Animation
-
-footerTimeline.fromTo(
-  '.footer__contacts-block-text',
-  { rotationX: 90, opacity: 0 },
-  {
-    rotationX: 0,
-    opacity: 1,
-    duration: 0.4,
-    ease: 'back.out(1.7)',
-    stagger: 0.3,
-  },
-  1.6
-);
-
-// Footer Plans Scroll Animation
-
-footerTimeline.fromTo(
-  '.footer__plans-title, .footer__plans-item',
-  { rotationX: 90, opacity: 0 },
-  {
-    rotationX: 0,
-    opacity: 1,
-    duration: 0.4,
-    ease: 'back.out(1.7)',
-    stagger: 0.2,
-  },
-  1.4
-);
-
-// Footer Social Text Scroll Animation
-
-footerTimeline.from(
-  '.footer__social-text',
-  {
-    opacity: 0,
-    x: -5,
-    duration: 1.2,
-    ease: 'power2.out',
-    onStart() {
-      this.targets().forEach((el) => (el.style.transformOrigin = 'left'));
-    },
-    onUpdate() {
-      const progress = this.progress();
-      this.targets().forEach(
-        (el) => (el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`)
-      );
-    },
-    onComplete() {
-      this.targets().forEach((el) => (el.style.clipPath = 'inset(0 0 0 0)'));
-    },
-  },
-  1.4
-);
-
-// Footer Social Icons Scroll Animation
-
-footerTimeline.fromTo(
-  '.footer__social-icon',
-  { scale: 0.8, opacity: 0 },
-  {
-    scale: 1,
-    opacity: 1,
-    duration: 0.6,
-    ease: 'back.out(1.7)',
-    stagger: 0.2,
-  },
-  1.6
-);
-
-// Footer Copyright Scroll Animation
-
-footerTimeline.fromTo(
-  '.footer__copyright--pc, .footer__copyright--mobile',
-  { x: '100%', opacity: 0 },
-  {
-    x: '0%',
-    opacity: 1,
-    duration: 0.8,
-    ease: 'power3.out',
-  },
-  2
-);
-
 // 1280px+ Scroll Animations
 
 const tabletWidth = window.matchMedia('(min-width: 1280px)');
@@ -1039,12 +936,111 @@ if (tabletWidth.matches) {
 
   // Footer Input Field Scroll Animation
 
-footerTimeline.fromTo(
-  '.footer__intro-form',
-  { width: '26%' },
-  { width: '62%', duration: 3, ease: 'power3.out' },
-  0.55
-);
+  footerTimeline.fromTo(
+    '.footer__intro-form',
+    { width: '26%' },
+    { width: '62%', duration: 3, ease: 'power3.out' },
+    0.55
+  );
+
+  // Footer Contact Icons Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__contacts-block-icon',
+    { scale: 0.8, opacity: 0 },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.3,
+    },
+    1.55
+  );
+
+  // Footer Contact Text Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__contacts-block-text',
+    { rotationX: 90, opacity: 0 },
+    {
+      rotationX: 0,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.3,
+    },
+    1.6
+  );
+
+  // Footer Plans Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__plans-title, .footer__plans-item',
+    { rotationX: 90, opacity: 0 },
+    {
+      rotationX: 0,
+      opacity: 1,
+      duration: 0.4,
+      ease: 'back.out(1.7)',
+      stagger: 0.2,
+    },
+    1.4
+  );
+
+  // Footer Social Text Scroll Animation
+
+  footerTimeline.from(
+    '.footer__social-text',
+    {
+      opacity: 0,
+      x: -5,
+      duration: 1.2,
+      ease: 'power2.out',
+      onStart() {
+        this.targets().forEach((el) => (el.style.transformOrigin = 'left'));
+      },
+      onUpdate() {
+        const progress = this.progress();
+        this.targets().forEach(
+          (el) => (el.style.clipPath = `inset(0 ${100 - progress * 100}% 0 0)`)
+        );
+      },
+      onComplete() {
+        this.targets().forEach((el) => (el.style.clipPath = 'inset(0 0 0 0)'));
+      },
+    },
+    1.4
+  );
+
+  // Footer Social Icons Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__social-icon',
+    { scale: 0.8, opacity: 0 },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.6,
+      ease: 'back.out(1.7)',
+      stagger: 0.2,
+    },
+    1.6
+  );
+
+  // Footer Copyright Scroll Animation
+
+  footerTimeline.fromTo(
+    '.footer__copyright--pc, .footer__copyright--mobile',
+    { x: '100%', opacity: 0 },
+    {
+      x: '0%',
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power3.out',
+    },
+    2
+  );
 }
 
 // Hamburger
@@ -1175,6 +1171,7 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
       spaceBetween: 10,
     },
     1280: {
+      grabCursor: false,
       slidesPerView: '5',
       centeredSlides: false,
       spaceBetween: 15,
@@ -1187,6 +1184,7 @@ const clientsSwiper = new Swiper('.slider--clients .swiper', {
       allowTouchMove: false,
     },
     1440: {
+      grabCursor: false,
       slidesPerView: '6',
       centeredSlides: false,
       spaceBetween: 20,
