@@ -2663,7 +2663,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
 @media (min-width: 1024px) {
   .button {
     text-shadow: none;
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1), text-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .button:hover {
