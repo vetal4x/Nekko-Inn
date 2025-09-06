@@ -1278,10 +1278,12 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   outline: none;
   border-radius: 40px;
   background: transparent;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .booking__input:focus {
   border-color: var(--main-color);
+  box-shadow: 0 0 8px var(--secondary-color);
 }
 
 .date-wrapper {
@@ -1501,6 +1503,11 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
 
 .footer__intro-email__input::placeholder {
   color: var(--main-text-color);
+}
+
+.footer__intro-email__input:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 8px var(--secondary-color);
 }
 
 .footer__contacts {
@@ -2663,7 +2670,8 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
 @media (min-width: 1024px) {
   .button {
     text-shadow: none;
-    transition: box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1), text-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1),
+      text-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
   .button:hover {
@@ -3223,6 +3231,16 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
 
   .contacts__text a {
     font-size: 20px;
+  }
+
+  .contacts__link {
+    display: inline-block;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .contacts__link:hover {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    transform: scale(0.97);
   }
 
   .contacts__address {
