@@ -45,7 +45,10 @@
       defer
     ></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"
+      defer
+    ></script>
 
     <script src="js/main.js" defer></script>
   </head>
@@ -71,16 +74,24 @@
             <nav class="header__navbar">
               <ul class="header__navbar-list">
                 <li class="header__navbar-item">
-                  <a href="#about" class="header__navbar-item--link">About Us</a>
+                  <a href="#about" class="header__navbar-item--link"
+                    >About Us</a
+                  >
                 </li>
                 <li class="header__navbar-item">
-                  <a href="#rooms" class="header__navbar-item--link">Our Rooms</a>
+                  <a href="#rooms" class="header__navbar-item--link"
+                    >Our Rooms</a
+                  >
                 </li>
                 <li class="header__navbar-item">
-                  <a href="#care" class="header__navbar-item--link">Purr Care</a>
+                  <a href="#care" class="header__navbar-item--link"
+                    >Purr Care</a
+                  >
                 </li>
                 <li class="header__navbar-item">
-                  <a href="#testimonial" class="header__navbar-item--link">Testimonial</a>
+                  <a href="#testimonial" class="header__navbar-item--link"
+                    >Testimonial</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -120,7 +131,7 @@
                   />
                 </svg>
               </button>
-              <button class="header__button button button--light">
+              <button class="header__button button book-now button--light">
                 Book Now
               </button>
             </div>
@@ -194,7 +205,7 @@
                   <a href="#">Testimonial</a>
                 </li>
               </ul>
-              <button class="mobile-button mobile-button--dark">
+              <button class="mobile-button mobile-button--dark book-now">
                 Book Now
               </button>
             </div>
@@ -221,7 +232,7 @@
                 cat's comfort and happiness are our top priorities.
               </p>
               <button
-                class="hero__button button mobile-button mobile-button--light"
+                class="hero__button button mobile-button mobile-button--light book-now"
               >
                 BOOK A PURR-SUITE
               </button>
@@ -327,7 +338,7 @@
 
           <!---------- About Section ---------->
 
-          <section id="about"class="about">
+          <section id="about" class="about">
             <div class="about__content-wrapper">
               <span class="about__title section__title">
                 Your Trusted Cat Retreat
@@ -347,7 +358,7 @@
                 your cat is in caring hands at NekoInn.
               </p>
               <button
-                class="about__button button mobile-button mobile-button--light"
+                class="about__button button mobile-button mobile-button--light book-now"
               >
                 BOOK NOW
               </button>
@@ -552,7 +563,7 @@
                   to ensure your cat's happiness and well-being at NekoInn.
                 </p>
                 <button
-                  class="care__intro-button button mobile-button mobile-button--dark"
+                  class="care__intro-button button mobile-button mobile-button--dark book-now"
                 >
                   Book Now
                 </button>
@@ -1060,7 +1071,7 @@
                   <li class="pricing-card__feature">Daily Wellness Check</li>
                 </ul>
                 <button
-                  class="pricing__button button mobile-button mobile-button--light"
+                  class="pricing__button button mobile-button mobile-button--light book-now"
                 >
                   BOOK NOW
                 </button>
@@ -1110,7 +1121,7 @@
                   <li class="pricing-card__feature">24/7 Concierge Service</li>
                 </ul>
                 <button
-                  class="pricing__button button mobile-button mobile-button--dark"
+                  class="pricing__button button mobile-button mobile-button--dark book-now"
                 >
                   BOOK NOW
                 </button>
@@ -1151,7 +1162,7 @@
                   <li class="pricing-card__feature">VIP Wellness Check</li>
                 </ul>
                 <button
-                  class="pricing__button button mobile-button mobile-button--light"
+                  class="pricing__button button mobile-button mobile-button--light book-now"
                 >
                   BOOK NOW
                 </button>
@@ -1761,9 +1772,10 @@
               <div class="booking__header">
                 <span class="booking__title section__title"
                   >Secure Your Cat's Stay Today
-                  <span class="booking__title-underline"></span></span
-                >
-                <h2 class="booking__subtitle section__subtitle">Book Now
+                  <span class="booking__title-underline"></span
+                ></span>
+                <h2 class="booking__subtitle section__subtitle">
+                  Book Now
                   <span class="booking__subtitle-underline"></span>
                 </h2>
                 <p class="booking__text section__text">
@@ -1914,10 +1926,12 @@
                   <span class="footer__intro-logo-text--top"
                     >Stay In Touch
                     <span class="footer__intro-logo-text--top-underline"></span>
-                    </span
-                  >
-                  <span class="footer__intro-logo-text--bottom">Newsletter
-                    <span class="footer__intro-logo-text--bottom-underline"></span>
+                  </span>
+                  <span class="footer__intro-logo-text--bottom"
+                    >Newsletter
+                    <span
+                      class="footer__intro-logo-text--bottom-underline"
+                    ></span>
                   </span>
                 </div>
               </div>
@@ -2081,5 +2095,157 @@
         </footer>
       </div>
     </div>
+
+    <!-- Booking Modal -->
+
+    <dialog class="booking-modal booking-modal--hidden" id="booking-modal">
+      <div class="booking-modal__content">
+        <button class="booking-modal__close" aria-label="Close modal">
+          <svg
+            class="booking-modal__close-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 5L5 15M5 5L15 15"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <div class="booking-modal__header">
+          <h2 class="booking-modal__title">Secure Your Cat's Stay Today</h2>
+          <p class="booking-modal__subtitle">
+            Fill out the form below and we’ll take care of the rest
+          </p>
+        </div>
+
+        <form class="booking-modal__form" action="#" method="post">
+          <div class="booking-modal__field">
+            <label for="modal-full-name" class="booking-modal__label"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="modal-full-name"
+              name="full-name"
+              class="booking-modal__input"
+              placeholder="Eg. Jane Doe"
+              required
+            />
+          </div>
+
+          <div class="booking-modal__field">
+            <label for="modal-email" class="booking-modal__label">Email</label>
+            <input
+              type="email"
+              id="modal-email"
+              name="email"
+              class="booking-modal__input"
+              placeholder="Eg. janedoe@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="booking-modal__field">
+            <label for="modal-phone" class="booking-modal__label"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              id="modal-phone"
+              name="phone"
+              class="booking-modal__input"
+              placeholder="Eg. 100-616-6060"
+              pattern="^\+?[0-9\s\-]{7,20}$"
+              required
+            />
+          </div>
+
+          <div class="booking-modal__field">
+            <label for="modal-cat-name" class="booking-modal__label"
+              >Cat Name</label
+            >
+            <input
+              type="text"
+              id="modal-cat-name"
+              name="cat-name"
+              class="booking-modal__input"
+              placeholder="Eg. Timothy"
+            />
+          </div>
+
+          <div class="booking-modal__field">
+            <label for="modal-date" class="booking-modal__label"
+              >Pick a Date</label
+            >
+            <div class="booking-modal__date-wrapper">
+            <input
+              type="date"
+              id="modal-date"
+              name="date"
+              class="booking-modal__input booking-modal__input--date"
+              required
+            />
+            <div class="booking-modal__date-icon-wrapper">
+              <svg
+                width="25"
+                height="29"
+                viewBox="0 0 25 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.1077 20.7623L19.3626 18.0172M8.12492 13.0417H0.833252M24.1666 10.125V7.20833C24.1666 5.5975 22.8607 4.29167 21.2499 4.29167H3.74992C2.13909 4.29167 0.833252 5.5975 0.833252 7.20833V24.7083C0.833252 26.3192 2.13909 27.625 3.74992 27.625H8.12492M16.8749 1.375V7.20833M8.12492 1.375V7.20833M12.4999 27.625V24.8799L21.4215 15.9583L24.1666 18.7034L15.245 27.625H12.4999Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          </div>
+
+          <div class="booking-modal__field">
+            <label for="modal-pets-qty" class="booking-modal__label"
+              >How Many Pets</label
+            >
+            <input
+              type="number"
+              id="modal-pets-qty"
+              name="pets-qty"
+              min="1"
+              max="10"
+              step="1"
+              class="booking-modal__input"
+              placeholder="1"
+            />
+          </div>
+
+          <div class="booking-modal__field">
+            <label for="modal-plan" class="booking-modal__label"
+              >Select Plan</label
+            >
+            <select id="modal-plan" class="booking-modal__input booking-modal__input--plan" required>
+              <option value="ducal">Purr Ducal</option>
+              <option value="royal" selected>Purr Royal</option>
+              <option value="imperial">Purr Imperial</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="booking-modal__button button mobile-button mobile-button--light"
+          >
+            Confirm Booking
+          </button>
+        </form>
+      </div>
+    </dialog>
   </body>
 </html>

@@ -1273,35 +1273,92 @@ dateInput.value = today;
 
 // Calendar Icon
 
-const input = document.getElementById('date');
-const icon = document.querySelector('.date-icon-wrapper');
+document.addEventListener('click', (e) => {
+  const icon = e.target.closest('.date-icon-wrapper, .booking-modal__date-icon-wrapper');
+  if (!icon) return;
 
-let pickerOpen = false;
+  let input = null;
+  const targetId = icon.dataset.target;
+  if (targetId) {
+    input = document.getElementById(targetId);
+  }
+  if (!input) {
+    input =
+      icon.closest('label')?.querySelector('input[type="date"]') ||
+      icon.parentElement?.querySelector('input[type="date"]') ||
+      icon.closest('.modal')?.querySelector('input[type="date"]') ||
+      document.querySelector('#date');
+  }
+  if (!input) return;
 
-icon.addEventListener('click', () => {
-  if (typeof input.showPicker === 'function') {
-    if (!pickerOpen) {
-      input.showPicker();
-      pickerOpen = true;
-      input.addEventListener(
-        'blur',
-        () => {
+  if (!input._pickerAttached) {
+    let pickerOpen = false;
+
+    function togglePicker() {
+      if (typeof input.showPicker === 'function') {
+        if (!pickerOpen) {
+          input.showPicker();
+          pickerOpen = true;
+        } else {
+          input.blur();
           pickerOpen = false;
-        },
-        { once: true }
-      );
-    } else {
-      input.blur();
-      pickerOpen = false;
+        }
+      } else {
+        if (document.activeElement === input) {
+          input.blur();
+          pickerOpen = false;
+        } else {
+          input.focus();
+          pickerOpen = true;
+        }
+      }
     }
-  } else {
-    if (document.activeElement === input) {
-      input.blur();
-    } else {
-      input.focus();
-    }
+
+    icon.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      togglePicker();
+    });
+
+    input.addEventListener('blur', () => (pickerOpen = false));
+    input.addEventListener('change', () => (pickerOpen = false));
+
+    input._pickerAttached = true;
   }
 });
+
+
+// Booking Modal
+
+const dialog = document.getElementById('booking-modal');
+const openButtons = document.querySelectorAll('.book-now');
+const closeButton = dialog.querySelector('.booking-modal__close');
+
+const openModal = (e) => {
+  e.preventDefault();
+  if (!dialog.open) {
+    dialog.showModal();
+    dialog.classList.add('showing');
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+const closeModal = () => {
+  dialog.classList.remove('showing');
+  setTimeout(() => {
+    dialog.close();
+    document.body.style.overflow = '';
+  }, 400);
+};
+
+openButtons.forEach(btn => btn.addEventListener('click', openModal));
+
+closeButton.addEventListener('click', closeModal);
+
+dialog.addEventListener('click', (e) => {
+  if (e.target === dialog) closeModal();
+});
+
+
 
 // Image Gallery
 
