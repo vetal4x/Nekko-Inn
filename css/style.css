@@ -1752,8 +1752,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   width: 100%;
 }
 
-.footer__intro-email::after {
-  content: '';
+.footer__intro-email__button {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -1761,12 +1760,13 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   width: 54px;
   height: 54px;
   background-color: var(--main-color);
+  border: none;
   border-radius: 50%;
   background-image: url('../images/email-icon.png');
   background-size: 27px 21px;
   background-repeat: no-repeat;
   background-position: center;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .footer__intro-email__label {
@@ -1796,15 +1796,22 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   outline: none;
   border-radius: 40px;
   background: transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .footer__intro-email__input::placeholder {
   color: var(--main-text-color);
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .footer__intro-email__input:focus {
   border-color: var(--main-color);
   box-shadow: 0 0 8px var(--secondary-color);
+}
+
+.footer__intro-email__input:focus::placeholder {
+  opacity: 0.5;
 }
 
 .footer__contacts {
@@ -3485,6 +3492,18 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     max-width: 720px;
   }
 
+  .footer__intro-email__button {
+    text-shadow: none;
+    transition: box-shadow 1s cubic-bezier(0.19, 1, 0.22, 1),
+      text-shadow 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .footer__intro-email__button:hover {
+    box-shadow: inset 0 0 30px var(--secondary-color),
+      0 0 30px var(--secondary-color);
+    text-shadow: 2px 2px 4px #427388;
+  }
+
   .footer__intro::after {
     bottom: -54px;
     width: 100%;
@@ -4189,7 +4208,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     left: 42px;
   }
 
-  .footer__intro-email::after {
+  .footer__intro-email__button {
     right: 21px;
   }
 
@@ -4952,7 +4971,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     left: 47px;
   }
 
-  .footer__intro-email::after {
+  .footer__intro-email__button {
     width: 60px;
     height: 60px;
     right: 23px;
@@ -5549,7 +5568,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     left: 56px;
   }
 
-  .footer__intro-email::after {
+  .footer__intro-email__button {
     right: 19px;
     width: 74px;
     height: 74px;
