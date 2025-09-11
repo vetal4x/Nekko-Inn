@@ -1358,6 +1358,29 @@ dialog.addEventListener('click', (e) => {
   if (e.target === dialog) closeModal();
 });
 
+// Input Field Custom Arrows
+
+function setupCustomArrows(inputId, upClass, downClass) {
+  const input = document.getElementById(inputId);
+  const upBtn = document.querySelector(`.${upClass}`);
+  const downBtn = document.querySelector(`.${downClass}`);
+
+  if (!input || !upBtn || !downBtn) return;
+
+  upBtn.addEventListener("click", () => {
+    let val = parseInt(input.value) || 1;
+    if (val < input.max) input.value = val + 1;
+  });
+
+  downBtn.addEventListener("click", () => {
+    let val = parseInt(input.value) || 1;
+    if (val > input.min) input.value = val - 1;
+  });
+}
+
+setupCustomArrows("modal-pets-qty", "booking-modal__arrow--up", "booking-modal__arrow--down");
+
+setupCustomArrows("pets-qty", "booking__arrow--up", "booking__arrow--down");
 
 
 // Image Gallery

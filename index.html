@@ -1884,6 +1884,44 @@
                     class="booking__input booking__input--pets-qty"
                     placeholder="1"
                   />
+                  <div class="booking__arrows">
+                <button
+                  type="button"
+                  class="booking__arrow booking__arrow--up"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="booking__arrow-icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="booking__arrow booking__arrow--down"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="booking__arrow-icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                </button>
+              </div>
                 </div>
 
                 <div class="booking__field">
@@ -2184,54 +2222,98 @@
               >Pick a Date</label
             >
             <div class="booking-modal__date-wrapper">
-            <input
-              type="date"
-              id="modal-date"
-              name="date"
-              class="booking-modal__input booking-modal__input--date"
-              required
-            />
-            <div class="booking-modal__date-icon-wrapper">
-              <svg
-                width="25"
-                height="29"
-                viewBox="0 0 25 29"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22.1077 20.7623L19.3626 18.0172M8.12492 13.0417H0.833252M24.1666 10.125V7.20833C24.1666 5.5975 22.8607 4.29167 21.2499 4.29167H3.74992C2.13909 4.29167 0.833252 5.5975 0.833252 7.20833V24.7083C0.833252 26.3192 2.13909 27.625 3.74992 27.625H8.12492M16.8749 1.375V7.20833M8.12492 1.375V7.20833M12.4999 27.625V24.8799L21.4215 15.9583L24.1666 18.7034L15.245 27.625H12.4999Z"
-                  stroke="white"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <input
+                type="date"
+                id="modal-date"
+                name="date"
+                class="booking-modal__input booking-modal__input--date"
+                required
+              />
+              <div class="booking-modal__date-icon-wrapper">
+                <svg
+                  width="25"
+                  height="29"
+                  viewBox="0 0 25 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.1077 20.7623L19.3626 18.0172M8.12492 13.0417H0.833252M24.1666 10.125V7.20833C24.1666 5.5975 22.8607 4.29167 21.2499 4.29167H3.74992C2.13909 4.29167 0.833252 5.5975 0.833252 7.20833V24.7083C0.833252 26.3192 2.13909 27.625 3.74992 27.625H8.12492M16.8749 1.375V7.20833M8.12492 1.375V7.20833M12.4999 27.625V24.8799L21.4215 15.9583L24.1666 18.7034L15.245 27.625H12.4999Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
           </div>
 
           <div class="booking-modal__field">
             <label for="modal-pets-qty" class="booking-modal__label"
               >How Many Pets</label
             >
-            <input
-              type="number"
-              id="modal-pets-qty"
-              name="pets-qty"
-              min="1"
-              max="10"
-              step="1"
-              class="booking-modal__input"
-              placeholder="1"
-            />
+            <div class="booking-modal__number-wrapper">
+              <input
+                type="number"
+                id="modal-pets-qty"
+                name="pets-qty"
+                min="1"
+                max="10"
+                step="1"
+                class="booking-modal__input"
+                placeholder="1"
+              />
+              <div class="booking-modal__arrows">
+                <button
+                  type="button"
+                  class="booking-modal__arrow booking-modal__arrow--up"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="booking-modal__arrow-icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="booking-modal__arrow booking-modal__arrow--down"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="booking-modal__arrow-icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
 
           <div class="booking-modal__field">
             <label for="modal-plan" class="booking-modal__label"
               >Select Plan</label
             >
-            <select id="modal-plan" class="booking-modal__input booking-modal__input--plan" required>
+            <select
+              id="modal-plan"
+              class="booking-modal__input booking-modal__input--plan"
+              required
+            >
               <option value="ducal">Purr Ducal</option>
               <option value="royal" selected>Purr Royal</option>
               <option value="imperial">Purr Imperial</option>
