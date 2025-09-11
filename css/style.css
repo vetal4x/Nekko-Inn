@@ -117,7 +117,8 @@ button {
 .hero__image-main--pc,
 .our-rooms__image-gallery,
 .slider-testimonials--pc,
-.footer__copyright--pc {
+.footer__copyright--pc,
+.footer__plans-link svg {
   display: none;
 }
 
@@ -1860,7 +1861,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   text-align: left;
 }
 
-.footer__contacts-block-text-bottom {
+.footer__contacts-block-link-bottom {
   color: var(--main-text-color);
   font-size: 14px;
   font-weight: 400;
@@ -2256,7 +2257,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     font-size: 24px;
   }
 
-  .footer__contacts-block-text-bottom {
+  .footer__contacts-block-link-bottom {
     font-size: 17px;
     line-height: 24px;
   }
@@ -3036,9 +3037,9 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     line-height: 26px;
   }
 
-  .footer__contacts-block-text-bottom {
+  .footer__contacts-block-link-bottom {
     font-size: 14px;
-    line-height: 12px;
+    line-height: 21px;
   }
 
   .footer__right {
@@ -3530,6 +3531,17 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     width: 100%;
   }
 
+  .footer__contacts-block-link-bottom {
+    color: var(--main-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .footer__contacts-block-link-bottom:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 5px var(--main-color);
+  }
+
   .footer__contacts-block-icon {
     height: 50px;
     width: 50px;
@@ -3566,6 +3578,55 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
   .footer__plans-link {
     font-size: 14px;
     line-height: 46px;
+    position: relative;
+    overflow: visible;
+    background: linear-gradient(
+      to right,
+      var(--main-color) 100%,
+      var(--main-text-color) 0%
+    );
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--main-text-color);
+    transition: background-size 0.5s ease, -webkit-text-fill-color 0.5s ease,
+      text-shadow 0.3s ease;
+  }
+
+  .footer__plans-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--main-color);
+    transition: width 0.5s ease;
+  }
+
+  .footer__plans-link:hover {
+    background-size: 100% 100%;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 3px var(--main-color);
+  }
+
+  .footer__plans-link:hover::before {
+    width: 100%;
+  }
+
+  .footer__plans-link svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateX(-16px) translateY(-50%);
+    opacity: 0;
+    transition: transform 0.4s ease 0.2s, opacity 0.4s ease 0.2s;
+  }
+
+  .footer__plans-link:hover svg {
+    transform: translateX(0) translateY(-50%);
+    opacity: 1;
   }
 
   .footer__social {
@@ -3587,7 +3648,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     width: 44px;
     height: 44px;
     transform-origin: center;
-     transform: scale(1);
+    transform: scale(1);
     transition: color 0.3s ease, box-shadow 0.3s ease;
   }
 
@@ -5010,7 +5071,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     line-height: 33px;
   }
 
-  .footer__contacts-block-text-bottom {
+  .footer__contacts-block-link-bottom {
     font-size: 16px;
     line-height: 26px;
   }
@@ -5599,7 +5660,7 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     line-height: 40px;
   }
 
-  .footer__contacts-block-text-bottom {
+  .footer__contacts-block-link-bottom {
     font-size: 20px;
     line-height: 32px;
   }
