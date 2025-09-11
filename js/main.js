@@ -1041,6 +1041,19 @@ if (tabletWidth.matches) {
     },
     2
   );
+
+  // Footer Social Icons Hover Scale
+  
+const icons = document.querySelectorAll('.footer__social-icon');
+
+icons.forEach(icon => {
+  icon.addEventListener('mouseenter', () => {
+    gsap.to(icon, { scale: 1.1, duration: 0.3, ease: "power1.out" });
+  });
+  icon.addEventListener('mouseleave', () => {
+    gsap.to(icon, { scale: 1, duration: 0.3, ease: "power1.out" });
+  });
+});
 }
 
 // Hamburger

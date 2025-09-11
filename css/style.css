@@ -3587,42 +3587,38 @@ body[data-theme='light'] .pricing-card--dark .pricing-card__feature::before {
     width: 44px;
     height: 44px;
     transform-origin: center;
-    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+     transform: scale(1);
+    transition: color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  ul.footer__social-icons li a.footer__social-icon.facebook:hover,
-  ul.footer__social-icons li a.footer__social-icon.facebook:focus {
+  .footer__social-icon.facebook:hover,
+  .footer__social-icon.facebook:focus {
     color: #3b5998;
     box-shadow: 0 0 22px 0 #3b5998;
-    transform: scale(1.1);
   }
 
-  ul.footer__social-icons li a.footer__social-icon.twitter:hover,
-  ul.footer__social-icons li a.footer__social-icon.twitter:focus {
+  .footer__social-icon.twitter:hover,
+  .footer__social-icon.twitter:focus {
     color: #00aced;
     box-shadow: 0 0 22px 0 #00aced;
-    transform: scale(1.1);
   }
 
-  ul.footer__social-icons li a.footer__social-icon.linkedin:hover,
-  ul.footer__social-icons li a.footer__social-icon.linkedin:focus {
+  .footer__social-icon.linkedin:hover,
+  .footer__social-icon.linkedin:focus {
     color: #0077b5;
     box-shadow: 0 0 22px 0 #0077b5;
-    transform: scale(1.1);
   }
 
-  ul.footer__social-icons li a.footer__social-icon.youtube:hover,
-  ul.footer__social-icons li a.footer__social-icon.youtube:focus {
+  .footer__social-icon.youtube:hover,
+  .footer__social-icon.youtube:focus {
     color: #cd201f;
     box-shadow: 0 0 22px 0 #cd201f;
-    transform: scale(1.1);
   }
 
-  ul.footer__social-icons li a.footer__social-icon.instagram:hover,
-  ul.footer__social-icons li a.footer__social-icon.instagram:focus {
+  .footer__social-icon.instagram:hover,
+  .footer__social-icon.instagram:focus {
     color: #e4405f;
     box-shadow: 0 0 22px 0 #e4405f;
-    transform: scale(1.1);
   }
 
   .footer__copyright--mobile {
